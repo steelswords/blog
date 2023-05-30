@@ -1,4 +1,4 @@
-base_url = "https://welpo.github.io/tabi"
+base_url = "http://127.0.0.1:1111"
 title = "Tristan Andrus"
 description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
 generate_feed = true
