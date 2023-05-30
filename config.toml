@@ -46,10 +46,11 @@ favicon_emoji = "💻"
 headerImage = ""
 
 menu = [
-    { name = "blog", url = "blog/" },
-    { name = "archive", url = "archive/" },
-    { name = "tags", url = "tags/" },
     { name = "projects", url = "projects/" },
+    { name = "experience", url = "experience/" },
+    { name = "blog", url = "blog/" },
+    { name = "tags", url = "tags/" },
+    { name = "archive", url = "archive/" },
 ]
 
 # The icons available can be found in "social_icons" in the "static" folder
