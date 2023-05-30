@@ -1,6 +1,6 @@
 base_url = "https://welpo.github.io/tabi"
-title = "~/tabi"
-description = "tabi is a fast, lightweight, and modern Zola theme with multi-language support, optional JavaScript, and a perfect Lighthouse score."
+title = "Tristan Andrus"
+description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
 generate_feed = true
 compile_sass = true
 minify_html = true
@@ -102,7 +102,7 @@ language_name.es = "Español"
 
 # Enable JavaScript theme toggler for dark/light mode (and automatic switching).
 # The default setting is the light theme.
-theme_switcher = true
+theme_switcher = false
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
@@ -120,7 +120,7 @@ favicon = ""
 
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
-favicon_emoji = "🌱"
+favicon_emoji = "💻"
 
 # This header image is used for SEO. For example if you were to share an image via Messenger/Instagram/Twitter a preview picture is also presented
 headerImage = ""
