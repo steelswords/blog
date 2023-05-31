@@ -15,7 +15,7 @@ lot of entries on Utah’s MLS (Multiple Listing System). The MLS website has lo
 of useful information, including the price, number of beds and baths, square 
 footage, and so on. It also has a link to the property on Google Maps.
 
-{{ dimmable_image(src="static/img/articles/web-scraping-in-rust/bigbighouse.jpg", alt="A very reasonably-sized house.") }}
+{{ dimmable_image(src="img/articles/web-scraping-in-rust/bigbighouse.jpg", alt="A very reasonably-sized house.") }}
 
 This quaint city bungalow is perfect for those five-alarm chili parties where 
 11 guests need to use the bathroom at the same time.
@@ -70,7 +70,7 @@ over at [UserLAnd](https://userland.tech/), this is possible! I just had to clon
 my repo and manually install a few things. I seem to remember having to install a 
 couple of packages, like `ca-certificates`.
 
-{{ dimmable_image(src="static/img/articles/web-scraping-in-rust/phoneuse.jpg", alt="A screenshot of running this program on an Android phone") }}
+{{ dimmable_image(src="img/articles/web-scraping-in-rust/phoneuse.jpg", alt="A screenshot of running this program on an Android phone") }}
 
 # Potential Improvements
 
