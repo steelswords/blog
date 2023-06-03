@@ -28,7 +28,7 @@ Some notable software projects I have done:
 - The operating system kernel I wrote for my senior design project
 - A CPSL compiler
 - The STM32 ARM-powered robot I controlled over Bluetooth (pure C code)
-- The MAVLink library a previous company has been using for months for command and control of ArduCopter drones
+- The MAVLink library a previous company has been using for years for command and control of ArduCopter drones
 - Control code for a manufacturing machine
 - An implementation of ARP
 - A grammar-based text generator
@@ -63,7 +63,7 @@ and soldered all the circuitry in my Useless Box project (article coming soon).
 
 ## Power
 
-I most significant foray into power electronics was the design of a 2 kW solar 
+My most significant foray into power electronics was the design of a 2 kW solar 
 powered battery charging station which is still in use today.
 
 One of my primary concerns as “the drone guy” at work is ensuring all the payload 

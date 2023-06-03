@@ -1,4 +1,5 @@
-base_url = "https://tristanandrus.pages.dev"
+#base_url = "https://tristanandrus.pages.dev"
+base_url = "http://localhost:1111"
 title = "Tristan Andrus"
 description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
 generate_feed = true
@@ -46,7 +47,8 @@ favicon_emoji = "💻"
 headerImage = ""
 
 menu = [
-    { name = "projects", url = "projects/" },
+    # I'm going to spend some more time making this good before adding it as a menu option
+    #{ name = "projects", url = "projects/" },
     { name = "experience", url = "experience/" },
     { name = "blog", url = "blog/" },
     { name = "tags", url = "tags/" },
