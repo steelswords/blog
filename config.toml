@@ -1,5 +1,5 @@
-#base_url = "https://tristanandrus.pages.dev"
-base_url = "http://localhost:1111"
+base_url = "https://tristanandrus.pages.dev"
+#base_url = "http://localhost:1111"
 title = "Tristan Andrus"
 description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
 generate_feed = true
