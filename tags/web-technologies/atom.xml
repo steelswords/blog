@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - web technologies</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/tags/web-technologies/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-04-23T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/web-technologies/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Web Scraping in Rust</title>
+        <published>2023-04-23T00:00:00+00:00</published>
+        <updated>2023-04-23T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/web-scraping-in-rust/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/web-scraping-in-rust/</id>
+        
+        <content type="html">&lt;p&gt;Link to Github: [https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;mls-scraper]&lt;&#x2F;p&gt;
+&lt;p&gt;Recently, I have been on the hunt for a house. This has involved looking at a 
+lot of entries on Utah’s MLS (Multiple Listing System). The MLS website has lots 
+of useful information, including the price, number of beds and baths, square 
+footage, and so on. It also has a link to the property on Google Maps.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;bigbighouse.jpg&quot; alt=&quot;A very reasonably-sized house.&quot;  width=&quot;1536&quot;  height=&quot;765&quot; &#x2F;&gt;
+&lt;p&gt;This quaint city bungalow is perfect for those five-alarm chili parties where 
+11 guests need to use the bathroom at the same time.&lt;&#x2F;p&gt;
+&lt;p&gt;As it turns out, our main criterion for picking a property, besides having a 
+comfortable price and size, was the commute to my office. As my wife and I compiled 
+a dataset of potential houses, it became tedious to manually look up the commute 
+from each property. Futhermore, the address at the top is not selectable, so I 
+can’t just copy it into a spreadsheet.&lt;&#x2F;p&gt;
+&lt;p&gt;This seems like a job for…. a three-day project that saves me a total of 20 minutes!&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is this gives me a chance to try Rust. I’ve used Rust trivially 
+before, but this is an opportunity to make something actually useful to me.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-does-it-do&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-does-it-do&quot; aria-label=&quot;Anchor link for: what-does-it-do&quot;&gt;🔗&lt;&#x2F;a&gt;What Does it Do?&lt;&#x2F;h1&gt;
+&lt;p&gt;The program reaches out to an MLS listing and scrapes a few of the things that are 
+harder to get, like the address, the MLS number, and most importantly, the commute time.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s right. I found a crate that lets me query the Google Maps API, so I 
+automatically look up what the morning commute time is. I get directions for my 
+work address with a departure time of 8:45 next Tuesday morning, as Tuesday is 
+the least remarkable (and most representative) work day.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s how it runs:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; run &lt;span class=&quot;z-string z-quoted z-single z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;https:&#x2F;&#x2F;www.utahrealestate.com&#x2F;&amp;lt;mls number&amp;gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And this is the output:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Days on URE: 135
+Status: ACTIVE
+MLS#: 1####4
+Type: Single Family
+Style: 2-Story
+Year Built: 1939
+Address: 2##########
+Salt Lake City, UT 84103
+Commute time: 42 mins
+Time in traffic: 41 mins
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;running-this-on-the-go-mobile&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#running-this-on-the-go-mobile&quot; aria-label=&quot;Anchor link for: running-this-on-the-go-mobile&quot;&gt;🔗&lt;&#x2F;a&gt;Running this on the Go (Mobile)&lt;&#x2F;h1&gt;
+&lt;p&gt;Even though I use a super-portable ultrabook, I unfortunately don’t always have my 
+laptop with me. Wouldn’t it be nice to run this on my phone? Thanks to the folks 
+over at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;userland.tech&#x2F;&quot;&gt;UserLAnd&lt;&#x2F;a&gt;, this is possible! I just had to clone 
+my repo and manually install a few things. I seem to remember having to install a 
+couple of packages, like &lt;code&gt;ca-certificates&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;phoneuse.jpg&quot; alt=&quot;A screenshot of running this program on an Android phone&quot;  width=&quot;900&quot;  height=&quot;2000&quot; &#x2F;&gt;
+&lt;h1 id=&quot;potential-improvements&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#potential-improvements&quot; aria-label=&quot;Anchor link for: potential-improvements&quot;&gt;🔗&lt;&#x2F;a&gt;Potential Improvements&lt;&#x2F;h1&gt;
+&lt;p&gt;Before long, we were under contract for a house, so my internal need for this 
+has dissipated. But if I were to make a more polished, fleshed-out version, it 
+would look like this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better commute estimation
+&lt;ul&gt;
+&lt;li&gt;Evening commute&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure we’re not estimating on a holiday&lt;&#x2F;li&gt;
+&lt;li&gt;Perhaps do a little iteration to find the optimal departure time&lt;&#x2F;li&gt;
+&lt;li&gt;Check for public transport options&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;More customizability
+&lt;ul&gt;
+&lt;li&gt;Configurable work address&lt;&#x2F;li&gt;
+&lt;li&gt;Output on terminal, and&#x2F;or&lt;&#x2F;li&gt;
+&lt;li&gt;Output to a CSV to make spreadsheeting easier&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Clean up some warnings&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;But for now, I was just doing this project for fun and to save myself a little 
+bit of aggravation. So maybe I’ll come back to it, but I think probably not in 
+any serious capacity.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;thoughts-on-rust&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#thoughts-on-rust&quot; aria-label=&quot;Anchor link for: thoughts-on-rust&quot;&gt;🔗&lt;&#x2F;a&gt;Thoughts on Rust&lt;&#x2F;h1&gt;
+&lt;p&gt;Rust is an interesting language. I find some parts really clean and snappy, like 
+all the builtin functions. I like the safety feature, and I love that it’s 
+efficient and can go toe-to-toe with C++. The main thing I don’t like is the 
+steep learning curve. Rust works very differently from other languages I’ve used 
+before, especially its borrowing system. (Die-hard Rustaceans will tell me that’s 
+what’s so great about it.) That being said, for all my frustrations of trying to 
+figure out why my closure expected a () but found a &amp;amp;str, I keep finding myself 
+drawn to this language. There is something magical about this tricky language. 
+I think my Rust journey is not over; it has just begun.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

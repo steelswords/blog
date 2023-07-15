@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - opinion</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/tags/opinion/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-01-01T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/opinion/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2022 Book Review</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/2022-book-review/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/2022-book-review/</id>
+        
+        <content type="html">&lt;p&gt;Here are some of the books I read in 2022 and what I thought of them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-mythical-man-month-by-fred-brooks&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-mythical-man-month-by-fred-brooks&quot; aria-label=&quot;Anchor link for: the-mythical-man-month-by-fred-brooks&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; by Fred Brooks&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. &lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; is a classic of software program management, and
+for good reason. Every chapter laid out truths about software development that
+resonated deeply with my experience. There were some surreal parts of some of 
+the later chapters where Brooks would go from a timeless nugget of wisdom to 
+discussing details of the microfiche system he was using. However, I’d say 93% 
+of the book is just as relevant today as it was then. For a 1975 computer book, 
+The Mythical Man Month holds up impressively well.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;dune-by-frank-herbert&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#dune-by-frank-herbert&quot; aria-label=&quot;Anchor link for: dune-by-frank-herbert&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Dune&lt;&#x2F;em&gt; by Frank Herbert&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. I’ll admit, I started reading Dune because of the 2021 film. I started reading it in that year and only in 2022 did I finish it. This book is dense. The world building is impeccable. It can be a little tedious at times because you get to experience scenes through multiple characters’ eyes. I want to know what’s going to happen to Muad’Dib, but for now this series is on the back burner.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ready-player-two-by-ernest-cline&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ready-player-two-by-ernest-cline&quot; aria-label=&quot;Anchor link for: ready-player-two-by-ernest-cline&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Ready Player Two&lt;&#x2F;em&gt; by Ernest Cline&lt;&#x2F;h1&gt;
+&lt;p&gt;3&#x2F;10. I’m sad to say this did not live to its predecessor. I think it’s a combination of factors. Most of the references did not resonate with me, and the pacing was wonky. The setup was cool, but took a long time. Then the first couple adventures took a long time, followed by several rushed ones and a quick ending.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-green-mile-by-stephen-king&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-green-mile-by-stephen-king&quot; aria-label=&quot;Anchor link for: the-green-mile-by-stephen-king&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Green Mile&lt;&#x2F;em&gt; by Stephen King&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. Good writing. Mostly interesting story. Not as captivating as Misery. There were some dull spots. But it did make me cry, so there’s that.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shady-characters-by-keith-houston&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#shady-characters-by-keith-houston&quot; aria-label=&quot;Anchor link for: shady-characters-by-keith-houston&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Shady Characters&lt;&#x2F;em&gt; by Keith Houston&lt;&#x2F;h1&gt;
+&lt;p&gt;9&#x2F;10. I would recommend this book to anyone who has ever wondered why the question mark looks the way it does, or anyone who knows what a pilcrow is. Very informative and well researched.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;evicted-by-nathan-desmond&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#evicted-by-nathan-desmond&quot; aria-label=&quot;Anchor link for: evicted-by-nathan-desmond&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Evicted&lt;&#x2F;em&gt; by Nathan Desmond&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. It is hard to express how meaningful this book was to read. It takes a very honest look at poverty in America, revolving around evictions and housing insecurity. This was written by a man who has spent years with poor tenants and their landlords. This is one of those books that will change your outlook on things forever. I very much recommend it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-body-a-guide-for-occupants-by-bill-bryson&quot; aria-label=&quot;Anchor link for: the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Body: A Guide for Occupants&lt;&#x2F;em&gt; by Bill Bryson&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. This book was good, but felt a little offbeat at times. My main takeaways are these. First, medicine has really only had a handful of really big hits: germ theory, a scientific understanding of anatomy, antibiotics, anesthetic, and vaccines. There is still a lot we don’t know about the body. But ol’ Bill Bryson does not have a medical degree, so if anyone qualified would like to email me to correct my takeaways, I would welcome it.&lt;&#x2F;p&gt;
+&lt;p&gt;The other takeaway from The Body is an understanding of why traditional, conservative farming communities are predisposed to be leery of doctors. Because until about 120 years ago, a lot of what doctors did was actively harmful. Yikes!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot; aria-label=&quot;Anchor link for: how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;How to Invent Everything: A Survival Guide for the Stranded Time Traveler&lt;&#x2F;em&gt; by Ryan North&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. I love this book. I have always tried to build a library where if it were the last remaining library on Earth, I could feasibly rebuild civilization. You know, at least a bit. This book is now the crown jewel of that collection. It was amazing to see how to bootstrap civilization in one hardcover tome. If I ever have to dash off into the wilderness, I hope to have a copy of How to Invent Everything with me.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

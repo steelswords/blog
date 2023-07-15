@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - yocto</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/tags/yocto/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-30T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/yocto/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Hello World in Yocto</title>
+        <published>2022-06-30T00:00:00+00:00</published>
+        <updated>2022-06-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/hello-world-in-yocto/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/hello-world-in-yocto/</id>
+        
+        <content type="html">&lt;h1 id=&quot;introduction&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot;&gt;🔗&lt;&#x2F;a&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;Yocto is a way to role your own Linux distribution, with a focus on embedded 
+systems. This page will get you up and running!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;requirements&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#requirements&quot; aria-label=&quot;Anchor link for: requirements&quot;&gt;🔗&lt;&#x2F;a&gt;Requirements&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;50 GB of disk space&lt;&#x2F;li&gt;
+&lt;li&gt;A supported distribution (If using Arch, follow the Arch Wiki article)&lt;&#x2F;li&gt;
+&lt;li&gt;These packages installed: &lt;code&gt;gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A semipowerful computer. If you’re doing this on a Chromebook, you’re going to have a bad time.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;setup&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#setup&quot; aria-label=&quot;Anchor link for: setup&quot;&gt;🔗&lt;&#x2F;a&gt;Setup&lt;&#x2F;h1&gt;
+&lt;p&gt;We will be following the documenation at [https:&#x2F;&#x2F;docs.yoctoproject.org] today.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s clone the repo, first of all.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; clone git:&#x2F;&#x2F;git.yoctoproject.org&#x2F;poky.git&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; poky&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The branches of the repo are all releases. We’re going to check out the 
+&lt;code&gt;kirkstone&lt;&#x2F;code&gt; branch, since that is the most recent release at the time of this writing.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; checkout&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;t&lt;&#x2F;span&gt; origin&#x2F;kirkstone&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;b&lt;&#x2F;span&gt; kirkstone&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; pull&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The basic workflow works like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-source z-shell&quot;&gt;source&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; oe-init-build-env &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;build-dir&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;bitbake&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; core-image-full-cmdline&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Notice that when you source &lt;code&gt;oe-init-build-env&lt;&#x2F;code&gt; it also puts you in the build 
+directory. If your build directory didn’t exist before, now it does, along with 
+some important files in the &lt;code&gt;conf&lt;&#x2F;code&gt; directory.&lt;&#x2F;p&gt;
+&lt;p&gt;The official docs suggest uncommenting these lines in the &lt;code&gt;conf&#x2F;local.conf&lt;&#x2F;code&gt; file 
+in your build directory:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;BB_SIGNATURE_HANDLER = &amp;quot;OEEquivHash&amp;quot;
+BB_HASHSERVE = &amp;quot;auto&amp;quot;
+BB_HASHSERVE_UPSTREAM = &amp;quot;typhoon.yocto.io:8687&amp;quot;
+SSTATE_MIRRORS ?= &amp;quot;file:&#x2F;&#x2F;.* https:&#x2F;&#x2F;sstate.yoctoproject.org&#x2F;all&#x2F;PATH;downloadfilename=PATH&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Uncommenting those lines lets Yocto download pre-built OS bits instead of building 
+them yourself. It’s way faster! I did that and I was able to have a build going 
+in 4-5 minutes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;hello-world-in-yocto&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#hello-world-in-yocto&quot; aria-label=&quot;Anchor link for: hello-world-in-yocto&quot;&gt;🔗&lt;&#x2F;a&gt;Hello World in Yocto&lt;&#x2F;h1&gt;
+&lt;p&gt;Alright, this is it. Let’s build an operating system and emulate it with QEMU.&lt;&#x2F;p&gt;
+&lt;p&gt;In your build directory, run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;bitbake&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; core-image-full-cmdline&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You’ll see lots of spinny things happen, and then it will finish. If you’ve chosen to download over build it won’t take long, depending on the speed of your network connection.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s run this sucker.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;runqemu&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; qemux86-64&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You’ll see it boot, and wonder of wonder, miracle of miracles:&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;yocto&#x2F;yocto-bootscreen.png&quot; alt=&quot;The Yocto bootscreen&quot;  width=&quot;1024&quot;  height=&quot;796&quot; &#x2F;&gt;
+&lt;p&gt;A boot screen!&lt;&#x2F;p&gt;
+&lt;p&gt;Login with the username &lt;code&gt;root&lt;&#x2F;code&gt; (no password) and you’re set! You just made your 
+own operating system (ish)!&lt;&#x2F;p&gt;
+&lt;p&gt;Now for the moment we’ve all been waiting for.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-echo z-shell&quot;&gt;echo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Hello, world!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;yocto&#x2F;yocto-hello-world.jpg&quot; alt=&quot;The Yocto bootscreen&quot;  width=&quot;1024&quot;  height=&quot;796&quot; &#x2F;&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - project</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/tags/project/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-06-12T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/project/atom.xml</id>
+    <entry xml:lang="en">
+        <title>CPSL Compiler</title>
+        <published>2022-06-12T00:00:00+00:00</published>
+        <updated>2022-06-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/cpsl-compiler/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/cpsl-compiler/</id>
+        
+        <content type="html">&lt;h1 id=&quot;building-a-compiler&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-a-compiler&quot; aria-label=&quot;Anchor link for: building-a-compiler&quot;&gt;🔗&lt;&#x2F;a&gt;Building a Compiler&lt;&#x2F;h1&gt;
+&lt;p&gt;During my undergrad degree, I took a wonderful class called Compiler Construction. It had a reputation among the computer science students of being the hardest class their department offered. It was so much fun!&lt;&#x2F;p&gt;
+&lt;p&gt;The first day of the class, the professor stressed to us the amount of work this compiler would take. He said not to procrastinate because we couldn’t physically type the amount of code required in less than four weeks or so. He was more or less right about that. Not to worry though, I got started as soon as I could.&lt;&#x2F;p&gt;
+&lt;p&gt;The class was very interesting. We talked about parsing, regular expressions, and abstract syntax trees, among other topics.&lt;&#x2F;p&gt;
+&lt;p&gt;The ultimate end of the class, and the only graded assignment, was a compiler for a language called CPSL, which is structured very similarly to Pascal. We were given a language specification and a bunch of example programs written in CPSL.&lt;&#x2F;p&gt;
+&lt;p&gt;Our assignment simplified the modern compiler frontend&#x2F;backend design into one frontend program that took CPSL and compiled it into MIPS assembly. This necessitated using a MIPS simulator to actually run any of the programs compiled from CPSL.&lt;&#x2F;p&gt;
+&lt;p&gt;Originally, the assignment was to incorporate writing functions in CPSL, but due to COVID disruptions, the requirements were scaled back so that compiling functions resulted in extra credit.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the code for &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;compilers&quot;&gt;my compiler on Github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Laser Tank</title>
+        <published>2018-12-20T00:00:00+00:00</published>
+        <updated>2018-12-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/laser-tank/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/laser-tank/</id>
+        
+        <content type="html">&lt;h1 id=&quot;the-laser-tank&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-laser-tank&quot; aria-label=&quot;Anchor link for: the-laser-tank&quot;&gt;🔗&lt;&#x2F;a&gt;The Laser Tank&lt;&#x2F;h1&gt;
+&lt;p&gt;One Christmas, Santa was very kind and left me a tank tread chassis. It was a beautiful thing, with two geared DC motors on an aluminum frame. I meant to make a robot out of it immediately, but unfortunately school and work got in the way of using it in a project. So when my lab partner for my microcontrollers class and I were given free range over our final project, I seized that opportunity to make something out of that chassis. And make something we did…. The LASER TANK!&lt;&#x2F;p&gt;
+&lt;p&gt;The proposal for this project didn’t do anything really very groundbreaking. We didn’t implement computer vision on it or anything, since I envisioned this project as just making a working robot out of that chassis. And hey, it worked.&lt;&#x2F;p&gt;
+&lt;p&gt;The robot is remote controlled over Bluetooth and drives around and shoots its little laser turret (actually a $3 laser pointer we dismantled). Also it looks cool. The other really cool thing about it is you can control where the laser points and shoot it.&lt;&#x2F;p&gt;
+&lt;p&gt;We used an HC-06 Bluetooth module to pair to our phones and control the robot. We installed a Bluetooth serial terminal app on an Android phone and sent the robot plaintext commands over the UART connection the HC-06 provides. This project would be really trivial if we were allowed to use an Arduino and its support libraries. Instead we had to implement all the helper functions ourselves. This included code for articulating the stepper motor that the laser sits upon and for interacting with the microcontroller’s onboard UART controller. It was lots of fun!&lt;&#x2F;p&gt;
+&lt;p&gt;Here it is in action:&lt;&#x2F;p&gt;
+&lt;div &gt;
+    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xH9-nnhlVDA&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+</feed>

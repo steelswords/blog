@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-07-02T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Connect 4 in Rust</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/connect4/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/connect4/</id>
+        
+        <content type="html">&lt;p&gt;Link to the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;connect4&quot;&gt;Github project&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As part of my Rust journey, I decided it would be good idea to write something fun.
+But I knew better than to try to make an ambitious 3D project work. I don&#x27;t have
+time like &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fourteenscrews.com&#x2F;&quot;&gt;this poor guy&lt;&#x2F;a&gt; to make something really,
+really impressive with my new language. So I decided to make a TUI game. Connect
+Four seemed to fit the bill really well.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m writing this a bit after development on my Connect Four project has concluded,
+cause I&#x27;ve been working on a lot of projects lately and am trying desperately to get 
+them on my blog to show off. 😉&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the final result.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;connect4playthrough.gif&quot; alt=&quot;A stunning upset by Player 2&quot;  width=&quot;520&quot;  height=&quot;329&quot; &#x2F;&gt;
+&lt;h1 id=&quot;features&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#features&quot; aria-label=&quot;Anchor link for: features&quot;&gt;🔗&lt;&#x2F;a&gt;Features&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Local multiplayer&lt;&#x2F;li&gt;
+&lt;li&gt;Colors...? Yep.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;development&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#development&quot; aria-label=&quot;Anchor link for: development&quot;&gt;🔗&lt;&#x2F;a&gt;Development&lt;&#x2F;h1&gt;
+&lt;p&gt;As you can see from the git history, I did the bulk of this work in April and May
+of 2023. I had some knowledge, but was by no means a pro Rust developer when I began.
+Now, I&#x27;ve made a lot of progress.&lt;&#x2F;p&gt;
+&lt;p&gt;I used crossterm, which proved to be both powerful and not too tricky to use. I
+will definitely consider using crossterm again if I develop another game for the
+terminal.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-about-single-player&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-about-single-player&quot; aria-label=&quot;Anchor link for: what-about-single-player&quot;&gt;🔗&lt;&#x2F;a&gt;What about Single Player?&lt;&#x2F;h2&gt;
+&lt;p&gt;This version doesn&#x27;t have an AI you can play against or remote multiplayer - yet!&lt;&#x2F;p&gt;
+&lt;p&gt;Actually, in version 0.3.0 I want to add a remote multiplayer feature. I&#x27;ve actually
+been working on a chat application to get used to serde and message passing over
+sockets in Rust before I implemented this. (Article, as always, &amp;quot;coming soon&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;As a side note, I used &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sassman&#x2F;t-rec-rs&quot;&gt;t-rec&lt;&#x2F;a&gt; to record this demo. 
+It is built in Rust and was very easy to use. It also elided all the still frames 
+together to reduce file size.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Let&#x27;s Build a Cross Compiler!</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/lets-build-a-cross-compiler/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/lets-build-a-cross-compiler/</id>
+        
+        <content type="html">&lt;h1 id=&quot;creating-a-cross-compiler-for-an-arm-target&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#creating-a-cross-compiler-for-an-arm-target&quot; aria-label=&quot;Anchor link for: creating-a-cross-compiler-for-an-arm-target&quot;&gt;🔗&lt;&#x2F;a&gt;Creating a Cross Compiler for an ARM target&lt;&#x2F;h1&gt;
+&lt;p&gt;I want to learn more about cross compiling. I&#x27;m familiar with the concept, 
+I&#x27;ve done my fair share as an embedded developer, but most of the time I just use 
+a pre-generated toolchain from Yocto or a microcontroller SDK.I&#x27;ve even built a 
+cross-compiler for my operating system project before, but that was just following 
+the tutorial on the OSDev Wiki.&lt;&#x2F;p&gt;
+&lt;p&gt;So how do I make a cross compiler for pleasure and profit?&lt;&#x2F;p&gt;
+&lt;p&gt;For this project, I&#x27;m using my trusty Raspberry Pi Zero W. This is for a couple of reasons.&lt;&#x2F;p&gt;
+&lt;p&gt;First, I recently wanted to cross-compile for the Zero W and could not find a toolchain
+that would work for me. I found a precompiled one, but it had the wrong version
+of glibc included or something. &lt;&#x2F;p&gt;
+&lt;p&gt;Second, it&#x27;s a less-mainstream ARM target. Most of the help I&#x27;ve seen on the Interwebs
+for cross-compiling to Pis is for the Pi 3 or Pi 4. And they&#x27;re using a different
+architecture version than the Pi Zero.&lt;&#x2F;p&gt;
+&lt;p&gt;Which brings me to this project. How do I create a cross-compiler toolchain for the
+Pi Zero W, which a specific glibc version? And more generally, how can I create
+a cross compiler for an arbitrary platform? That, more than anything, is the real
+key takeaway I&#x27;m after.&lt;&#x2F;p&gt;
+&lt;p&gt;I konw I can set the right flags for the target arch and whether to use hard or 
+soft floats, etc., etc. and build binutils, glibc, and gcc from scratch, but that
+sounds really onerous. Is there some other way?&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;enter-crosstool-ng&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#enter-crosstool-ng&quot; aria-label=&quot;Anchor link for: enter-crosstool-ng&quot;&gt;🔗&lt;&#x2F;a&gt;Enter Crosstool-ng.&lt;&#x2F;h1&gt;
+&lt;p&gt;Crosstool-ng is a nifty set of scripts designed to make downloading and building 
+the right binutils, libc, and compiler source easy peasy. And boy, does it deliver. 
+I was able to go from no experience to making a toolchain for my Raspberrry Pi 
+Zero W in under an hour while watching a movie. (Home tinkerers will likely know
+what I mean about a movie-watching productivity hit.)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;configuring-crosstool-ng&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#configuring-crosstool-ng&quot; aria-label=&quot;Anchor link for: configuring-crosstool-ng&quot;&gt;🔗&lt;&#x2F;a&gt;Configuring Crosstool-ng&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a few config options we need to set to tell crosstool-ng to build the right thing.&lt;&#x2F;p&gt;
+&lt;p&gt;The target architecture is of course arm. But what about the instruction set mode? 
+Is it &lt;code&gt;arm&lt;&#x2F;code&gt; or &lt;code&gt;thumb&lt;&#x2F;code&gt;? I think there will be many such details I don&#x27;t know off 
+the top of my head. Let&#x27;s find the datasheet for the CPU.  I found on the Raspberry Pi 
+website that the Pi Zero W uses a Broadcom BCM2835 chip, which contains a 
+single-core ARM1176JZF-S processor. Let&#x27;s look at the datasheet for the ARM1176JZF-S.&lt;&#x2F;p&gt;
+&lt;p&gt;K, it supports arm and thumb instructions, so let&#x27;s go with arm.&lt;&#x2F;p&gt;
+&lt;p&gt;There were some other config parameters I set. Most of them were obvious to me,
+so I didn&#x27;t record them (unfortunate for those 100% of other people who think 
+differently from me, I do apologize). But some of the config items were kind of
+like a treasure hunt. For reference, I&#x27;ve recorded the trickiest items, where I found
+the right value, and what it was for the Pi Zero W here:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Config parameter&lt;&#x2F;th&gt;&lt;th&gt;Where I found the answer&lt;&#x2F;th&gt;&lt;th&gt;Answer&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;architecture level: &lt;code&gt;CT_ARCH_ARCH&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;gcc -v&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;armv6&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;glibc version&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;ldd --version&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;2.31-13&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Various FPU options&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;gcc -v&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;hard float, hardware float throughout&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Alright, with those set, we&#x27;re ready to build the toolchain!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;building-the-toolchain&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-the-toolchain&quot; aria-label=&quot;Anchor link for: building-the-toolchain&quot;&gt;🔗&lt;&#x2F;a&gt;Building the Toolchain&lt;&#x2F;h1&gt;
+&lt;p&gt;With the config values all set to the proper values (hopefully!),  it was time to 
+save my configuration, copy it to &lt;code&gt;.config&lt;&#x2F;code&gt;, and run &lt;code&gt;ct-ng build.10&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After about 15-20 minutes, crosstool-ng had downloaded the specified versions of 
+everything it needed and built a complete compiler and toolchain for me!&lt;&#x2F;p&gt;
+&lt;p&gt;Using that toolchain, I compiled my &lt;code&gt;hello.c&lt;&#x2F;code&gt; program and &lt;code&gt;scp&lt;&#x2F;code&gt;ed it to my pi zero. 
+Hey presto! It works!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;🔗&lt;&#x2F;a&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;In the future, if I ever need to make a cross compiler, I&#x27;m going to build it with
+crosstool-ng. There is no reason not to, and it made the whole process super easy,
+clean, and reproducable. Three wonderful things to see in the mess of complexity
+that is computer programming.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Web Scraping in Rust</title>
+        <published>2023-04-23T00:00:00+00:00</published>
+        <updated>2023-04-23T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/web-scraping-in-rust/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/web-scraping-in-rust/</id>
+        
+        <content type="html">&lt;p&gt;Link to Github: [https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;mls-scraper]&lt;&#x2F;p&gt;
+&lt;p&gt;Recently, I have been on the hunt for a house. This has involved looking at a 
+lot of entries on Utah’s MLS (Multiple Listing System). The MLS website has lots 
+of useful information, including the price, number of beds and baths, square 
+footage, and so on. It also has a link to the property on Google Maps.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;bigbighouse.jpg&quot; alt=&quot;A very reasonably-sized house.&quot;  width=&quot;1536&quot;  height=&quot;765&quot; &#x2F;&gt;
+&lt;p&gt;This quaint city bungalow is perfect for those five-alarm chili parties where 
+11 guests need to use the bathroom at the same time.&lt;&#x2F;p&gt;
+&lt;p&gt;As it turns out, our main criterion for picking a property, besides having a 
+comfortable price and size, was the commute to my office. As my wife and I compiled 
+a dataset of potential houses, it became tedious to manually look up the commute 
+from each property. Futhermore, the address at the top is not selectable, so I 
+can’t just copy it into a spreadsheet.&lt;&#x2F;p&gt;
+&lt;p&gt;This seems like a job for…. a three-day project that saves me a total of 20 minutes!&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is this gives me a chance to try Rust. I’ve used Rust trivially 
+before, but this is an opportunity to make something actually useful to me.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-does-it-do&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-does-it-do&quot; aria-label=&quot;Anchor link for: what-does-it-do&quot;&gt;🔗&lt;&#x2F;a&gt;What Does it Do?&lt;&#x2F;h1&gt;
+&lt;p&gt;The program reaches out to an MLS listing and scrapes a few of the things that are 
+harder to get, like the address, the MLS number, and most importantly, the commute time.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s right. I found a crate that lets me query the Google Maps API, so I 
+automatically look up what the morning commute time is. I get directions for my 
+work address with a departure time of 8:45 next Tuesday morning, as Tuesday is 
+the least remarkable (and most representative) work day.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s how it runs:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; run &lt;span class=&quot;z-string z-quoted z-single z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;https:&#x2F;&#x2F;www.utahrealestate.com&#x2F;&amp;lt;mls number&amp;gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And this is the output:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Days on URE: 135
+Status: ACTIVE
+MLS#: 1####4
+Type: Single Family
+Style: 2-Story
+Year Built: 1939
+Address: 2##########
+Salt Lake City, UT 84103
+Commute time: 42 mins
+Time in traffic: 41 mins
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;running-this-on-the-go-mobile&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#running-this-on-the-go-mobile&quot; aria-label=&quot;Anchor link for: running-this-on-the-go-mobile&quot;&gt;🔗&lt;&#x2F;a&gt;Running this on the Go (Mobile)&lt;&#x2F;h1&gt;
+&lt;p&gt;Even though I use a super-portable ultrabook, I unfortunately don’t always have my 
+laptop with me. Wouldn’t it be nice to run this on my phone? Thanks to the folks 
+over at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;userland.tech&#x2F;&quot;&gt;UserLAnd&lt;&#x2F;a&gt;, this is possible! I just had to clone 
+my repo and manually install a few things. I seem to remember having to install a 
+couple of packages, like &lt;code&gt;ca-certificates&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;phoneuse.jpg&quot; alt=&quot;A screenshot of running this program on an Android phone&quot;  width=&quot;900&quot;  height=&quot;2000&quot; &#x2F;&gt;
+&lt;h1 id=&quot;potential-improvements&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#potential-improvements&quot; aria-label=&quot;Anchor link for: potential-improvements&quot;&gt;🔗&lt;&#x2F;a&gt;Potential Improvements&lt;&#x2F;h1&gt;
+&lt;p&gt;Before long, we were under contract for a house, so my internal need for this 
+has dissipated. But if I were to make a more polished, fleshed-out version, it 
+would look like this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better commute estimation
+&lt;ul&gt;
+&lt;li&gt;Evening commute&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure we’re not estimating on a holiday&lt;&#x2F;li&gt;
+&lt;li&gt;Perhaps do a little iteration to find the optimal departure time&lt;&#x2F;li&gt;
+&lt;li&gt;Check for public transport options&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;More customizability
+&lt;ul&gt;
+&lt;li&gt;Configurable work address&lt;&#x2F;li&gt;
+&lt;li&gt;Output on terminal, and&#x2F;or&lt;&#x2F;li&gt;
+&lt;li&gt;Output to a CSV to make spreadsheeting easier&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Clean up some warnings&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;But for now, I was just doing this project for fun and to save myself a little 
+bit of aggravation. So maybe I’ll come back to it, but I think probably not in 
+any serious capacity.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;thoughts-on-rust&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#thoughts-on-rust&quot; aria-label=&quot;Anchor link for: thoughts-on-rust&quot;&gt;🔗&lt;&#x2F;a&gt;Thoughts on Rust&lt;&#x2F;h1&gt;
+&lt;p&gt;Rust is an interesting language. I find some parts really clean and snappy, like 
+all the builtin functions. I like the safety feature, and I love that it’s 
+efficient and can go toe-to-toe with C++. The main thing I don’t like is the 
+steep learning curve. Rust works very differently from other languages I’ve used 
+before, especially its borrowing system. (Die-hard Rustaceans will tell me that’s 
+what’s so great about it.) That being said, for all my frustrations of trying to 
+figure out why my closure expected a () but found a &amp;amp;str, I keep finding myself 
+drawn to this language. There is something magical about this tricky language. 
+I think my Rust journey is not over; it has just begun.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Linux Kernel Development, part 2: Character Devices</title>
+        <published>2023-01-21T00:00:00+00:00</published>
+        <updated>2023-01-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/linux-kernel-development-part-2/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/linux-kernel-development-part-2/</id>
+        
+        <content type="html">&lt;p&gt;Now that we’ve done &lt;a href=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;blog&#x2F;linux-kernel-development-part-1&#x2F;&quot;&gt;a “Hello, World” kernel module&lt;&#x2F;a&gt;, 
+let’s dive into something a little less trivial: a character device driver. This 
+will allow us to create a file in &lt;code&gt;&#x2F;dev&lt;&#x2F;code&gt; that we can read and write from. Our 
+goal here is to make a &lt;code&gt;&#x2F;dev&#x2F;fibonacci0&lt;&#x2F;code&gt; device that gives us the next Fibonacci 
+number every time we read from it.&lt;&#x2F;p&gt;
+&lt;p&gt;This article will give a brief overview of what’s going on since a comprehensive 
+treatment of the concepts involved is more than I want to type out today. The 
+curious reader will find more details in the “Further Reading” section.&lt;&#x2F;p&gt;
+&lt;p&gt;The code for this article is available on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;linux-kernel-modules&quot;&gt;my Github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Of course, I started this project by adapting my “Hello, World” kernel module 
+from the last article. Then I began working in the dynamic major number allocation 
+and resource creation functions described in &lt;em&gt;Linux Device Drivers&lt;&#x2F;em&gt;. My code was 
+building and running alright:&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;linux-kernel-development&#x2F;part2-not-in-dev.png&quot; alt=&quot;Parital success&quot;  width=&quot;954&quot;  height=&quot;260&quot; &#x2F;&gt;
+&lt;p&gt;But there was nothing in &lt;code&gt;&#x2F;dev&lt;&#x2F;code&gt;! Our device did make it into &lt;code&gt;&#x2F;sys&lt;&#x2F;code&gt;, but not all 
+the way to &lt;code&gt;&#x2F;dev&lt;&#x2F;code&gt;. I turned to some more recent sources to fix my problems. I’m 
+not sure if &lt;em&gt;Linux Device Drivers&lt;&#x2F;em&gt; is just too old to reference here (I suspect 
+not), or if I missed a crucial section in my late-night, new-parent reading of it. 
+Either way, I found some help courtesy of Derek Molloy’s examples, linked below.&lt;&#x2F;p&gt;
+&lt;p&gt;I was getting abysmal speed through SSH, so I soldered on the GPIO headers and 
+busted out the serial console. Because embedded engineers can have nice things 
+too, I’m using &lt;code&gt;tmux&lt;&#x2F;code&gt; over my serial connection. This not only lets me have multiple 
+terminals open, but it also maintains them if my cable gets unplugged.&lt;&#x2F;p&gt;
+&lt;p&gt;First thing to do is to copy our new module over and run it.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &#x2F;lib&#x2F;modules&#x2F;5.15.84+&#x2F;kernel&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; cp &#x2F;tmp&#x2F;fibonacci.ko .&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; modprobe fibonacci&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then we can see what &lt;code&gt;dmesg&lt;&#x2F;code&gt; has to say.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;linux-kernel-development&#x2F;part2-dmesg.png&quot; alt=&quot;dmesg says the device was created successfully&quot;  width=&quot;727&quot;  height=&quot;114&quot; &#x2F;&gt;
+&lt;p&gt;That’s good news! Everything seems to have loaded properly. Let’s check that our device is in &lt;code&gt;&#x2F;dev&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;linux-kernel-development&#x2F;part2-ls-dev.png&quot; alt=&quot;Listing of &amp;#x2F;dev showing fibonacci0&quot;  width=&quot;727&quot;  height=&quot;114&quot; &#x2F;&gt;
+&lt;p&gt;Nice! Now let’s read from it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; cat &#x2F;dev&#x2F;fibonacci0&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;At first, nothing was forthcoming. I was writing to the user-space buffer, but 
+my return values were all off. Because it took me a while to figure out what was 
+going on, I will include what I’ve learned here.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-read&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-read&quot; aria-label=&quot;Anchor link for: how-to-read&quot;&gt;🔗&lt;&#x2F;a&gt;How to &lt;code&gt;read()&lt;&#x2F;code&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;The prototype for our &lt;code&gt;read()&lt;&#x2F;code&gt; function looks like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;C&quot; class=&quot;language-C z-code&quot;&gt;&lt;code class=&quot;language-C&quot; data-lang=&quot;C&quot;&gt;&lt;span class=&quot;z-source z-c&quot;&gt;&lt;span class=&quot;z-support z-type z-sys-types z-c&quot;&gt;ssize_t&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-c&quot;&gt;mydriver_read&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-storage z-type z-c&quot;&gt;struct&lt;&#x2F;span&gt; file &lt;span class=&quot;z-keyword z-operator z-c&quot;&gt;*&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-c&quot;&gt;filePointer&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-c&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-type z-c&quot;&gt;char&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-c&quot;&gt;*&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-c&quot;&gt;userspaceBuffer&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-c&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-sys-types z-c&quot;&gt;size_t&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-c&quot;&gt;sizeOfUserspaceBuffer&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-c&quot;&gt;,&lt;&#x2F;span&gt; loff_t &lt;span class=&quot;z-keyword z-operator z-c&quot;&gt;*&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-c&quot;&gt;offset&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The first argument is a pointer to a &lt;code&gt;struct file&lt;&#x2F;code&gt;. This tells the driver which 
+file is being accessed from userspace. It would be important if I were writing a 
+driver that handled multiple files, but since I am only ever dealing with one 
+file I don’t particularly care about this argument.&lt;&#x2F;p&gt;
+&lt;p&gt;The second argument, &lt;code&gt;userspaceBuffer&lt;&#x2F;code&gt;, is a pointer to a buffer in userspace. 
+This is the destination buffer. You want to copy your data, which is currently in 
+kernel memory, into that userspace buffer. This, like most things in kernel development, 
+is not something you can just &lt;code&gt;strcpy()&lt;&#x2F;code&gt; away. Thanks to the differences in kernel 
+memory and regular, paged userspace memory, you could open up security holes or trigger 
+a page fault from kernel code (which is a no-no), or other icky things. So how the 
+heck do we get data into that buffer? Thankfully, the Linux kernel API provides a 
+nifty function for us that works much like &lt;code&gt;strcpy&lt;&#x2F;code&gt;: &lt;code&gt;copy_to_user()&lt;&#x2F;code&gt;. It works 
+much the same way, but it makes sure that all the virtual memory details are all squared away.&lt;&#x2F;p&gt;
+&lt;p&gt;The program in userland making this read() call passes in the size of it’s 
+receiving buffer, which I have here named &lt;code&gt;sizeOfUserspaceBuffer&lt;&#x2F;code&gt;, as well as an 
+&lt;code&gt;offset&lt;&#x2F;code&gt;. We set that &lt;code&gt;offset&lt;&#x2F;code&gt; in our driver code. It represents how much of the 
+kernel buffer we have already read. I’ll explain a little more below.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;return-values&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#return-values&quot; aria-label=&quot;Anchor link for: return-values&quot;&gt;🔗&lt;&#x2F;a&gt;Return Values&lt;&#x2F;h2&gt;
+&lt;p&gt;Valid return values for our &lt;code&gt;read()&lt;&#x2F;code&gt; function are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol start=&quot;0&quot;&gt;
+&lt;li&gt;This indicates that the end of the file has been reached. The userspace program assumes that no data has been transferred.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Negative value. Indicates an error&lt;&#x2F;li&gt;
+&lt;li&gt;Non-negative value. Indicates the number of bytes copied into the receiving userspace buffer. That is, how much was “read”.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;So how does this work with &lt;code&gt;offset&lt;&#x2F;code&gt;? If I have 48 bytes in my driver for the user 
+to read, they &lt;code&gt;read()&lt;&#x2F;code&gt; and give me a pointer to a 32-byte buffer, then I set 
+&lt;code&gt;offset&lt;&#x2F;code&gt; to 32, since that is where we want the user to next call &lt;code&gt;read()&lt;&#x2F;code&gt;. 
+(Userspace will keep calling &lt;code&gt;read()&lt;&#x2F;code&gt; until I return a value that indicates they 
+have consumed all the available data.) Next time, I get a &lt;code&gt;read()&lt;&#x2F;code&gt; call with &lt;code&gt;offset&lt;&#x2F;code&gt; 
+of 32, and I know to pass bytes 32-47. Finally, the third time I get a &lt;code&gt;read()&lt;&#x2F;code&gt; 
+call, I return 0 to let the userspace program know it got all the data I had.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;putting-it-all-together&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#putting-it-all-together&quot; aria-label=&quot;Anchor link for: putting-it-all-together&quot;&gt;🔗&lt;&#x2F;a&gt;Putting it all together&lt;&#x2F;h1&gt;
+&lt;p&gt;So I made this adjustment to my code and…&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;linux-kernel-development&#x2F;part2-success.png&quot; alt=&quot;Success! Reading fibonacci numbers out of a character device&quot;  width=&quot;727&quot;  height=&quot;317&quot; &#x2F;&gt;
+&lt;p&gt;Huzzah! That’s just what we wanted. Whew! I don’t think I’ve ever worked that hard to generate the Fibonacci series.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;further-reading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#further-reading&quot; aria-label=&quot;Anchor link for: further-reading&quot;&gt;🔗&lt;&#x2F;a&gt;Further Reading&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;linux-kernel-labs.github.io&#x2F;refs&#x2F;heads&#x2F;master&#x2F;labs&#x2F;device_drivers.html&quot;&gt;https:&#x2F;&#x2F;linux-kernel-labs.github.io&#x2F;refs&#x2F;heads&#x2F;master&#x2F;labs&#x2F;device_drivers.html&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;static.lwn.net&#x2F;images&#x2F;pdf&#x2F;LDD3&#x2F;ch03.pdf&quot;&gt;https:&#x2F;&#x2F;static.lwn.net&#x2F;images&#x2F;pdf&#x2F;LDD3&#x2F;ch03.pdf&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.kernel.org&#x2F;doc&#x2F;htmldocs&#x2F;kernel-api&#x2F;index.html&quot;&gt;Linux Kernel API Reference&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;http:&#x2F;&#x2F;derekmolloy.ie&#x2F;writing-a-linux-kernel-module-part-2-a-character-device&#x2F;&quot;&gt;Derek Molloy’s treatment of the subject&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Linux Kernel Development on the Raspberry Pi Zero W</title>
+        <published>2023-01-03T00:00:00+00:00</published>
+        <updated>2023-01-03T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/linux-kernel-development-part-1/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/linux-kernel-development-part-1/</id>
+        
+        <content type="html">&lt;h1 id=&quot;building-the-raspberry-pi-kernel-from-source&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-the-raspberry-pi-kernel-from-source&quot; aria-label=&quot;Anchor link for: building-the-raspberry-pi-kernel-from-source&quot;&gt;🔗&lt;&#x2F;a&gt;Building the Raspberry Pi Kernel from Source&lt;&#x2F;h1&gt;
+&lt;p&gt;“From source?” you say. “But Tristan, we can totally just build a module as long 
+as we have the headers.” Yes, yes. That’s true. But we’re on a learnin’ adventure 
+here today, so we’re going to start by building the kernel from source. Plus, 
+building the kernel from source and then building kernel modules off of that is a 
+great way to ensure the module is compiled against the same version as the kernel 
+is running, which is Very Important.&lt;&#x2F;p&gt;
+&lt;p&gt;First, I clone the sources and run a build, to make sure I have everything I need.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; clone&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; --&lt;&#x2F;span&gt;depth&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-option z-shell&quot;&gt;=&lt;&#x2F;span&gt;1 https:&#x2F;&#x2F;github.com&#x2F;raspberrypi&#x2F;linux.git raspberrypi-linux&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; raspberrypi-linux&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We need to make the config file that controls the kernel build process. Because we’re doing this on my (much more capable) machine instead of on the target, we include some extra parameters to specify how to cross-compile.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-assignment z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-unquoted z-shell&quot;&gt;kernel&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;make&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcmrpi_defconfig&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I put my laptop into “High performace” mode for whatever that does and run the following:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;make&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now it’s time to deploy our changes. Plug in that SD card and let’s get down to it. 
+This step is a little involved, so I wrote up a script to do it for me.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;deploy.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;!&#x2F;usr&#x2F;bin&#x2F;env bash&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-set z-shell&quot;&gt;set&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt;-&lt;&#x2F;span&gt;ue&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt;-&lt;&#x2F;span&gt;o&lt;&#x2F;span&gt; pipefail&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-variable z-other z-readwrite z-assignment z-shell&quot;&gt;DESTINATION_ROOT&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-unquoted z-shell&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&#x2F;media&#x2F;tristan&#x2F;rootfs&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-variable z-other z-readwrite z-assignment z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-unquoted z-shell&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&#x2F;media&#x2F;tristan&#x2F;boot&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-variable z-other z-readwrite z-assignment z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-unquoted z-shell&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;kernel&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-keyword z-control z-conditional z-if z-shell&quot;&gt;if&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-logical z-shell&quot;&gt;!&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-double-brace z-begin z-shell&quot;&gt;[[&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt;-&lt;&#x2F;span&gt;d&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_ROOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-function z-double-brace z-end z-shell&quot;&gt;]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-keyword z-control z-conditional z-then z-shell&quot;&gt;then&lt;&#x2F;span&gt;
+    &lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-echo z-shell&quot;&gt;echo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Could not find root destination &lt;span class=&quot;z-constant z-character z-escape z-shell&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_ROOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-character z-escape z-shell&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;. Is it mounted?&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-exit z-shell&quot;&gt;exit&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; 1&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-keyword z-control z-conditional z-end z-shell&quot;&gt;fi&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-keyword z-control z-conditional z-if z-shell&quot;&gt;if&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-logical z-shell&quot;&gt;!&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-double-brace z-begin z-shell&quot;&gt;[[&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt;-&lt;&#x2F;span&gt;d&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-function z-double-brace z-end z-shell&quot;&gt;]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-keyword z-control z-conditional z-then z-shell&quot;&gt;then&lt;&#x2F;span&gt;
+    &lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-echo z-shell&quot;&gt;echo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Could not find boot destination &lt;span class=&quot;z-constant z-character z-escape z-shell&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-character z-escape z-shell&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;. Is it mounted?&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-exit z-shell&quot;&gt;exit&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; 2&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-keyword z-control z-conditional z-end z-shell&quot;&gt;fi&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; Install kernel modules to SD card&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; env PATH=&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=&lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_ROOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; modules_install&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; Backup old img&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;.img&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;-backup.img&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; Install new kernel and device tree files&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; arch&#x2F;arm&#x2F;boot&#x2F;zImage &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;KERNEL&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;.img&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; arch&#x2F;arm&#x2F;boot&#x2F;dts&#x2F;&lt;span class=&quot;z-keyword z-operator z-regexp z-quantifier z-shell&quot;&gt;*&lt;&#x2F;span&gt;.dtb &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; arch&#x2F;arm&#x2F;boot&#x2F;dts&#x2F;overlays&#x2F;&lt;span class=&quot;z-keyword z-operator z-regexp z-quantifier z-shell&quot;&gt;*&lt;&#x2F;span&gt;.dtb&lt;span class=&quot;z-keyword z-operator z-regexp z-quantifier z-shell&quot;&gt;*&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;overlays&#x2F;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; arch&#x2F;arm&#x2F;boot&#x2F;dts&#x2F;overlays&#x2F;README &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-variable z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-begin z-shell&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-variable z-other z-readwrite z-shell&quot;&gt;DESTINATION_BOOT&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-expansion z-parameter z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-expansion z-parameter z-end z-shell&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;overlays&#x2F;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we’ll slide that SD card in the Pi Zero W and boot ‘er up.&lt;&#x2F;p&gt;
+&lt;p&gt;Success! It still boots. That’s good news. Now let’s make some oh-so-satisfying changes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;let-s-make-a-kernel-module&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#let-s-make-a-kernel-module&quot; aria-label=&quot;Anchor link for: let-s-make-a-kernel-module&quot;&gt;🔗&lt;&#x2F;a&gt;Let’s Make a Kernel Module&lt;&#x2F;h1&gt;
+&lt;p&gt;These first few “learning” modules won’t do anything serious, so I don’t feel 
+inclined to put them in their own git repo(s). Instead, let’s make a new git 
+branch and a new directory in the kernel repo.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; checkout&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;b&lt;&#x2F;span&gt; my_custom_development&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; custom_modules&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; custom_modules&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then, let’s add our beginners’ kernel module and a Makefile. As you can see, I 
+am a fan of silly messages for test printouts. It makes it more fun.&lt;&#x2F;p&gt;
+&lt;p&gt;Now for &lt;code&gt;helloworld.c&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;C&quot; class=&quot;language-C z-code&quot;&gt;&lt;code class=&quot;language-C&quot; data-lang=&quot;C&quot;&gt;&lt;span class=&quot;z-source z-c&quot;&gt;&lt;span class=&quot;z-meta z-preprocessor z-include z-c&quot;&gt;&lt;span class=&quot;z-keyword z-control z-import z-include z-c&quot;&gt;#include&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-other z-lt-gt z-include z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-c&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;linux&#x2F;init.h&lt;span class=&quot;z-punctuation z-definition z-string z-end z-c&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-preprocessor z-include z-c&quot;&gt;&lt;span class=&quot;z-keyword z-control z-import z-include z-c&quot;&gt;#include&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-other z-lt-gt z-include z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-c&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;linux&#x2F;module.h&lt;span class=&quot;z-punctuation z-definition z-string z-end z-c&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-variable z-function z-c&quot;&gt;MODULE_LICENSE&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;GPLv3&lt;span class=&quot;z-punctuation z-definition z-string z-end z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-storage z-modifier z-c&quot;&gt;static&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-type z-c&quot;&gt;int&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-c&quot;&gt;hello_world_init&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-storage z-type z-c&quot;&gt;void&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-c&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;
+    &lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-variable z-function z-c&quot;&gt;printk&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;KERN_ALERT &lt;span class=&quot;z-string z-quoted z-double z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Hello, world! This is My First Kernel Module(TM) by Playskool(TM)&lt;span class=&quot;z-constant z-character z-escape z-c&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;z-keyword z-control z-flow z-return z-c&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-numeric z-integer z-decimal z-c&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-end z-c&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-storage z-modifier z-c&quot;&gt;static&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-type z-c&quot;&gt;void&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-c&quot;&gt;hello_world_exit&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-parameters z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-storage z-type z-c&quot;&gt;void&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-c&quot;&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;
+    &lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-variable z-function z-c&quot;&gt;printk&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;KERN_ALERT &lt;span class=&quot;z-string z-quoted z-double z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Goodbye, world! Remember to tip your waitresses&lt;span class=&quot;z-constant z-character z-escape z-c&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-c&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-c&quot;&gt;&lt;span class=&quot;z-meta z-block z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-end z-c&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-variable z-function z-c&quot;&gt;module_init&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;hello_world_init&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-variable z-function z-c&quot;&gt;module_exit&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-c&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-c&quot;&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;hello_world_exit&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-c&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-c&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-c&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And the Makefile:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;Makefile&quot; class=&quot;language-Makefile z-code&quot;&gt;&lt;code class=&quot;language-Makefile&quot; data-lang=&quot;Makefile&quot;&gt;&lt;span class=&quot;z-source z-makefile&quot;&gt;&lt;span class=&quot;z-variable z-other z-makefile&quot;&gt;CR_C&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-makefile&quot;&gt;:=&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-source z-makefile&quot;&gt;&lt;span class=&quot;z-meta z-string z-makefile&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-makefile&quot;&gt;arm-linux-gnueabihf-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-variable z-other z-makefile&quot;&gt;KERNEL_DIR&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-makefile&quot;&gt;:=&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-source z-makefile&quot;&gt;&lt;span class=&quot;z-meta z-string z-makefile&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-makefile&quot;&gt;&#x2F;home&#x2F;tristan&#x2F;Repos&#x2F;raspberrypi-linux&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-variable z-other z-makefile&quot;&gt;obj-m&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-makefile&quot;&gt;+=&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-source z-makefile&quot;&gt;&lt;span class=&quot;z-meta z-string z-makefile&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-makefile&quot;&gt;helloworld.o&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;z-meta z-function z-makefile&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-makefile&quot;&gt;all&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-makefile&quot;&gt;:&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function z-arguments z-makefile&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-body z-makefile&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-body z-makefile&quot;&gt;	&lt;span class=&quot;z-source z-shell&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;make&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; ARCH=arm CROSS_COMPILE=&lt;span class=&quot;z-variable z-parameter z-makefile&quot;&gt;&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;CR_C&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;C&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-makefile&quot;&gt;&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;KERNEL_DIR&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; M=&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-function z-builtin z-makefile&quot;&gt;shell&lt;&#x2F;span&gt; &lt;span class=&quot;z-source z-shell&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt; modules&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-makefile&quot;&gt;&lt;span class=&quot;z-entity z-name z-function z-makefile&quot;&gt;clean&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-makefile&quot;&gt;:&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function z-arguments z-makefile&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-body z-makefile&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-body z-makefile&quot;&gt;	&lt;span class=&quot;z-source z-shell&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;make&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; ARCH=arm CROSS_COMPILE=&lt;span class=&quot;z-variable z-parameter z-makefile&quot;&gt;&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;CR_C&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;C&lt;&#x2F;span&gt; &lt;span class=&quot;z-variable z-parameter z-makefile&quot;&gt;&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;KERNEL_DIR&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; M=&lt;span class=&quot;z-keyword z-other z-block z-begin z-makefile&quot;&gt;$(&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-function z-builtin z-makefile&quot;&gt;shell&lt;&#x2F;span&gt; &lt;span class=&quot;z-source z-shell&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-other z-block z-end z-makefile&quot;&gt;)&lt;&#x2F;span&gt; clean&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The Makefile has two targets: &lt;code&gt;all&lt;&#x2F;code&gt; and &lt;code&gt;clean&lt;&#x2F;code&gt;. Let me break down the &lt;code&gt;make&lt;&#x2F;code&gt; commands for you.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ARCH=arm&lt;&#x2F;code&gt; sets the architecture to arm. Important for cross-compiling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;CROSS_COMPILER=$(CR_C)&lt;&#x2F;code&gt;: Sets the cross-compiler binary prefix. When &lt;code&gt;make&lt;&#x2F;code&gt; calls &lt;code&gt;gcc&lt;&#x2F;code&gt; now, it will call &lt;code&gt;arm-linux-gnueabihf-gcc&lt;&#x2F;code&gt; instead.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-C $(KERNEL_DIR)&lt;&#x2F;code&gt;: This has &lt;code&gt;make&lt;&#x2F;code&gt; change directory to &lt;code&gt;KERNEL_DIR&lt;&#x2F;code&gt; before it does anything else. We do this so all the headers and other kernel-ly goodness is in place before we make.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;M=$(shell pwd)&lt;&#x2F;code&gt; This sets the variable &lt;code&gt;M&lt;&#x2F;code&gt;, which is typically used in kernel Makefiles to represent the directory of an external module to build.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;modules&lt;&#x2F;code&gt;: The actual target to build. All the logic for how this is executed is defined in the main kernel Makefile.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;So now we have a bunch of files in our &lt;code&gt;custom_modules&lt;&#x2F;code&gt; directory. Let’s copy one 
+over to our Raspberry Pi Zero W and load it up to see the fruits of our labor! 
+We need to copy it to somewhere in &lt;code&gt;&#x2F;lib&#x2F;modules&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;scp&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; helloworld.ko pizero:&#x2F;tmp&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;ssh&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; pizero&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we’ll run some commands on the Pi Zero. First we copy the kernel module to an 
+appropriate directory. Then, we’ll run &lt;code&gt;depmod&lt;&#x2F;code&gt; and &lt;code&gt;modprobe&lt;&#x2F;code&gt;, to load our 
+module into the kernel. Then, we’ll check to make sure it’s loaded with &lt;code&gt;lsmod&lt;&#x2F;code&gt;. 
+Finally, we look at the message we wanted our module to print using &lt;code&gt;journalctl&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;On the Pi:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; cp &#x2F;tmp&#x2F;helloworld.ko &#x2F;lib&#x2F;modules&#x2F;5.15.84+&#x2F;kernel&#x2F;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;modinfo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &#x2F;lib&#x2F;modules&#x2F;5.15.84+&#x2F;kernel&#x2F;helloworld.ko&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;depmod&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; modprobe helloworld&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;lsmod&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-keyword z-operator z-logical z-pipe z-shell&quot;&gt;|&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;grep&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; helloworld&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt;&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;xe&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;linux-kernel-development&#x2F;part1-success.png&quot; alt=&quot;The sweet, beautiful sight of a correct terminal printout&quot;  width=&quot;954&quot;  height=&quot;260&quot; &#x2F;&gt;
+&lt;p&gt;There it is! That’s our message. When we unload the module, we will see the other 
+message as well. That was a lot of fun! Tune in next time for a less trivial 
+kernel module as we work our way towards building drivers.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About Tristan Andrus</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/about/" type="text/html"/>
+        <id>https://tristanandrus.com/about/</id>
+        
+        <content type="html">&lt;h1 id=&quot;about-me&quot;&gt;About Me&lt;&#x2F;h1&gt;
+&lt;p&gt;I love making things work.&lt;&#x2F;p&gt;
+&lt;p&gt;I am an embedded engineer living in the Salt Lake Metro area, Utah, USA. I love Linux, embedded systems, and computer security. I also love acting, singing, and playing the piano. And learning languages, like Latin and Chinese. Most of all, though, I love creating things.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;experience&quot;&gt;Experience&lt;&#x2F;h1&gt;
+&lt;p&gt;I have been working professionally as an engineer since January of 2018. Most of that time has been spent working with drones: everything from developing software to fly autonomous missions to designing circuit boards to working on the frame. Since then, I have shifted to working in the home security and IoT space. I have a B.S. in computer engineering from Utah State University.&lt;&#x2F;p&gt;
+&lt;p&gt;For more of my professional experience, check out my “Professional” page.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;why-engineering&quot;&gt;Why engineering?&lt;&#x2F;h1&gt;
+&lt;p&gt;As a kid, I loved the Harry Potter books. I used to dream about waking up to an invitation to learn about a world of magic.&lt;&#x2F;p&gt;
+&lt;p&gt;Electronics and computers are the closest thing to magic we have in this world. Tell me this isn’t magic: We melt down a lump of sand into a very specific configuration. By doing special, wizardly things to it, we can package that lump of melted sand into something you can speak to and it can literally order a pizza for you. That lump of sand uses wizardry to understand what you’re saying, talks to other lumps of sand through wires people have strung every which way, and eventually another lump of sand writes a message to a human being, who starts making you a pizza. This is magic, my friends, and I am all in.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;things-you-should-know-about-me&quot;&gt;Things you should know about me&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m a self-starter. I taught myself to code in middle school and Latin in high school. I love learning!&lt;&#x2F;li&gt;
+&lt;li&gt;I constantly have projects going on, from my chain mail, to learning to play the organ, to the operating system I started from scratch.&lt;&#x2F;li&gt;
+&lt;li&gt;I almost became an actor moonlighting as an engineer. I’m glad I’m doing it the other way around.&lt;&#x2F;li&gt;
+&lt;li&gt;I have watched Frasier probably upwards of 20 times through.&lt;&#x2F;li&gt;
+&lt;li&gt;I love Linux. It is the only operating system I use on the daily. No joke: every computer I own has Linux (or Android) installed on it.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;examples-of-my-work&quot;&gt;Examples of my work&lt;&#x2F;h1&gt;
+&lt;p&gt;If you’re an employer looking to give me a great job, you might be interested to see examples of my work on GitHub. A lot of my portfolio is school assignments and to make it harder for would-be plagurists I have made all those repositories private. If you convince me you’re not just a lazy engineering student I’ll give you read access to the repositories for any of the following classes:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Microcontrollers
+Computer Networks
+Compiler Construction
+Reconfigurable Computing
+Intelligent Systems
+Operating Systems and Concurrency
+Data Structures and Algorithms (C++)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Although I am still relatively new at engineering professionally, I am so excited to start my full-time engineering adventure! I love doing this stuff on my own and at work.
+Contact Me&lt;&#x2F;p&gt;
+&lt;p&gt;If you want to contact me, I am available on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tristan-andrus&quot;&gt;LinkedIn&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2022 Book Review</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/2022-book-review/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/2022-book-review/</id>
+        
+        <content type="html">&lt;p&gt;Here are some of the books I read in 2022 and what I thought of them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-mythical-man-month-by-fred-brooks&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-mythical-man-month-by-fred-brooks&quot; aria-label=&quot;Anchor link for: the-mythical-man-month-by-fred-brooks&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; by Fred Brooks&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. &lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; is a classic of software program management, and
+for good reason. Every chapter laid out truths about software development that
+resonated deeply with my experience. There were some surreal parts of some of 
+the later chapters where Brooks would go from a timeless nugget of wisdom to 
+discussing details of the microfiche system he was using. However, I’d say 93% 
+of the book is just as relevant today as it was then. For a 1975 computer book, 
+The Mythical Man Month holds up impressively well.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;dune-by-frank-herbert&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#dune-by-frank-herbert&quot; aria-label=&quot;Anchor link for: dune-by-frank-herbert&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Dune&lt;&#x2F;em&gt; by Frank Herbert&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. I’ll admit, I started reading Dune because of the 2021 film. I started reading it in that year and only in 2022 did I finish it. This book is dense. The world building is impeccable. It can be a little tedious at times because you get to experience scenes through multiple characters’ eyes. I want to know what’s going to happen to Muad’Dib, but for now this series is on the back burner.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ready-player-two-by-ernest-cline&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ready-player-two-by-ernest-cline&quot; aria-label=&quot;Anchor link for: ready-player-two-by-ernest-cline&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Ready Player Two&lt;&#x2F;em&gt; by Ernest Cline&lt;&#x2F;h1&gt;
+&lt;p&gt;3&#x2F;10. I’m sad to say this did not live to its predecessor. I think it’s a combination of factors. Most of the references did not resonate with me, and the pacing was wonky. The setup was cool, but took a long time. Then the first couple adventures took a long time, followed by several rushed ones and a quick ending.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-green-mile-by-stephen-king&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-green-mile-by-stephen-king&quot; aria-label=&quot;Anchor link for: the-green-mile-by-stephen-king&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Green Mile&lt;&#x2F;em&gt; by Stephen King&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. Good writing. Mostly interesting story. Not as captivating as Misery. There were some dull spots. But it did make me cry, so there’s that.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shady-characters-by-keith-houston&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#shady-characters-by-keith-houston&quot; aria-label=&quot;Anchor link for: shady-characters-by-keith-houston&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Shady Characters&lt;&#x2F;em&gt; by Keith Houston&lt;&#x2F;h1&gt;
+&lt;p&gt;9&#x2F;10. I would recommend this book to anyone who has ever wondered why the question mark looks the way it does, or anyone who knows what a pilcrow is. Very informative and well researched.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;evicted-by-nathan-desmond&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#evicted-by-nathan-desmond&quot; aria-label=&quot;Anchor link for: evicted-by-nathan-desmond&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Evicted&lt;&#x2F;em&gt; by Nathan Desmond&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. It is hard to express how meaningful this book was to read. It takes a very honest look at poverty in America, revolving around evictions and housing insecurity. This was written by a man who has spent years with poor tenants and their landlords. This is one of those books that will change your outlook on things forever. I very much recommend it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-body-a-guide-for-occupants-by-bill-bryson&quot; aria-label=&quot;Anchor link for: the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Body: A Guide for Occupants&lt;&#x2F;em&gt; by Bill Bryson&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. This book was good, but felt a little offbeat at times. My main takeaways are these. First, medicine has really only had a handful of really big hits: germ theory, a scientific understanding of anatomy, antibiotics, anesthetic, and vaccines. There is still a lot we don’t know about the body. But ol’ Bill Bryson does not have a medical degree, so if anyone qualified would like to email me to correct my takeaways, I would welcome it.&lt;&#x2F;p&gt;
+&lt;p&gt;The other takeaway from The Body is an understanding of why traditional, conservative farming communities are predisposed to be leery of doctors. Because until about 120 years ago, a lot of what doctors did was actively harmful. Yikes!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot; aria-label=&quot;Anchor link for: how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;How to Invent Everything: A Survival Guide for the Stranded Time Traveler&lt;&#x2F;em&gt; by Ryan North&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. I love this book. I have always tried to build a library where if it were the last remaining library on Earth, I could feasibly rebuild civilization. You know, at least a bit. This book is now the crown jewel of that collection. It was amazing to see how to bootstrap civilization in one hardcover tome. If I ever have to dash off into the wilderness, I hope to have a copy of How to Invent Everything with me.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Professional Experience</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/experience/" type="text/html"/>
+        <id>https://tristanandrus.com/experience/</id>
+        
+        <content type="html">&lt;h1 id=&quot;professional-experience&quot;&gt;Professional Experience&lt;&#x2F;h1&gt;
+&lt;p&gt;I have a B.S. in computer engineering from Utah State University. As an embedded engineer, I enjoy both the software and hardware realms and thrive on the interplay between the two.&lt;&#x2F;p&gt;
+&lt;p&gt;I have been working as an engineer professionally since 2018, and full-time since 2021.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software&quot;&gt;Software&lt;&#x2F;h1&gt;
+&lt;p&gt;I have been coding since 2008, when I learned BASIC for an English project, of all 
+things. I went on to learn C, C++, C#, x86(_64) assembly, Rust, and Python, and 
+dabble in a few others, like Java and JavaScript. I am most proficient in C++. 
+Until I started working at Vivint, all of my professional development has been in C++. 
+However, I have done development in pure C, and I am well familiar with the differences 
+between C and C++. I have done a few projects in Rust as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Some notable software projects I have done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The operating system kernel I wrote for my senior design project&lt;&#x2F;li&gt;
+&lt;li&gt;A CPSL compiler&lt;&#x2F;li&gt;
+&lt;li&gt;The STM32 ARM-powered robot I controlled over Bluetooth (pure C code)&lt;&#x2F;li&gt;
+&lt;li&gt;The MAVLink library a previous company has been using for years for command and control of ArduCopter drones&lt;&#x2F;li&gt;
+&lt;li&gt;Control code for a manufacturing machine&lt;&#x2F;li&gt;
+&lt;li&gt;An implementation of ARP&lt;&#x2F;li&gt;
+&lt;li&gt;A grammar-based text generator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;linux&quot;&gt;Linux&lt;&#x2F;h1&gt;
+&lt;p&gt;Linux has been my daily driver for the past 6 years. I work, play, write, and game 
+on Linux 98% of the time. I am proficient with shell scripting as well as systemd 
+service configuration. About 4 years ago, I switched to using Arch on my main 
+machines as a way of gaining understanding of how Linux works underneath the hood.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve also started to sharpen my embedded Linux skills with some Yocto projects&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;hardware&quot;&gt;Hardware&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;fpga&quot;&gt;FPGA&lt;&#x2F;h2&gt;
+&lt;p&gt;I have done some work with FPGAs in both Verilog and VHDL. Some notable projects from this category include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A 4-bit CPU complete with arithmetic logic unit (ALU) and instruction pointer&lt;&#x2F;li&gt;
+&lt;li&gt;A bumper pool game that utilized DACs and ADCs and drove a VGA connector for graphics&lt;&#x2F;li&gt;
+&lt;li&gt;A pseudo-random number generator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;analog-design-pcbs&quot;&gt;Analog Design&#x2F;PCBs&lt;&#x2F;h2&gt;
+&lt;p&gt;I have designed two PCBs for work of about 10-20 components each. I used ExpressPCB 
+and Altium for them. The former project was implemented and flown on drone missions, 
+but production of the latter has been halted until the program gets more funding. 
+I have also designed, layed out, and assembled a PCB at home with KiCad.&lt;&#x2F;p&gt;
+&lt;p&gt;Besides straight PCBs, I also design circuits when I can. For instance, I designed 
+and soldered all the circuitry in my Useless Box project (article coming soon).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;power&quot;&gt;Power&lt;&#x2F;h2&gt;
+&lt;p&gt;My most significant foray into power electronics was the design of a 2 kW solar 
+powered battery charging station which is still in use today.&lt;&#x2F;p&gt;
+&lt;p&gt;One of my primary concerns as “the drone guy” at work is ensuring all the payload 
+components have power. I select various BECs or voltage regulators to ensure there 
+is enough current at the appropriate voltages for the payload components on board.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Meeting Indicator</title>
+        <published>2022-12-17T00:00:00+00:00</published>
+        <updated>2022-12-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/meeting-indicator/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/meeting-indicator/</id>
+        
+        <content type="html">&lt;h1 id=&quot;meeting-indicator&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#meeting-indicator&quot; aria-label=&quot;Anchor link for: meeting-indicator&quot;&gt;🔗&lt;&#x2F;a&gt;Meeting Indicator&lt;&#x2F;h1&gt;
+&lt;p&gt;Ever since I started working from home my wife has wanted to know if I’m in a meeting or not. You know, to know if she can interrupt me to ask me a question or say goodbye when she leaves for an errand, that sort of thing. Her proposed solution to this problem was some sort of remote-controlled LED stand.&lt;&#x2F;p&gt;
+&lt;p&gt;This was a fine solution, but since most of these remotes use IR, they would likely require me to stand up from my desk, cross the room, open the door, turn on the lights with a remote, and then go back to my meeting. And I would have to repeat all those steps when I’m done with the meeting. That’s a lot of interruption and steps, and at that point I might as well have a hotel “Do Not Disturb” sign I just hang on my door. And from experience, I probably would not remember to set the indicator until I was already in the meeting.&lt;&#x2F;p&gt;
+&lt;p&gt;So there was the problem statement. I need something clear to indicate I’m in a meeting, and it has to be something low-friction for me. And if I happened to make it easy to automate in the future (for instance, it detects when Zoom or Teams is open and sets&#x2F;unsets automatically), even better!&lt;&#x2F;p&gt;
+&lt;p&gt;I chose the trusty ESP8266 for this job. I have a bunch of them lying around, and they come with a ready-made server application example. I coded in a couple of endpoints to change the colors and query what color was displayed. The code was displayed below&lt;&#x2F;p&gt;
+&lt;p&gt;I started prototyping on a breadboard. I was able to minimize the number of components I needed for a bright light by joining the cathodes of all four LEDs and running a single resistor from that common node to ground. This seems a little sketchy at first, but as long as I never have both colors of LEDs on at the same time, it will be just fine. Heck, it will probably be okay even if all four LEDs are on simultaneously anyway.&lt;&#x2F;p&gt;
+&lt;p&gt;The brightness of just one green or one red LED powered from the microcontroller was not very visible, so I put two of each color in parallel.&lt;&#x2F;p&gt;
+&lt;p&gt;I had this on a breadboard for probably a month or so to prove the hardware and then moved into a more permanent perfboard.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;singles&#x2F;meeting-indicator.jpg&quot; alt=&quot;My meeting indicator&quot;  width=&quot;1536&quot;  height=&quot;920&quot; &#x2F;&gt;
+&lt;p&gt;A couple of aliases later and I can simply type &lt;code&gt;inmeeting&lt;&#x2F;code&gt; or &lt;code&gt;outmeeting&lt;&#x2F;code&gt; on my work laptop and my light changes from green to red and back again. This little project has helped my working from home life immensely!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hello World in Yocto</title>
+        <published>2022-06-30T00:00:00+00:00</published>
+        <updated>2022-06-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/hello-world-in-yocto/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/hello-world-in-yocto/</id>
+        
+        <content type="html">&lt;h1 id=&quot;introduction&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot;&gt;🔗&lt;&#x2F;a&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;Yocto is a way to role your own Linux distribution, with a focus on embedded 
+systems. This page will get you up and running!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;requirements&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#requirements&quot; aria-label=&quot;Anchor link for: requirements&quot;&gt;🔗&lt;&#x2F;a&gt;Requirements&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;50 GB of disk space&lt;&#x2F;li&gt;
+&lt;li&gt;A supported distribution (If using Arch, follow the Arch Wiki article)&lt;&#x2F;li&gt;
+&lt;li&gt;These packages installed: &lt;code&gt;gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A semipowerful computer. If you’re doing this on a Chromebook, you’re going to have a bad time.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;setup&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#setup&quot; aria-label=&quot;Anchor link for: setup&quot;&gt;🔗&lt;&#x2F;a&gt;Setup&lt;&#x2F;h1&gt;
+&lt;p&gt;We will be following the documenation at [https:&#x2F;&#x2F;docs.yoctoproject.org] today.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s clone the repo, first of all.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; clone git:&#x2F;&#x2F;git.yoctoproject.org&#x2F;poky.git&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; poky&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The branches of the repo are all releases. We’re going to check out the 
+&lt;code&gt;kirkstone&lt;&#x2F;code&gt; branch, since that is the most recent release at the time of this writing.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; checkout&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;t&lt;&#x2F;span&gt; origin&#x2F;kirkstone&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; -&lt;&#x2F;span&gt;b&lt;&#x2F;span&gt; kirkstone&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; pull&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The basic workflow works like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-source z-shell&quot;&gt;source&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; oe-init-build-env &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;build-dir&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;bitbake&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; core-image-full-cmdline&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Notice that when you source &lt;code&gt;oe-init-build-env&lt;&#x2F;code&gt; it also puts you in the build 
+directory. If your build directory didn’t exist before, now it does, along with 
+some important files in the &lt;code&gt;conf&lt;&#x2F;code&gt; directory.&lt;&#x2F;p&gt;
+&lt;p&gt;The official docs suggest uncommenting these lines in the &lt;code&gt;conf&#x2F;local.conf&lt;&#x2F;code&gt; file 
+in your build directory:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;BB_SIGNATURE_HANDLER = &amp;quot;OEEquivHash&amp;quot;
+BB_HASHSERVE = &amp;quot;auto&amp;quot;
+BB_HASHSERVE_UPSTREAM = &amp;quot;typhoon.yocto.io:8687&amp;quot;
+SSTATE_MIRRORS ?= &amp;quot;file:&#x2F;&#x2F;.* https:&#x2F;&#x2F;sstate.yoctoproject.org&#x2F;all&#x2F;PATH;downloadfilename=PATH&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Uncommenting those lines lets Yocto download pre-built OS bits instead of building 
+them yourself. It’s way faster! I did that and I was able to have a build going 
+in 4-5 minutes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;hello-world-in-yocto&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#hello-world-in-yocto&quot; aria-label=&quot;Anchor link for: hello-world-in-yocto&quot;&gt;🔗&lt;&#x2F;a&gt;Hello World in Yocto&lt;&#x2F;h1&gt;
+&lt;p&gt;Alright, this is it. Let’s build an operating system and emulate it with QEMU.&lt;&#x2F;p&gt;
+&lt;p&gt;In your build directory, run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;bitbake&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; core-image-full-cmdline&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You’ll see lots of spinny things happen, and then it will finish. If you’ve chosen to download over build it won’t take long, depending on the speed of your network connection.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s run this sucker.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;runqemu&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; qemux86-64&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You’ll see it boot, and wonder of wonder, miracle of miracles:&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;yocto&#x2F;yocto-bootscreen.png&quot; alt=&quot;The Yocto bootscreen&quot;  width=&quot;1024&quot;  height=&quot;796&quot; &#x2F;&gt;
+&lt;p&gt;A boot screen!&lt;&#x2F;p&gt;
+&lt;p&gt;Login with the username &lt;code&gt;root&lt;&#x2F;code&gt; (no password) and you’re set! You just made your 
+own operating system (ish)!&lt;&#x2F;p&gt;
+&lt;p&gt;Now for the moment we’ve all been waiting for.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-echo z-shell&quot;&gt;echo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-string z-quoted z-double z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Hello, world!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;yocto&#x2F;yocto-hello-world.jpg&quot; alt=&quot;The Yocto bootscreen&quot;  width=&quot;1024&quot;  height=&quot;796&quot; &#x2F;&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Useless Box</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/useless-box/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/useless-box/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;A useless project, but a fun one to be sure&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I wanted to make a useless box because it sounded like a fun project and it would make a nice gift for my wife. Plus, I had all the hardware!&lt;&#x2F;p&gt;
+&lt;p&gt;Here it is in action:&lt;&#x2F;p&gt;
+&lt;div &gt;
+    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;e5GbTxEwg40&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The primary reason this took so long was because I didn’t have a 3D printer at 
+first. After I acquired one this project took off! It was so exciting to print 
+out those parts effortlessly, instead of trying to craft them out of cardboard.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;mechanical-assembly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#mechanical-assembly&quot; aria-label=&quot;Anchor link for: mechanical-assembly&quot;&gt;🔗&lt;&#x2F;a&gt;Mechanical Assembly&lt;&#x2F;h1&gt;
+&lt;p&gt;All of the mechanical pieces are 3D printed. I used balassy’s design, 
+&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.thingiverse.com&#x2F;thing:3856965&quot;&gt;found on Thingiverse&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of the screws used are M3. It’s so nice to use metric screws. They’re much 
+simpler than the multiple Imperial scales we use here in the States.&lt;&#x2F;p&gt;
+&lt;p&gt;There was nothing mechanical holding the lid opener servo to the bottom of the 
+box, so I used an adhesive strip from a package of command hooks. It worked 
+really well.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;electrical-assembly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#electrical-assembly&quot; aria-label=&quot;Anchor link for: electrical-assembly&quot;&gt;🔗&lt;&#x2F;a&gt;Electrical Assembly&lt;&#x2F;h1&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;uselessbox-hw-overview.jpg&quot; alt=&quot;Useless Box hardware assembly&quot;  width=&quot;1287&quot;  height=&quot;969&quot; &#x2F;&gt;
+&lt;p&gt;The microcontroller is an Arduino Nano, which I had insisted on purchasing ages 
+ago for reasons lost to time. (I much prefer the ESP8266 for projects these days 
+due to its WiFi connectivity.) I used a perfboard I had on hand from AliExpress, 
+as well as various passive components and a toggle switch I had for another, 
+scrapped project.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-perfboard&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-perfboard&quot; aria-label=&quot;Anchor link for: the-perfboard&quot;&gt;🔗&lt;&#x2F;a&gt;The Perfboard&lt;&#x2F;h2&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;perfboard.jpg&quot; alt=&quot;Up close on some very prototype-grade soldering&quot;  width=&quot;904&quot;  height=&quot;681&quot; &#x2F;&gt;
+&lt;p&gt;This perfboard was certainly not my finest. I really should have planned this 
+board out better. First off, I tried to drive the servo signal from the Arduino’s 
+analog pins. That didn’t work, so I tied those analog pins to some digital pins 
+on the other side of the board. Then I found out I did not understand the pinout 
+of this switch at all. Rookie mistake! It just goes to show: test everything before 
+you solder it. I figured out the ON-OFF-ON switch’s pinnouts and rewired that.&lt;&#x2F;p&gt;
+&lt;p&gt;Next I had issues with my hardware switch debouncing circuit. If I jiggled the 
+switch in the center position, without switching it, the value read on the input 
+pin would get toggled on and off rapidly. That sounded like the pin was floating 
+when the switch wasn’t engaged. Bah. More bad planning on my part. So I took a 
+1 MΩ resistor and tied the pin low. I was kicking myself for not taking advantage 
+of the internal pullup resistors that the microcontroller has to offer. Well, 
+next time I’ll plan better and maybe just design some PCBs.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#software&quot; aria-label=&quot;Anchor link for: software&quot;&gt;🔗&lt;&#x2F;a&gt;Software&lt;&#x2F;h1&gt;
+&lt;p&gt;I set up an interrupt to handle a change on the input pin. This is a more efficient way of doing things than polling. I registered the handler and to my surprise the ISR was usually getting called twice per switch. Ugh. That likely means my low-pass hardware debouncing circuit is a little insufficient. I should have just done some software debouncing, but I’m such a stickler for hardware efficiency. Next iteration I won’t bother with the low pass filter debouncing design at all.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-next-generation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-next-generation&quot; aria-label=&quot;Anchor link for: the-next-generation&quot;&gt;🔗&lt;&#x2F;a&gt;The next generation&lt;&#x2F;h1&gt;
+&lt;p&gt;One day, when I catch the right wind in my sails, I’ll make the useless box sassier, as per my wife’s request. I whiteboarded a mathematical model of sass – or sassimatics, as I call it – as a heuristic for getting the box to respond in a seemingly more exasperated way based on how “annoyed” it was. I’ll update this page when it happens.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;conclusion.jpg&quot; alt=&quot;The Useless Box&quot;  width=&quot;1400&quot;  height=&quot;788&quot; &#x2F;&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CPSL Compiler</title>
+        <published>2022-06-12T00:00:00+00:00</published>
+        <updated>2022-06-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/cpsl-compiler/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/cpsl-compiler/</id>
+        
+        <content type="html">&lt;h1 id=&quot;building-a-compiler&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#building-a-compiler&quot; aria-label=&quot;Anchor link for: building-a-compiler&quot;&gt;🔗&lt;&#x2F;a&gt;Building a Compiler&lt;&#x2F;h1&gt;
+&lt;p&gt;During my undergrad degree, I took a wonderful class called Compiler Construction. It had a reputation among the computer science students of being the hardest class their department offered. It was so much fun!&lt;&#x2F;p&gt;
+&lt;p&gt;The first day of the class, the professor stressed to us the amount of work this compiler would take. He said not to procrastinate because we couldn’t physically type the amount of code required in less than four weeks or so. He was more or less right about that. Not to worry though, I got started as soon as I could.&lt;&#x2F;p&gt;
+&lt;p&gt;The class was very interesting. We talked about parsing, regular expressions, and abstract syntax trees, among other topics.&lt;&#x2F;p&gt;
+&lt;p&gt;The ultimate end of the class, and the only graded assignment, was a compiler for a language called CPSL, which is structured very similarly to Pascal. We were given a language specification and a bunch of example programs written in CPSL.&lt;&#x2F;p&gt;
+&lt;p&gt;Our assignment simplified the modern compiler frontend&#x2F;backend design into one frontend program that took CPSL and compiled it into MIPS assembly. This necessitated using a MIPS simulator to actually run any of the programs compiled from CPSL.&lt;&#x2F;p&gt;
+&lt;p&gt;Originally, the assignment was to incorporate writing functions in CPSL, but due to COVID disruptions, the requirements were scaled back so that compiling functions resulted in extra credit.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the code for &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;compilers&quot;&gt;my compiler on Github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Laser Tank</title>
+        <published>2018-12-20T00:00:00+00:00</published>
+        <updated>2018-12-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/laser-tank/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/laser-tank/</id>
+        
+        <content type="html">&lt;h1 id=&quot;the-laser-tank&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-laser-tank&quot; aria-label=&quot;Anchor link for: the-laser-tank&quot;&gt;🔗&lt;&#x2F;a&gt;The Laser Tank&lt;&#x2F;h1&gt;
+&lt;p&gt;One Christmas, Santa was very kind and left me a tank tread chassis. It was a beautiful thing, with two geared DC motors on an aluminum frame. I meant to make a robot out of it immediately, but unfortunately school and work got in the way of using it in a project. So when my lab partner for my microcontrollers class and I were given free range over our final project, I seized that opportunity to make something out of that chassis. And make something we did…. The LASER TANK!&lt;&#x2F;p&gt;
+&lt;p&gt;The proposal for this project didn’t do anything really very groundbreaking. We didn’t implement computer vision on it or anything, since I envisioned this project as just making a working robot out of that chassis. And hey, it worked.&lt;&#x2F;p&gt;
+&lt;p&gt;The robot is remote controlled over Bluetooth and drives around and shoots its little laser turret (actually a $3 laser pointer we dismantled). Also it looks cool. The other really cool thing about it is you can control where the laser points and shoot it.&lt;&#x2F;p&gt;
+&lt;p&gt;We used an HC-06 Bluetooth module to pair to our phones and control the robot. We installed a Bluetooth serial terminal app on an Android phone and sent the robot plaintext commands over the UART connection the HC-06 provides. This project would be really trivial if we were allowed to use an Arduino and its support libraries. Instead we had to implement all the helper functions ourselves. This included code for articulating the stepper motor that the laser sits upon and for interacting with the microcontroller’s onboard UART controller. It was lots of fun!&lt;&#x2F;p&gt;
+&lt;p&gt;Here it is in action:&lt;&#x2F;p&gt;
+&lt;div &gt;
+    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xH9-nnhlVDA&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Making of my Chain Mail Armor</title>
+        <published>2017-06-17T00:00:00+00:00</published>
+        <updated>2017-06-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/making-chain-mail-armor/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/making-chain-mail-armor/</id>
+        
+        <content type="html">&lt;p&gt;I have always been fascinated with the Middle Ages, and Medieval Europe in general. 
+I grew up watching (and emulating) the great duels in &lt;em&gt;The Princess Bride&lt;&#x2F;em&gt; and 
+&lt;em&gt;The Court Jester&lt;&#x2F;em&gt;. So naturally there came a point when I wanted to stock my 
+own armory. I researched and researched and eventually concluded I wanted to make 
+my own chain mail armor! Once I’d earned enough capital, I embarked on my adventure. 
+It took a few tries with a few different methods, which I will share with you here. 
+But first, let’s cover a little bit of the theory behind making chain mail armor.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-chain-mail-armor-you-ask&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-chain-mail-armor-you-ask&quot; aria-label=&quot;Anchor link for: what-is-chain-mail-armor-you-ask&quot;&gt;🔗&lt;&#x2F;a&gt;What is Chain Mail Armor, You Ask?&lt;&#x2F;h2&gt;
+&lt;p&gt;Chain Mail is actually a modern term for an ancient type of armor called mail, or 
+&lt;em&gt;maille&lt;&#x2F;em&gt; (in French). The basic idea of mail is to weave a bunch of metal rings 
+together to form a protective mesh. The resulting armor is flexible and protects 
+from slashes and, to the extent allowed by the space between its links, piercing 
+implements. It’s still used today by butchers and shark divers.&lt;&#x2F;p&gt;
+&lt;p&gt;In my research on the subject, I have read of two ways that chain mail was made 
+historically. The first was by punching the rings out of a solid plate of metal 
+and riveting them together. The second way is similar, but instead of punching 
+the links out of a sheet of metal, the rings are formed by wrapping a wire around 
+a dowel to form a kind of spring and cutting the spring. The contraption used for 
+making these springs was called a mandrel, I believe. I used this method for all 
+the chain mail I made.&lt;&#x2F;p&gt;
+&lt;p&gt;So now that we have some theory of what chain mail is and how it is made, let’s 
+look at how I made my chain mail hauberk!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-not-to-do-things-part-i&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-not-to-do-things-part-i&quot; aria-label=&quot;Anchor link for: how-not-to-do-things-part-i&quot;&gt;🔗&lt;&#x2F;a&gt;How Not to Do Things: Part I&lt;&#x2F;h1&gt;
+&lt;p&gt;My first attempt was to use ~24 gauge floral wire. It wasn’t intended to be 
+exactly functional in a battle-ready sense, but it was meant look attractive and 
+“cool.” I used mandrel style, not sheet style. I took the floral wire and wrapped 
+it around a AA battery. Then I would take some delegated scissors and cut the 
+rings with about 1&#x2F;8 inch overlap. Then I would take needle-nosed pliers and twist, twist, twist unitl I got a closed ring. The result was ugly. I did not follow the propper flow directions, and as a result, my mail looked weird, with crazy waves propogating throughout. And because I used ~24 gauge wire, the armor was not practical at all. It may have offered slight protection against cutting, but only if my assailant was very careful and sawed gently against the mail, perhaps while purring softly. Not exactly battle-ready.&lt;&#x2F;p&gt;
+&lt;p&gt;Because the product was neither beautiful nor functional, I ended up abandoning this method for greener pastures. I did end up with a breastplate-sized patch, though. If I ever find it again I’ll post pictures.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;part-i-b&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#part-i-b&quot; aria-label=&quot;Anchor link for: part-i-b&quot;&gt;🔗&lt;&#x2F;a&gt;(Part I b)&lt;&#x2F;h2&gt;
+&lt;p&gt;Before I entirely abandoned floral wire, I experimented with another method. It may sound kind of crazy: I made butted mail by wrapping the floral wire around a AAA battery. To be frank, it just looked silly. It wasn’t big enough to psuedo-rivet (read as: twist together) the ends like the AA battery links, and it wasn’t small enough for the links to stay together on their own. AAA battery-sized links were an enormous flop.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;part-i-c&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#part-i-c&quot; aria-label=&quot;Anchor link for: part-i-c&quot;&gt;🔗&lt;&#x2F;a&gt;(Part I c)&lt;&#x2F;h2&gt;
+&lt;p&gt;Had I learned my lesson yet? No. I tried another way to use floral wire (largely because it was really cheap and I was really poor).&lt;&#x2F;p&gt;
+&lt;p&gt;Realizing that the AAA-sized links were too frail for butted mail, I thought, “If I just make a bunch of small links with the thin wire, wouldn’t it be the same as less links with heavy wire? So I experimented with making the links by wrapping the floral wire around a LEGO lance. The result was a really tight, very beautiful butted mail. It wasn’t very strong, of course, but it was stronger than the AAA-sized fiasco. In fact, it was strong enough to hold up to mild tugs and pulls. And did I mention it was gorgeous? By now I had figured out the flow pattern, and it looked dang good. But it wasn’t really strong enough to last in the real world with real use and abuse, and it took WAY too long to make a substantial area of it, to boot. Lance-sized floral wire was a nice toy, but ultimately not what we were looking for. However, if you’re looking at making jewelry, I would look at doing something similar, just a little bit bigger rings and thicker&#x2F;stronger wire.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;lessons-learned-from-part-i&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#lessons-learned-from-part-i&quot; aria-label=&quot;Anchor link for: lessons-learned-from-part-i&quot;&gt;🔗&lt;&#x2F;a&gt;LESSONS LEARNED FROM PART I:&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Don’t use floral wire.&lt;&#x2F;li&gt;
+&lt;li&gt;Do observe proper flow directions.&lt;&#x2F;li&gt;
+&lt;li&gt;Don’t use floral wire.&lt;&#x2F;li&gt;
+&lt;li&gt;More links = more work.&lt;&#x2F;li&gt;
+&lt;li&gt;Don’t use floral wire.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;But enough of this floral wire nonsense. Let’s get on to something a bit more useful.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-not-to-do-things-part-ii-copper-wire&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-not-to-do-things-part-ii-copper-wire&quot; aria-label=&quot;Anchor link for: how-not-to-do-things-part-ii-copper-wire&quot;&gt;🔗&lt;&#x2F;a&gt;How not to do things, Part II: Copper Wire&lt;&#x2F;h1&gt;
+&lt;p&gt;This is a tale of a young man who did not yet know the magic that is Internet shopping. The young man, an aspiring armorer, needed wire that was more heavy-duty than floral wire. So he went to his local hardware store and bought the strongest wire he thought he could manipulate with the pliers he had at home: 12-gauge insulated copper electrical wire. Perfect! A much better solution than what he was using before! And the spool only cost something like $12 USD! What a bargain! Ah, but remember how that copper wire was insulated? That meant- you guessed it – lots and LOTS of stripping the PVC insulation. Without stripping tools. One thing I will say is I got pretty good at taking off chunks of insulation with naught but my nails and some needle-nosed pliers. As good as you can get, anyway. And then I had to find a suitable dowel for a mandrel. I eventually settled on a half-inch diameter for the mandrel, I believe.&lt;&#x2F;p&gt;
+&lt;p&gt;Then I had to wind the wire up to make a spring. This was a little bit trickier because unlike my floral wire, this wire was pretty thick and had some stiffness to it. And then there was the fact that I had to strip the wire before I coiled it….&lt;&#x2F;p&gt;
+&lt;p&gt;Cutting the spring into links also proved a problem. I knew that the scissors I used for cutting floral wire were out, but I assumed that because wire of that type was cuttable with needle-nosed pliers that I could just use those to cut links from my spring. Oh my. I was quite wrong. First of all, the rings were so small in diameter that my pliers wouldn’t even fit in them. Solution? Tin snips! I ended up having to acquire tin snips just to cut the copper spring with some difficulty.&lt;&#x2F;p&gt;
+&lt;p&gt;In the end, I did end up using up the spool of copper wire, and ended up with about enough mail to cover a third of my chest. For $12 USD, this did not look good for my high-schooler pocketbook. But the copper mail was quite strong. I could not pull the mesh apart, even with all my might (I tried). This was great news! It meant I was on the right track! But I needed a cheaper, easier solution.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;chainmail&#x2F;chainmailcopper.jpg&quot; alt=&quot;Copper chain mail&quot;  width=&quot;800&quot;  height=&quot;600&quot; &#x2F;&gt;
+&lt;p&gt;Enter Success I.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;success-i-let-s-use-steel&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#success-i-let-s-use-steel&quot; aria-label=&quot;Anchor link for: success-i-let-s-use-steel&quot;&gt;🔗&lt;&#x2F;a&gt;Success I: Let’s use Steel&lt;&#x2F;h1&gt;
+&lt;p&gt;Once I realized that copper was not a great idea, I needed something else for my springs. Instead of silly floral wire or decorative copper, I began searching for something with a bit more mettle (no pun intended). That’s where my hobby of robotics came in handy. I started browsing around various online suppliers I knew of from escapades in robotics, and found that McMaster Carr sold terrific steel springs for pretty cheap. I ordered something like $80 worth, after very careful measurements on how much I would need, how big the rings should be, if they would mesh with my existing copper rings, etc. I estimated how many links I would need was based on how many beach towels I needed to cover the same area as my planned hauberk. Then, I found out how many copper links per square foot of mail I needed, and extrapolated to find out how many steel links I would need to make a hauberk.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, remember the trouble I had with cutting the copper links? As it turns out, steel is a lot harder than copper. So when I tried to cut my steel springs with my tin snips, I ended up with nicked tin snips and no cut links. I needed a better way.
+The better way to cut steel springs&lt;&#x2F;p&gt;
+&lt;p&gt;The better way to cut steel springs is to use a grinder. Just get the thinnest cutting disk you possibly can for the thinnest cut in the spring. Many many thanks to the youth leader who let me use his grinder. And for fashioning a jig to keep the spring in place while we cut it. The thing that surprised me the most was how hot the links got while we were cutting them! (Give me a break – the only previous work I had done with metal was with aluminum foil.)&lt;&#x2F;p&gt;
+&lt;p&gt;In the end, we ended up with a over a gallon bag full of metal links, all ready to weave.
+The Assembly&lt;&#x2F;p&gt;
+&lt;p&gt;Assembling the chain mail was relatively easy, but very time-consuming. Essentially, it consisted of making a bunch of single rings, which were then joined into the familiar 4-in-1 pattern like so:&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;chainmail&#x2F;chainmail4in1.jpg&quot; alt=&quot;A fivelette&quot;  width=&quot;500&quot;  height=&quot;401&quot; &#x2F;&gt;
+&lt;p&gt;After I had assembled several of these “fiveletts,” as I termed them, I strung them together in a vertical column. After I had assembled these, I wove them together to form the “fabric,” if you will, of the mail. It sounds simple because it is. A few hours’ work might produce something like this:&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;chainmail&#x2F;chainmail2.jpg&quot; alt=&quot;Some steel chain mail fabric&quot;  width=&quot;700&quot;  height=&quot;525&quot; &#x2F;&gt;
+&lt;p&gt;This whole process took many hours over several months. Each day after school, I would fire up a portable DVD player (usually loaded with &lt;em&gt;The Dark Knight&lt;&#x2F;em&gt;), and spend the afternoon working on my armor. Using leather gloves, slip-joint pliers, and eye protection (sometimes burrs jumped off rings as I was closing them), I knitted myself a working haubergeon. Isn’t it lovely? 🙂&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;chainmail&#x2F;chainmailwhole.jpg&quot; alt=&quot;Steel haubergeon acquired&quot;  width=&quot;775&quot;  height=&quot;581&quot; &#x2F;&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>nani</title>
+        <published>2015-10-30T00:00:00+00:00</published>
+        <updated>2023-02-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/projects/nani/" type="text/html"/>
+        <id>https://tristanandrus.com/projects/nani/</id>
+        
+        <content type="html"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>spectro</title>
+        <published>2015-10-29T00:00:00+00:00</published>
+        <updated>2023-05-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/projects/spectro/" type="text/html"/>
+        <id>https://tristanandrus.com/projects/spectro/</id>
+        
+        <content type="html"></content>
+        
+    </entry>
+</feed>
