@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - projects</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/projects/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-07-02T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/projects/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Connect 4 in Rust</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/connect4/"/>
+        <id>https://tristanandrus.com/blog/connect4/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/connect4/">&lt;p&gt;Link to the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;connect4&quot;&gt;Github project&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As part of my Rust journey, I decided it would be good idea to write something fun.
+But I knew better than to try to make an ambitious 3D project work. I don&#x27;t have
+time like &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fourteenscrews.com&#x2F;&quot;&gt;this poor guy&lt;&#x2F;a&gt; to make something really,
+really impressive with my new language. So I decided to make a TUI game. Connect
+Four seemed to fit the bill really well.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m writing this a bit after development on my Connect Four project has concluded,
+cause I&#x27;ve been working on a lot of projects lately and am trying desperately to get 
+them on my blog to show off. 😉&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the final result.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;connect4playthrough.gif&quot; alt=&quot;A stunning upset by Player 2&quot;  width=&quot;520&quot;  height=&quot;329&quot; &#x2F;&gt;
+&lt;h1 id=&quot;features&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#features&quot; aria-label=&quot;Anchor link for: features&quot;&gt;🔗&lt;&#x2F;a&gt;Features&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Local multiplayer&lt;&#x2F;li&gt;
+&lt;li&gt;Colors...? Yep.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;development&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#development&quot; aria-label=&quot;Anchor link for: development&quot;&gt;🔗&lt;&#x2F;a&gt;Development&lt;&#x2F;h1&gt;
+&lt;p&gt;As you can see from the git history, I did the bulk of this work in April and May
+of 2023. I had some knowledge, but was by no means a pro Rust developer when I began.
+Now, I&#x27;ve made a lot of progress.&lt;&#x2F;p&gt;
+&lt;p&gt;I used crossterm, which proved to be both powerful and not too tricky to use. I
+will definitely consider using crossterm again if I develop another game for the
+terminal.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-about-single-player&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-about-single-player&quot; aria-label=&quot;Anchor link for: what-about-single-player&quot;&gt;🔗&lt;&#x2F;a&gt;What about Single Player?&lt;&#x2F;h2&gt;
+&lt;p&gt;This version doesn&#x27;t have an AI you can play against or remote multiplayer - yet!&lt;&#x2F;p&gt;
+&lt;p&gt;Actually, in version 0.3.0 I want to add a remote multiplayer feature. I&#x27;ve actually
+been working on a chat application to get used to serde and message passing over
+sockets in Rust before I implemented this. (Article, as always, &amp;quot;coming soon&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;As a side note, I used &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sassman&#x2F;t-rec-rs&quot;&gt;t-rec&lt;&#x2F;a&gt; to record this demo. 
+It is built in Rust and was very easy to use. It also elided all the still frames 
+together to reduce file size.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

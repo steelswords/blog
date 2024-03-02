@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - rust</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/rust/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-07-17T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/rust/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Shrinking the binary size of Rust programs</title>
+        <published>2023-07-17T00:00:00+00:00</published>
+        <updated>2023-07-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/small-programs-in-rust/"/>
+        <id>https://tristanandrus.com/blog/small-programs-in-rust/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/small-programs-in-rust/">&lt;p&gt;Last week I was discussing with a coworker the merits of Rust versus the enthroned 
+leaders of systems programming: C and C++. I mentioned I had been building a program 
+in Rust to handle some JSON processing over HTTPS. Rust rocks! With its packages,
+I was able to get a bunch of functionality practically for free: HTTPS, authentication
+guards (thanks, &lt;code&gt;rocket&lt;&#x2F;code&gt;), JSON parsing (thanks, &lt;code&gt;serde&lt;&#x2F;code&gt; and &lt;code&gt;serde_json&lt;&#x2F;code&gt;), and
+many other features. But when I mentioned that the release binary was about 13 MB, 
+he pounced and said that would be much smaller if I were developing for an embedded 
+target and not for a Linux environment.&lt;&#x2F;p&gt;
+&lt;p&gt;I thought that sounded strange. Why would Rust be bloating my binaries? Wasn&#x27;t efficiency
+one of the huge draws of Rust for systems programmers like me? What on Earth was
+going into my binaries?&lt;&#x2F;p&gt;
+&lt;p&gt;My first erroneous assumption was that only the routines that Rust needs from the
+standard library and libc would be statically linked into the binary. There I was
+wrong on two accounts. First, Rust binaries by default are statically linked, but
+not to libc, just to the Rust code they interface with, the rust std library, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Here we take the default &amp;quot;Hello, world&amp;quot; program cargo creates and see what it&#x27;s linked
+to:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; new small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; build&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; --&lt;&#x2F;span&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;ldd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; target&#x2F;release&#x2F;small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And we get the usual suspects.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;linux-vdso.so.1 (0x00007fff21bfe000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;libgcc_s.so.1 =&amp;gt; &#x2F;usr&#x2F;lib&#x2F;libgcc_s.so.1 (0x00007f9ec5d9c000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;libc.so.6 =&amp;gt; &#x2F;usr&#x2F;lib&#x2F;libc.so.6 (0x00007f9ec5bb2000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;&#x2F;lib64&#x2F;ld-linux-x86-64.so.2 =&amp;gt; &#x2F;usr&#x2F;lib64&#x2F;ld-linux-x86-64.so.2 (0x00007f9ec5e57000)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But when we &lt;code&gt;ll&lt;&#x2F;code&gt; it, we see it is 4.1 MB. What on Earth is taking up all that room?&lt;&#x2F;p&gt;
+&lt;p&gt;By comparison, here are the sizes of the same &amp;quot;Hello, world&amp;quot; program in C, C++, and assembly
+(see &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;assembly-playground&quot;&gt;my Github&lt;&#x2F;a&gt; for the asm code):
+| Language | Program Size |
+|---------|---------------|
+| C       | 15,416 bytes |
+| C++     | 15,896 bytes |
+| Assembly | 15,520 bytes |&lt;&#x2F;p&gt;
+&lt;p&gt;Yes, you saw that right. The assembly program
+is &lt;strong&gt;larger&lt;&#x2F;strong&gt; than my C program. Perhaps we&#x27;ll explore this another time. And the
+extra 15 KB of linked in gunk is a little surprising for such bare-bones languages.&lt;&#x2F;p&gt;
+&lt;p&gt;But why is the Rust program still 269 times larger?&lt;&#x2F;p&gt;
+&lt;p&gt;It turns out rust-lang.org has a &lt;a href=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;blog&#x2F;small-programs-in-rust&#x2F;FAQ&quot;&gt;https:&#x2F;&#x2F;prev.rust-lang.org&#x2F;en-US&#x2F;faq.html#why-do-rust-programs-have-larger-binary-sizes-than-C-programs&lt;&#x2F;a&gt; that talks about this very topic. There are several reasons why Rust programs are bigger.&lt;&#x2F;p&gt;
+&lt;p&gt;First, is monomorphization. Like C++ templates, generic functions and types are
+generated for each time it&#x27;s used concretely in the program. This doesn&#x27;t affect
+our hello world program at all, but it&#x27;s nice to know.&lt;&#x2F;p&gt;
+&lt;p&gt;Second, debug symbols and panic unwinding. Even in release mode, Rust includes
+the debug symbols to make backtraces during panics worthwhile. When programs are
+linked with the Rust standard library, they also are linked against &lt;code&gt;libbacktrace&lt;&#x2F;code&gt; 
+and &lt;code&gt;libunwind&lt;&#x2F;code&gt;, which add more overhead. You can get rid of these libraries by
+not using &lt;code&gt;#![no_std]&lt;&#x2F;code&gt;, but that raises its own set of difficulties.&lt;&#x2F;p&gt;
+&lt;p&gt;Third, Rust does not do link-time optimization by default. This means larger binaries.&lt;&#x2F;p&gt;
+&lt;p&gt;Fourth, Rust defaults to an allocator called jemalloc, which apprarently increases
+the performance and reliability of your garden-variety system allocator. I don&#x27;t
+know much more about this facet.&lt;&#x2F;p&gt;
+&lt;p&gt;Still, let&#x27;s start disabling those things.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shrinking-the-binary&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#shrinking-the-binary&quot; aria-label=&quot;Anchor link for: shrinking-the-binary&quot;&gt;🔗&lt;&#x2F;a&gt;Shrinking the Binary&lt;&#x2F;h1&gt;
+&lt;p&gt;Let&#x27;s strip the debug symbols by using &lt;code&gt;strip&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;strip -o hello-world-stripped small_hello_world
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Alright, that got us down to 321,848 bytes. That&#x27;s amazing! A whole order of magnitude
+smaller. Now we&#x27;ve just got to shrink it by a factor of 20 or so.&lt;&#x2F;p&gt;
+&lt;p&gt;As a nice touch (yay, Rust tooling!), you can automatically set up the &lt;code&gt;release&lt;&#x2F;code&gt; profile
+of your &lt;code&gt;Cargo.toml&lt;&#x2F;code&gt; to strip the debug symbols out:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-begin z-toml&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-table z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;profile&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-table z-toml&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-end z-toml&quot;&gt;]&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;strip&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-language z-toml&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is thanks to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnthagen&#x2F;min-sized-rust&quot;&gt;johnthagen&#x27;s wonderful guide on shrinking Rust programs&lt;&#x2F;a&gt;,
+which informs much of this article.&lt;&#x2F;p&gt;
+&lt;p&gt;(For those curious, this gives me the same size as manually &lt;code&gt;strip&lt;&#x2F;code&gt;ing the binary
+afterwards).&lt;&#x2F;p&gt;
+&lt;p&gt;We will save using &lt;code&gt;no_std&lt;&#x2F;code&gt; for later. For now, let&#x27;s see what happens if we optimize for size:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-begin z-toml&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-table z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;profile&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-table z-toml&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-end z-toml&quot;&gt;]&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;strip&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-language z-toml&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;opt-level&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-basic z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;z&lt;span class=&quot;z-punctuation z-definition z-string z-end z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Same size. I gues there&#x27;s not much to shrink down. But how about Link Time Optimization?
+By default, the Cargo compiles and optimizes each compilation unit serparately.
+Link time optimization, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;llvm.org&#x2F;docs&#x2F;LinkTimeOptimization.html&quot;&gt;described here&lt;&#x2F;a&gt;,
+takes longer in the link step, but can produce better optimized binaries with less dead code.
+We can enable it by adding &lt;code&gt;lto = true&lt;&#x2F;code&gt; in our &lt;code&gt;profile.release&lt;&#x2F;code&gt; section of &lt;code&gt;Cargo.toml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that this brought my build time from 0.12 s to 3.86 s; quite the jump.
+But it also cut about 100 KB from our binary. The size is now 280,888 bytes.
+But can we get it down further?&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s restrict the number of code generation units. By default, Cargo spins up multiple
+codegen units to speed up compile times, but that does limit some of the optimizations
+you can do. Add &lt;code&gt;codegen-units = 1&lt;&#x2F;code&gt; to the &lt;code&gt;profile.release&lt;&#x2F;code&gt; section.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately, that didn&#x27;t affect the size at all. And it bumped my build time up to 8.15 s.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s try disabling some of the nicer features of Rust&#x27;s &lt;code&gt;panic!&lt;&#x2F;code&gt; calls. By default, a
+panic unwinds the stack frame and prints a backtrace. But we can strip that feature
+down by causing panic to abort immediately instead of producing a backtrace. To do
+this, add &lt;code&gt;panic = &amp;quot;abort&amp;quot;&lt;&#x2F;code&gt; to the same section as above.&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is that reclaimed about 4KB. We&#x27;re at 276,792 bytes now.&lt;&#x2F;p&gt;
+&lt;p&gt;The bad news is that is the end of the easy modifications. The rest of the 
+suggestions involve optimizing &lt;code&gt;libstd&lt;&#x2F;code&gt; for size and taking &lt;code&gt;libstd&lt;&#x2F;code&gt; out altogether.
+These are projects for a different day.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Connect 4 in Rust</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/connect4/"/>
+        <id>https://tristanandrus.com/blog/connect4/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/connect4/">&lt;p&gt;Link to the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;connect4&quot;&gt;Github project&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As part of my Rust journey, I decided it would be good idea to write something fun.
+But I knew better than to try to make an ambitious 3D project work. I don&#x27;t have
+time like &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fourteenscrews.com&#x2F;&quot;&gt;this poor guy&lt;&#x2F;a&gt; to make something really,
+really impressive with my new language. So I decided to make a TUI game. Connect
+Four seemed to fit the bill really well.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m writing this a bit after development on my Connect Four project has concluded,
+cause I&#x27;ve been working on a lot of projects lately and am trying desperately to get 
+them on my blog to show off. 😉&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the final result.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;connect4playthrough.gif&quot; alt=&quot;A stunning upset by Player 2&quot;  width=&quot;520&quot;  height=&quot;329&quot; &#x2F;&gt;
+&lt;h1 id=&quot;features&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#features&quot; aria-label=&quot;Anchor link for: features&quot;&gt;🔗&lt;&#x2F;a&gt;Features&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Local multiplayer&lt;&#x2F;li&gt;
+&lt;li&gt;Colors...? Yep.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;development&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#development&quot; aria-label=&quot;Anchor link for: development&quot;&gt;🔗&lt;&#x2F;a&gt;Development&lt;&#x2F;h1&gt;
+&lt;p&gt;As you can see from the git history, I did the bulk of this work in April and May
+of 2023. I had some knowledge, but was by no means a pro Rust developer when I began.
+Now, I&#x27;ve made a lot of progress.&lt;&#x2F;p&gt;
+&lt;p&gt;I used crossterm, which proved to be both powerful and not too tricky to use. I
+will definitely consider using crossterm again if I develop another game for the
+terminal.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-about-single-player&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-about-single-player&quot; aria-label=&quot;Anchor link for: what-about-single-player&quot;&gt;🔗&lt;&#x2F;a&gt;What about Single Player?&lt;&#x2F;h2&gt;
+&lt;p&gt;This version doesn&#x27;t have an AI you can play against or remote multiplayer - yet!&lt;&#x2F;p&gt;
+&lt;p&gt;Actually, in version 0.3.0 I want to add a remote multiplayer feature. I&#x27;ve actually
+been working on a chat application to get used to serde and message passing over
+sockets in Rust before I implemented this. (Article, as always, &amp;quot;coming soon&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;As a side note, I used &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sassman&#x2F;t-rec-rs&quot;&gt;t-rec&lt;&#x2F;a&gt; to record this demo. 
+It is built in Rust and was very easy to use. It also elided all the still frames 
+together to reduce file size.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Web Scraping in Rust</title>
+        <published>2023-04-23T00:00:00+00:00</published>
+        <updated>2023-04-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/web-scraping-in-rust/"/>
+        <id>https://tristanandrus.com/blog/web-scraping-in-rust/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/web-scraping-in-rust/">&lt;p&gt;Link to Github: [https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;mls-scraper]&lt;&#x2F;p&gt;
+&lt;p&gt;Recently, I have been on the hunt for a house. This has involved looking at a 
+lot of entries on Utah’s MLS (Multiple Listing System). The MLS website has lots 
+of useful information, including the price, number of beds and baths, square 
+footage, and so on. It also has a link to the property on Google Maps.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;bigbighouse.jpg&quot; alt=&quot;A very reasonably-sized house.&quot;  width=&quot;1536&quot;  height=&quot;765&quot; &#x2F;&gt;
+&lt;p&gt;This quaint city bungalow is perfect for those five-alarm chili parties where 
+11 guests need to use the bathroom at the same time.&lt;&#x2F;p&gt;
+&lt;p&gt;As it turns out, our main criterion for picking a property, besides having a 
+comfortable price and size, was the commute to my office. As my wife and I compiled 
+a dataset of potential houses, it became tedious to manually look up the commute 
+from each property. Futhermore, the address at the top is not selectable, so I 
+can’t just copy it into a spreadsheet.&lt;&#x2F;p&gt;
+&lt;p&gt;This seems like a job for…. a three-day project that saves me a total of 20 minutes!&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is this gives me a chance to try Rust. I’ve used Rust trivially 
+before, but this is an opportunity to make something actually useful to me.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-does-it-do&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-does-it-do&quot; aria-label=&quot;Anchor link for: what-does-it-do&quot;&gt;🔗&lt;&#x2F;a&gt;What Does it Do?&lt;&#x2F;h1&gt;
+&lt;p&gt;The program reaches out to an MLS listing and scrapes a few of the things that are 
+harder to get, like the address, the MLS number, and most importantly, the commute time.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s right. I found a crate that lets me query the Google Maps API, so I 
+automatically look up what the morning commute time is. I get directions for my 
+work address with a departure time of 8:45 next Tuesday morning, as Tuesday is 
+the least remarkable (and most representative) work day.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s how it runs:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; run &lt;span class=&quot;z-string z-quoted z-single z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;https:&#x2F;&#x2F;www.utahrealestate.com&#x2F;&amp;lt;mls number&amp;gt;&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And this is the output:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Days on URE: 135
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Status: ACTIVE
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;MLS#: 1####4
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Type: Single Family
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Style: 2-Story
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Year Built: 1939
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Address: 2##########
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Salt Lake City, UT 84103
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Commute time: 42 mins
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Time in traffic: 41 mins
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;running-this-on-the-go-mobile&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#running-this-on-the-go-mobile&quot; aria-label=&quot;Anchor link for: running-this-on-the-go-mobile&quot;&gt;🔗&lt;&#x2F;a&gt;Running this on the Go (Mobile)&lt;&#x2F;h1&gt;
+&lt;p&gt;Even though I use a super-portable ultrabook, I unfortunately don’t always have my 
+laptop with me. Wouldn’t it be nice to run this on my phone? Thanks to the folks 
+over at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;userland.tech&#x2F;&quot;&gt;UserLAnd&lt;&#x2F;a&gt;, this is possible! I just had to clone 
+my repo and manually install a few things. I seem to remember having to install a 
+couple of packages, like &lt;code&gt;ca-certificates&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;web-scraping-in-rust&#x2F;phoneuse.jpg&quot; alt=&quot;A screenshot of running this program on an Android phone&quot;  width=&quot;900&quot;  height=&quot;2000&quot; &#x2F;&gt;
+&lt;h1 id=&quot;potential-improvements&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#potential-improvements&quot; aria-label=&quot;Anchor link for: potential-improvements&quot;&gt;🔗&lt;&#x2F;a&gt;Potential Improvements&lt;&#x2F;h1&gt;
+&lt;p&gt;Before long, we were under contract for a house, so my internal need for this 
+has dissipated. But if I were to make a more polished, fleshed-out version, it 
+would look like this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better commute estimation
+&lt;ul&gt;
+&lt;li&gt;Evening commute&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure we’re not estimating on a holiday&lt;&#x2F;li&gt;
+&lt;li&gt;Perhaps do a little iteration to find the optimal departure time&lt;&#x2F;li&gt;
+&lt;li&gt;Check for public transport options&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;More customizability
+&lt;ul&gt;
+&lt;li&gt;Configurable work address&lt;&#x2F;li&gt;
+&lt;li&gt;Output on terminal, and&#x2F;or&lt;&#x2F;li&gt;
+&lt;li&gt;Output to a CSV to make spreadsheeting easier&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Clean up some warnings&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;But for now, I was just doing this project for fun and to save myself a little 
+bit of aggravation. So maybe I’ll come back to it, but I think probably not in 
+any serious capacity.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;thoughts-on-rust&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#thoughts-on-rust&quot; aria-label=&quot;Anchor link for: thoughts-on-rust&quot;&gt;🔗&lt;&#x2F;a&gt;Thoughts on Rust&lt;&#x2F;h1&gt;
+&lt;p&gt;Rust is an interesting language. I find some parts really clean and snappy, like 
+all the builtin functions. I like the safety feature, and I love that it’s 
+efficient and can go toe-to-toe with C++. The main thing I don’t like is the 
+steep learning curve. Rust works very differently from other languages I’ve used 
+before, especially its borrowing system. (Die-hard Rustaceans will tell me that’s 
+what’s so great about it.) That being said, for all my frustrations of trying to 
+figure out why my closure expected a () but found a &amp;amp;str, I keep finding myself 
+drawn to this language. There is something magical about this tricky language. 
+I think my Rust journey is not over; it has just begun.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
