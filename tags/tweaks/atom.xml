@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - tweaks</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/tweaks/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-05-12T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/tweaks/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A Script to Report Unscheduled Hours Left in the Day</title>
+        <published>2024-05-12T00:00:00+00:00</published>
+        <updated>2024-05-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/getting-calendar-events-from-gnome-synced-accounts/"/>
+        <id>https://tristanandrus.com/blog/getting-calendar-events-from-gnome-synced-accounts/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/getting-calendar-events-from-gnome-synced-accounts/">&lt;h1 id=&quot;a-tale-as-old-as-time&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#a-tale-as-old-as-time&quot; aria-label=&quot;Anchor link for: a-tale-as-old-as-time&quot;&gt;🔗&lt;&#x2F;a&gt;A Tale as Old as Time&lt;&#x2F;h1&gt;
+&lt;p&gt;If I had a trivial amount of currency for every time an engineer said,
+&amp;quot;It shouldn&#x27;t be too hard to XYZ. All you&#x27;d have to do is ABC,&amp;quot;
+I would have an exceptionally non-trivial amount of currency. This is one of those stories.&lt;&#x2F;p&gt;
+&lt;p&gt;I use Tmux extensively. If I could run my whole life from a terminal emulator, I would.
+But I haven&#x27;t played very much with ricing the thing yet. &amp;quot;What would be useful to add
+to the status line?&amp;quot; I wondered. IPv4 address? Certainly. But much else that&#x27;s offered
+out of the box.... I don&#x27;t know.&lt;&#x2F;p&gt;
+&lt;p&gt;That&#x27;s when it hit me. What if I could put the number of usuable hours left in
+the work day in the status line? Like &lt;code&gt;5pm - now - (meetings from now till 5pm)&lt;&#x2F;code&gt;.
+Sounds great, right? I already have my work calendar synced up on my work computer,
+and my personal ones on my personal computer. How hard would it be to get those
+events from wherever GNOME stores them?&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;querying-calendar-events&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#querying-calendar-events&quot; aria-label=&quot;Anchor link for: querying-calendar-events&quot;&gt;🔗&lt;&#x2F;a&gt;Querying Calendar Events&lt;&#x2F;h1&gt;
+&lt;p&gt;The answer, of course, is harder than I thought. I believe I have stumbled on one
+of those rare coding subjects that not a great many people dabble in. I will
+spare the reader a longwinded account of my grueling research process and leave
+my &amp;quot;final recipe,&amp;quot; so to speak, for any interested parties in the future.&lt;&#x2F;p&gt;
+&lt;p&gt;I know that I sync my work calendar to my desktop through Evolution-EWS, because
+the built-in Pop!_OS stuff does not support Office 365. (Thanks, Microsoft.)
+So my first attempts were to look at how to connect to whatver Evolution uses on
+the back end. For this, you will need to access the &lt;code&gt;EDataServer&lt;&#x2F;code&gt;. For the longest
+time, I could only find
+&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;discourse.gnome.org&#x2F;t&#x2F;accessing-evolution-calendars-from-scripts&#x2F;17884&quot;&gt;this forum post&lt;&#x2F;a&gt;,
+which leads you to the
+&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gnome.pages.gitlab.gnome.org&#x2F;evolution-data-server&#x2F;libedataserver&#x2F;method.SourceRegistry.list_enabled.html&quot;&gt;Evolution Data Server documentation&lt;&#x2F;a&gt;.
+But the API was all documented in C.&lt;&#x2F;p&gt;
+&lt;p&gt;I love C, but I had already determined that since I wanted this tool to be part
+of my scripts repo, easy to deploy onto new machines and run from Tmux, I wanted
+to use Python. I thought that would give me the most portability without having
+to maintain a binary anywhere.&lt;&#x2F;p&gt;
+&lt;p&gt;It took me a while to find the Python docs for what I needed, but
+&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;amolenaar.pages.gitlab.gnome.org&#x2F;pygobject-docs&#x2F;index.html&quot;&gt;eventually I found the Python docs for PyGObject&lt;&#x2F;a&gt;.
+Looking for EDataServer, you learn that you need to create an &lt;code&gt;EDataServer.SourceRegistry&lt;&#x2F;code&gt;
+object, &lt;code&gt;list_sources&lt;&#x2F;code&gt; on it, and then connect an &lt;code&gt;ECal.Client&lt;&#x2F;code&gt; to each one of the sources.&lt;&#x2F;p&gt;
+&lt;p&gt;Then if you don&#x27;t want to get &lt;em&gt;every event ever entered on each calendar&lt;&#x2F;em&gt;, you
+have to specify a search query using an S-expression.&lt;&#x2F;p&gt;
+&lt;p&gt;What is an S-expression, you might ask? Great question! It&#x27;s a LISP-like object 
+made from parentheses and fever dreams of documented APIs. There is literally
+no documentation on the format (see &amp;quot;It&#x27;s all in the code (TM)&amp;quot;&amp;quot;, below).&lt;&#x2F;p&gt;
+&lt;p&gt;But here are the bits and pieces I was able to scrape together to let me write a proper S-expression for these queries.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;discourse.gnome.org&#x2F;t&#x2F;how-do-i-use-s-expressions-on-evolution-data-servers-ecal-api&#x2F;9044&quot;&gt;It&#x27;s all in the code (TM)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;elementary&#x2F;calendar&#x2F;blob&#x2F;1099ba61def44231cbbb9ab594432bda32643720&#x2F;core&#x2F;Services&#x2F;Calendar&#x2F;EventStore.vala#L410&quot;&gt;One paltry example&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;evolution-hackers&#x2F;2022-March&#x2F;msg00001.html&quot;&gt;Actually good examples&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Think you&#x27;re set to write some good queries in S-expressions? There&#x27;s one more
+gotcha you should know about.&lt;&#x2F;p&gt;
+&lt;p&gt;The ranges are &lt;strong&gt;exclusive, not inclusive&lt;&#x2F;strong&gt;. So if you have an event that goes
+from 4-5pm, and you query all events from 9 am to 5 pm, you won&#x27;t get that 4pm event.&lt;&#x2F;p&gt;
+&lt;p&gt;In my script I just add a second to the end and subtract a second from the
+beginning time, so I&#x27;m querying from 8:59:59 to 5:00:01 during work hours.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;other-neat-features&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#other-neat-features&quot; aria-label=&quot;Anchor link for: other-neat-features&quot;&gt;🔗&lt;&#x2F;a&gt;Other neat features&lt;&#x2F;h1&gt;
+&lt;p&gt;I try to keep the deltas between the configs and setup on my work and personal to
+a minimum. So I put some business logic in to intelligently determine which part
+of the day we are calling the script in and thus, how many hours are left until
+the next phase of the day. These are the parts that are supported:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Early morning before work&lt;&#x2F;li&gt;
+&lt;li&gt;At work&lt;&#x2F;li&gt;
+&lt;li&gt;After work, but before bedtime&lt;&#x2F;li&gt;
+&lt;li&gt;After bedtime, but before a reasonable wakeup hour.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The last two I hope will be useful for personal regulation. Sometimes I get so
+caught up in a project it can be hard to extract myself to rest for the night.&lt;&#x2F;p&gt;
+&lt;p&gt;And there you have it! A script that reads from your synced calendars and tells
+you how many free hours you have until your next stage if the day!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-code&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-code&quot; aria-label=&quot;Anchor link for: the-code&quot;&gt;🔗&lt;&#x2F;a&gt;The Code&lt;&#x2F;h1&gt;
+&lt;p&gt;You can find the full script in &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;scripts&#x2F;blob&#x2F;master&#x2F;time-left-in-day.py&quot;&gt;my scripts repo on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

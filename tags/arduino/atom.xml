@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - arduino</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/arduino/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-12-17T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/arduino/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Meeting Indicator</title>
+        <published>2022-12-17T00:00:00+00:00</published>
+        <updated>2022-12-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/meeting-indicator/"/>
+        <id>https://tristanandrus.com/blog/meeting-indicator/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/meeting-indicator/">&lt;h1 id=&quot;meeting-indicator&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#meeting-indicator&quot; aria-label=&quot;Anchor link for: meeting-indicator&quot;&gt;🔗&lt;&#x2F;a&gt;Meeting Indicator&lt;&#x2F;h1&gt;
+&lt;p&gt;Ever since I started working from home my wife has wanted to know if I’m in a meeting or not. You know, to know if she can interrupt me to ask me a question or say goodbye when she leaves for an errand, that sort of thing. Her proposed solution to this problem was some sort of remote-controlled LED stand.&lt;&#x2F;p&gt;
+&lt;p&gt;This was a fine solution, but since most of these remotes use IR, they would likely require me to stand up from my desk, cross the room, open the door, turn on the lights with a remote, and then go back to my meeting. And I would have to repeat all those steps when I’m done with the meeting. That’s a lot of interruption and steps, and at that point I might as well have a hotel “Do Not Disturb” sign I just hang on my door. And from experience, I probably would not remember to set the indicator until I was already in the meeting.&lt;&#x2F;p&gt;
+&lt;p&gt;So there was the problem statement. I need something clear to indicate I’m in a meeting, and it has to be something low-friction for me. And if I happened to make it easy to automate in the future (for instance, it detects when Zoom or Teams is open and sets&#x2F;unsets automatically), even better!&lt;&#x2F;p&gt;
+&lt;p&gt;I chose the trusty ESP8266 for this job. I have a bunch of them lying around, and they come with a ready-made server application example. I coded in a couple of endpoints to change the colors and query what color was displayed. The code was displayed below&lt;&#x2F;p&gt;
+&lt;p&gt;I started prototyping on a breadboard. I was able to minimize the number of components I needed for a bright light by joining the cathodes of all four LEDs and running a single resistor from that common node to ground. This seems a little sketchy at first, but as long as I never have both colors of LEDs on at the same time, it will be just fine. Heck, it will probably be okay even if all four LEDs are on simultaneously anyway.&lt;&#x2F;p&gt;
+&lt;p&gt;The brightness of just one green or one red LED powered from the microcontroller was not very visible, so I put two of each color in parallel.&lt;&#x2F;p&gt;
+&lt;p&gt;I had this on a breadboard for probably a month or so to prove the hardware and then moved into a more permanent perfboard.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;singles&#x2F;meeting-indicator.jpg&quot; alt=&quot;My meeting indicator&quot;  width=&quot;1536&quot;  height=&quot;920&quot; &#x2F;&gt;
+&lt;p&gt;A couple of aliases later and I can simply type &lt;code&gt;inmeeting&lt;&#x2F;code&gt; or &lt;code&gt;outmeeting&lt;&#x2F;code&gt; on my work laptop and my light changes from green to red and back again. This little project has helped my working from home life immensely!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Useless Box</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/useless-box/"/>
+        <id>https://tristanandrus.com/blog/useless-box/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/useless-box/">&lt;blockquote&gt;
+&lt;p&gt;A useless project, but a fun one to be sure&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I wanted to make a useless box because it sounded like a fun project and it would make a nice gift for my wife. Plus, I had all the hardware!&lt;&#x2F;p&gt;
+&lt;p&gt;Here it is in action:&lt;&#x2F;p&gt;
+&lt;div &gt;
+    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;e5GbTxEwg40&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The primary reason this took so long was because I didn’t have a 3D printer at 
+first. After I acquired one this project took off! It was so exciting to print 
+out those parts effortlessly, instead of trying to craft them out of cardboard.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;mechanical-assembly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#mechanical-assembly&quot; aria-label=&quot;Anchor link for: mechanical-assembly&quot;&gt;🔗&lt;&#x2F;a&gt;Mechanical Assembly&lt;&#x2F;h1&gt;
+&lt;p&gt;All of the mechanical pieces are 3D printed. I used balassy’s design, 
+&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.thingiverse.com&#x2F;thing:3856965&quot;&gt;found on Thingiverse&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of the screws used are M3. It’s so nice to use metric screws. They’re much 
+simpler than the multiple Imperial scales we use here in the States.&lt;&#x2F;p&gt;
+&lt;p&gt;There was nothing mechanical holding the lid opener servo to the bottom of the 
+box, so I used an adhesive strip from a package of command hooks. It worked 
+really well.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;electrical-assembly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#electrical-assembly&quot; aria-label=&quot;Anchor link for: electrical-assembly&quot;&gt;🔗&lt;&#x2F;a&gt;Electrical Assembly&lt;&#x2F;h1&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;uselessbox-hw-overview.jpg&quot; alt=&quot;Useless Box hardware assembly&quot;  width=&quot;1287&quot;  height=&quot;969&quot; &#x2F;&gt;
+&lt;p&gt;The microcontroller is an Arduino Nano, which I had insisted on purchasing ages 
+ago for reasons lost to time. (I much prefer the ESP8266 for projects these days 
+due to its WiFi connectivity.) I used a perfboard I had on hand from AliExpress, 
+as well as various passive components and a toggle switch I had for another, 
+scrapped project.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-perfboard&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-perfboard&quot; aria-label=&quot;Anchor link for: the-perfboard&quot;&gt;🔗&lt;&#x2F;a&gt;The Perfboard&lt;&#x2F;h2&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;perfboard.jpg&quot; alt=&quot;Up close on some very prototype-grade soldering&quot;  width=&quot;904&quot;  height=&quot;681&quot; &#x2F;&gt;
+&lt;p&gt;This perfboard was certainly not my finest. I really should have planned this 
+board out better. First off, I tried to drive the servo signal from the Arduino’s 
+analog pins. That didn’t work, so I tied those analog pins to some digital pins 
+on the other side of the board. Then I found out I did not understand the pinout 
+of this switch at all. Rookie mistake! It just goes to show: test everything before 
+you solder it. I figured out the ON-OFF-ON switch’s pinnouts and rewired that.&lt;&#x2F;p&gt;
+&lt;p&gt;Next I had issues with my hardware switch debouncing circuit. If I jiggled the 
+switch in the center position, without switching it, the value read on the input 
+pin would get toggled on and off rapidly. That sounded like the pin was floating 
+when the switch wasn’t engaged. Bah. More bad planning on my part. So I took a 
+1 MΩ resistor and tied the pin low. I was kicking myself for not taking advantage 
+of the internal pullup resistors that the microcontroller has to offer. Well, 
+next time I’ll plan better and maybe just design some PCBs.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;software&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#software&quot; aria-label=&quot;Anchor link for: software&quot;&gt;🔗&lt;&#x2F;a&gt;Software&lt;&#x2F;h1&gt;
+&lt;p&gt;I set up an interrupt to handle a change on the input pin. This is a more efficient way of doing things than polling. I registered the handler and to my surprise the ISR was usually getting called twice per switch. Ugh. That likely means my low-pass hardware debouncing circuit is a little insufficient. I should have just done some software debouncing, but I’m such a stickler for hardware efficiency. Next iteration I won’t bother with the low pass filter debouncing design at all.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-next-generation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-next-generation&quot; aria-label=&quot;Anchor link for: the-next-generation&quot;&gt;🔗&lt;&#x2F;a&gt;The next generation&lt;&#x2F;h1&gt;
+&lt;p&gt;One day, when I catch the right wind in my sails, I’ll make the useless box sassier, as per my wife’s request. I whiteboarded a mathematical model of sass – or sassimatics, as I call it – as a heuristic for getting the box to respond in a seemingly more exasperated way based on how “annoyed” it was. I’ll update this page when it happens.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;useless-box&#x2F;conclusion.jpg&quot; alt=&quot;The Useless Box&quot;  width=&quot;1400&quot;  height=&quot;788&quot; &#x2F;&gt;
+</content>
+        
+    </entry>
+</feed>

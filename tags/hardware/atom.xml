@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - hardware</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/hardware/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-06T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/hardware/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Upgrading a VTech Baby Monitor</title>
+        <published>2023-09-06T00:00:00+00:00</published>
+        <updated>2023-09-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/baby-monitor-usb-c-upgrade/"/>
+        <id>https://tristanandrus.com/blog/baby-monitor-usb-c-upgrade/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/baby-monitor-usb-c-upgrade/">&lt;h1 id=&quot;upgrading-my-vtech-baby-monitor&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#upgrading-my-vtech-baby-monitor&quot; aria-label=&quot;Anchor link for: upgrading-my-vtech-baby-monitor&quot;&gt;🔗&lt;&#x2F;a&gt;Upgrading my VTech Baby Monitor&lt;&#x2F;h1&gt;
+&lt;p&gt;There is not much to tell here, but more to show. Our baby monitor works fine. It&#x27;s great.
+The battery is perhaps a little weedy, but what can you expect from NiMH?
+My only irritation with it was the barrel plug its charger used. It is super inconvenient
+to be tied to one baby monitor charger when we have all these perfectly good USB-C
+chargers all over the house. It bugged me that I couldn&#x27;t plug the monitor into
+USB-C, The Universal Charger™, so I fixed it.&lt;&#x2F;p&gt;
+&lt;p&gt;The DC power supply the monitor came with has 6V at a 400 mA.&lt;&#x2F;p&gt;
+&lt;p&gt;So first, I found an MT3608 module on AliExpress. It&#x27;s got a USB-C port and an adjustable boost
+voltage regulator. &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;a.aliexpress.com&#x2F;_m046TLM&quot;&gt;The link, for the curious&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;And here&#x27;s a picture.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;baby-monitor-upgrade&#x2F;usb-c-module.jpg&quot; alt=&quot;MT3608 DC-DC Booster Module&quot;  width=&quot;1962&quot;  height=&quot;1287&quot; &#x2F;&gt;
+&lt;p&gt;I desoldered the barrel jack and attached a little pigtail with the module on it.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;baby-monitor-upgrade&#x2F;barrel-jack-interior.jpg&quot; alt=&quot;The rear of the barrel jack on the PCB&quot;  width=&quot;4032&quot;  height=&quot;2268&quot; &#x2F;&gt;
+&lt;p&gt;And Bob&#x27;s your uncle.&lt;&#x2F;p&gt;
+
+&lt;img class=&quot;dimmable-image&quot; src=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;img&#x2F;articles&#x2F;baby-monitor-upgrade&#x2F;baby-monitor-upgrade-final.jpg&quot; alt=&quot;The final product: Fully reassembled, working, and with a little USB pigtail.&quot;  width=&quot;4032&quot;  height=&quot;2268&quot; &#x2F;&gt;
+&lt;h1 id=&quot;but-it-s-ugly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#but-it-s-ugly&quot; aria-label=&quot;Anchor link for: but-it-s-ugly&quot;&gt;🔗&lt;&#x2F;a&gt;But... It&#x27;s Ugly&lt;&#x2F;h1&gt;
+&lt;p&gt;Yeah. It is a little bit. There&#x27;s a chance I might put that module inside the chassis,
+but I did this mostly while my baby was sleeping, so I didn&#x27;t want to break out my
+Dremel. Maybe another day.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;reviews&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#reviews&quot; aria-label=&quot;Anchor link for: reviews&quot;&gt;🔗&lt;&#x2F;a&gt;Reviews&lt;&#x2F;h1&gt;
+&lt;p&gt;From my wife: &amp;quot;It seems to charge better!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Also, &amp;quot;I like it!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;So big win here!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

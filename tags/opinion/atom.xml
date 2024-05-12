@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Tristan Andrus - opinion</title>
+    <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://tristanandrus.com/tags/opinion/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tristanandrus.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-01T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/tags/opinion/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2023 Book Review</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/2023-book-review/"/>
+        <id>https://tristanandrus.com/blog/2023-book-review/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/2023-book-review/">&lt;p&gt;Here are some of the books I read in 2023 and what I thought of them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-hail-mary-project-by-andy-weir&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-hail-mary-project-by-andy-weir&quot; aria-label=&quot;Anchor link for: the-hail-mary-project-by-andy-weir&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Hail Mary Project&lt;&#x2F;em&gt; by Andy Weir&lt;&#x2F;h1&gt;
+&lt;p&gt;11&#x2F;10. This was such a fun read! Good sci-fi, technical enough to keep me entertained,
+and yet not so technical as to bore the non-STEM. Such a good read, I cannot recommend
+this book enough. One of my top picks for 2023!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;needful-things-by-stephen-king&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#needful-things-by-stephen-king&quot; aria-label=&quot;Anchor link for: needful-things-by-stephen-king&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Needful Things&lt;&#x2F;em&gt; by Stephen King&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. Excellently Written. A gripping premise. The book draws you along from high
+excitement to high excitement. A good read for horror fans.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;educated-a-memoir-by-tara-westover&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#educated-a-memoir-by-tara-westover&quot; aria-label=&quot;Anchor link for: educated-a-memoir-by-tara-westover&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Educated: A Memoir&lt;&#x2F;em&gt; by Tara Westover&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. This book is an Important Book to Read. An excellent tail.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;bad-blood-secrets-and-lies-in-a-silicon-valley-startup-by-john-carreyrou&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#bad-blood-secrets-and-lies-in-a-silicon-valley-startup-by-john-carreyrou&quot; aria-label=&quot;Anchor link for: bad-blood-secrets-and-lies-in-a-silicon-valley-startup-by-john-carreyrou&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Bad Blood: Secrets and Lies in a Silicon Valley Startup&lt;&#x2F;em&gt; by John Carreyrou&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. This was a good account of the Theranos scandel. Makes you shake your head at
+Elizabeth Holmes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;steve-jobs-by-walter-isaacson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#steve-jobs-by-walter-isaacson&quot; aria-label=&quot;Anchor link for: steve-jobs-by-walter-isaacson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Steve Jobs&lt;&#x2F;em&gt; by Walter Isaacson&lt;&#x2F;h1&gt;
+&lt;p&gt;9&#x2F;10. An excellent biography. Isaacson made me appreciate Jobs in a more complex, nuanced
+way, which I&#x27;m sure we all deserve. It also cemented my exacerbation of those who
+idolize Jobs. There are so many similarities between Jobs and Elon Musk. The absolute
+certainty that these men have of their own rightness and the way those around them
+have to work around them, not with them, to accomplish anything. I hope I never
+become one of these billionaires living in their own self-deluded bubble.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;stuff-matters-exploring-the-marvelous-materials-that-shape-our-man-made-world-by-mark-miodownik&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#stuff-matters-exploring-the-marvelous-materials-that-shape-our-man-made-world-by-mark-miodownik&quot; aria-label=&quot;Anchor link for: stuff-matters-exploring-the-marvelous-materials-that-shape-our-man-made-world-by-mark-miodownik&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Stuff Matters: Exploring the Marvelous Materials That Shape Our Man-Made World&lt;&#x2F;em&gt; by Mark Miodownik&lt;&#x2F;h1&gt;
+&lt;p&gt;8&#x2F;10. An excellent little book on material science. I particularly loved the descriptions
+of porcelain and self-healing concrete.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-final-empire-by-brandon-sanderson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-final-empire-by-brandon-sanderson&quot; aria-label=&quot;Anchor link for: the-final-empire-by-brandon-sanderson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Final Empire&lt;&#x2F;em&gt; by Brandon Sanderson&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. This was such a lovely fantasy read. People have been telling me for ages that I
+should read Mistborn, so I was glad to see what all the fuss was about. The story
+wrapped up so nicely that I honestly didn&#x27;t want to start the sequel.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chip-war-the-quest-to-dominate-the-world-s-most-critical-technology-by-chris-miller&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#chip-war-the-quest-to-dominate-the-world-s-most-critical-technology-by-chris-miller&quot; aria-label=&quot;Anchor link for: chip-war-the-quest-to-dominate-the-world-s-most-critical-technology-by-chris-miller&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Chip War: The Quest to Dominate the World&#x27;s Most Critical Technology&lt;&#x2F;em&gt; by Chris Miller&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. An interesting history of the semiconductor industry.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;blade-runner-by-phillip-k-dick&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#blade-runner-by-phillip-k-dick&quot; aria-label=&quot;Anchor link for: blade-runner-by-phillip-k-dick&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Blade Runner&lt;&#x2F;em&gt; by Phillip K. Dick&lt;&#x2F;h1&gt;
+&lt;p&gt;8&#x2F;10. A classic scifi&#x2F;film noir. Not much to say. Was it worth reading? Probably. I think
+the synthetics&#x2F;natural born angle is better explored in other franchises, though.
+&lt;em&gt;Battlestar Galactica&lt;&#x2F;em&gt; being one.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-seven-habits-of-highly-effective-people-by-stephen-r-covey&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-seven-habits-of-highly-effective-people-by-stephen-r-covey&quot; aria-label=&quot;Anchor link for: the-seven-habits-of-highly-effective-people-by-stephen-r-covey&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Seven Habits of Highly Effective People&lt;&#x2F;em&gt; by Stephen R. Covey&lt;&#x2F;h1&gt;
+&lt;p&gt;11&#x2F;10. I highly recommend this book to everyone. The breadth and depth of practical
+prescriptions for life and character refinement are impeccable. This book drops so
+many truth bombs and then just keeps them coming. Nonfiction Book of the Year award
+from me!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-well-of-ascention-by-brandon-sanderson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-well-of-ascention-by-brandon-sanderson&quot; aria-label=&quot;Anchor link for: the-well-of-ascention-by-brandon-sanderson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Well of Ascention&lt;&#x2F;em&gt; by Brandon Sanderson.&lt;&#x2F;h1&gt;
+&lt;p&gt;8&#x2F;10. This book flags a little behind its predecessor. But it is still a great novel.
+Again, the ending made me not want to read ahead, which I am forced to conclude, is
+a regular effect of Sanderson&#x27;s writting. There were high payoff moments, though,
+and much appreciated expansion on some topics introduced in &lt;em&gt;The Final Empire&lt;&#x2F;em&gt;.
+Eventually I will read the third book in the series, but I&#x27;m still recovering from
+the end of this one.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;when-mckinsey-comes-to-town-by-walt-bogdanich-and-michael-forsythe&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#when-mckinsey-comes-to-town-by-walt-bogdanich-and-michael-forsythe&quot; aria-label=&quot;Anchor link for: when-mckinsey-comes-to-town-by-walt-bogdanich-and-michael-forsythe&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;When McKinsey Comes to Town&lt;&#x2F;em&gt; by Walt Bogdanich and Michael Forsythe&lt;&#x2F;h1&gt;
+&lt;p&gt;8&#x2F;10. An eye-opening tale of corporate greed and corruption. Everyone should read
+this book if they wish to understand corporate America better.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;just-mercy-a-story-of-justice-and-redemption-by-bryan-stevenson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#just-mercy-a-story-of-justice-and-redemption-by-bryan-stevenson&quot; aria-label=&quot;Anchor link for: just-mercy-a-story-of-justice-and-redemption-by-bryan-stevenson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Just Mercy: A Story of Justice and Redemption&lt;&#x2F;em&gt; by Bryan Stevenson&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. Everyone should read this book too. The author&#x27;s background in philosophy
+certainly comes through in his measured, gentle prose on a charged and fraught topic.
+Such a valuable work in both race relations and criminal justice, from a man on the
+inside.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;speaker-for-the-dead-by-orson-scott-card&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#speaker-for-the-dead-by-orson-scott-card&quot; aria-label=&quot;Anchor link for: speaker-for-the-dead-by-orson-scott-card&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Speaker for the Dead&lt;&#x2F;em&gt; by Orson Scott Card&lt;&#x2F;h1&gt;
+&lt;p&gt;9&#x2F;10. This was a really smashing read. I was entralled with the Piggies and their culture,
+and the narrative was engaging. I was left craving the next book.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ghost-in-the-wires-my-adventures-as-the-world-s-most-wanted-hacker-by-kevin-mitnik&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ghost-in-the-wires-my-adventures-as-the-world-s-most-wanted-hacker-by-kevin-mitnik&quot; aria-label=&quot;Anchor link for: ghost-in-the-wires-my-adventures-as-the-world-s-most-wanted-hacker-by-kevin-mitnik&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Ghost in the Wires: My Adventures as the World&#x27;s Most Wanted Hacker&lt;&#x2F;em&gt; by Kevin Mitnik&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. This was a phenominal read. I&#x27;d read Kevin Mitnik&#x27;s other book, &lt;em&gt;The Art
+of Deception&lt;&#x2F;em&gt;, before and enjoyed it. This was like on a whole &#x27;nother level. Fans
+of &lt;em&gt;Mr. Robot&lt;&#x2F;em&gt; and &lt;em&gt;Catch Me If You Can&lt;&#x2F;em&gt; will love this book as well!!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Shrinking the binary size of Rust programs</title>
+        <published>2023-07-17T00:00:00+00:00</published>
+        <updated>2023-07-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/small-programs-in-rust/"/>
+        <id>https://tristanandrus.com/blog/small-programs-in-rust/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/small-programs-in-rust/">&lt;p&gt;Last week I was discussing with a coworker the merits of Rust versus the enthroned 
+leaders of systems programming: C and C++. I mentioned I had been building a program 
+in Rust to handle some JSON processing over HTTPS. Rust rocks! With its packages,
+I was able to get a bunch of functionality practically for free: HTTPS, authentication
+guards (thanks, &lt;code&gt;rocket&lt;&#x2F;code&gt;), JSON parsing (thanks, &lt;code&gt;serde&lt;&#x2F;code&gt; and &lt;code&gt;serde_json&lt;&#x2F;code&gt;), and
+many other features. But when I mentioned that the release binary was about 13 MB, 
+he pounced and said that would be much smaller if I were developing for an embedded 
+target and not for a Linux environment.&lt;&#x2F;p&gt;
+&lt;p&gt;I thought that sounded strange. Why would Rust be bloating my binaries? Wasn&#x27;t efficiency
+one of the huge draws of Rust for systems programmers like me? What on Earth was
+going into my binaries?&lt;&#x2F;p&gt;
+&lt;p&gt;My first erroneous assumption was that only the routines that Rust needs from the
+standard library and libc would be statically linked into the binary. There I was
+wrong on two accounts. First, Rust binaries by default are statically linked, but
+not to libc, just to the Rust code they interface with, the rust std library, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Here we take the default &amp;quot;Hello, world&amp;quot; program cargo creates and see what it&#x27;s linked
+to:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; new small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; build&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; --&lt;&#x2F;span&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;ldd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; target&#x2F;release&#x2F;small_hello_world&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And we get the usual suspects.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;linux-vdso.so.1 (0x00007fff21bfe000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;libgcc_s.so.1 =&amp;gt; &#x2F;usr&#x2F;lib&#x2F;libgcc_s.so.1 (0x00007f9ec5d9c000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;libc.so.6 =&amp;gt; &#x2F;usr&#x2F;lib&#x2F;libc.so.6 (0x00007f9ec5bb2000)
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;&#x2F;lib64&#x2F;ld-linux-x86-64.so.2 =&amp;gt; &#x2F;usr&#x2F;lib64&#x2F;ld-linux-x86-64.so.2 (0x00007f9ec5e57000)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But when we &lt;code&gt;ll&lt;&#x2F;code&gt; it, we see it is 4.1 MB. What on Earth is taking up all that room?&lt;&#x2F;p&gt;
+&lt;p&gt;By comparison, here are the sizes of the same &amp;quot;Hello, world&amp;quot; program in C, C++, and assembly
+(see &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;steelswords&#x2F;assembly-playground&quot;&gt;my Github&lt;&#x2F;a&gt; for the asm code):
+| Language | Program Size |
+|---------|---------------|
+| C       | 15,416 bytes |
+| C++     | 15,896 bytes |
+| Assembly | 15,520 bytes |&lt;&#x2F;p&gt;
+&lt;p&gt;Yes, you saw that right. The assembly program
+is &lt;strong&gt;larger&lt;&#x2F;strong&gt; than my C program. Perhaps we&#x27;ll explore this another time. And the
+extra 15 KB of linked in gunk is a little surprising for such bare-bones languages.&lt;&#x2F;p&gt;
+&lt;p&gt;But why is the Rust program still 269 times larger?&lt;&#x2F;p&gt;
+&lt;p&gt;It turns out rust-lang.org has a &lt;a href=&quot;https:&#x2F;&#x2F;tristanandrus.com&#x2F;blog&#x2F;small-programs-in-rust&#x2F;FAQ&quot;&gt;https:&#x2F;&#x2F;prev.rust-lang.org&#x2F;en-US&#x2F;faq.html#why-do-rust-programs-have-larger-binary-sizes-than-C-programs&lt;&#x2F;a&gt; that talks about this very topic. There are several reasons why Rust programs are bigger.&lt;&#x2F;p&gt;
+&lt;p&gt;First, is monomorphization. Like C++ templates, generic functions and types are
+generated for each time it&#x27;s used concretely in the program. This doesn&#x27;t affect
+our hello world program at all, but it&#x27;s nice to know.&lt;&#x2F;p&gt;
+&lt;p&gt;Second, debug symbols and panic unwinding. Even in release mode, Rust includes
+the debug symbols to make backtraces during panics worthwhile. When programs are
+linked with the Rust standard library, they also are linked against &lt;code&gt;libbacktrace&lt;&#x2F;code&gt; 
+and &lt;code&gt;libunwind&lt;&#x2F;code&gt;, which add more overhead. You can get rid of these libraries by
+not using &lt;code&gt;#![no_std]&lt;&#x2F;code&gt;, but that raises its own set of difficulties.&lt;&#x2F;p&gt;
+&lt;p&gt;Third, Rust does not do link-time optimization by default. This means larger binaries.&lt;&#x2F;p&gt;
+&lt;p&gt;Fourth, Rust defaults to an allocator called jemalloc, which apprarently increases
+the performance and reliability of your garden-variety system allocator. I don&#x27;t
+know much more about this facet.&lt;&#x2F;p&gt;
+&lt;p&gt;Still, let&#x27;s start disabling those things.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shrinking-the-binary&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#shrinking-the-binary&quot; aria-label=&quot;Anchor link for: shrinking-the-binary&quot;&gt;🔗&lt;&#x2F;a&gt;Shrinking the Binary&lt;&#x2F;h1&gt;
+&lt;p&gt;Let&#x27;s strip the debug symbols by using &lt;code&gt;strip&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;strip -o hello-world-stripped small_hello_world
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Alright, that got us down to 321,848 bytes. That&#x27;s amazing! A whole order of magnitude
+smaller. Now we&#x27;ve just got to shrink it by a factor of 20 or so.&lt;&#x2F;p&gt;
+&lt;p&gt;As a nice touch (yay, Rust tooling!), you can automatically set up the &lt;code&gt;release&lt;&#x2F;code&gt; profile
+of your &lt;code&gt;Cargo.toml&lt;&#x2F;code&gt; to strip the debug symbols out:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-begin z-toml&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-table z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;profile&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-table z-toml&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-end z-toml&quot;&gt;]&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;strip&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-language z-toml&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is thanks to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnthagen&#x2F;min-sized-rust&quot;&gt;johnthagen&#x27;s wonderful guide on shrinking Rust programs&lt;&#x2F;a&gt;,
+which informs much of this article.&lt;&#x2F;p&gt;
+&lt;p&gt;(For those curious, this gives me the same size as manually &lt;code&gt;strip&lt;&#x2F;code&gt;ing the binary
+afterwards).&lt;&#x2F;p&gt;
+&lt;p&gt;We will save using &lt;code&gt;no_std&lt;&#x2F;code&gt; for later. For now, let&#x27;s see what happens if we optimize for size:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-begin z-toml&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-tag z-table z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;profile&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-table z-toml&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-table z-toml&quot;&gt;release&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-table z-end z-toml&quot;&gt;]&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;strip&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-language z-toml&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;opt-level&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-basic z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;z&lt;span class=&quot;z-punctuation z-definition z-string z-end z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Same size. I gues there&#x27;s not much to shrink down. But how about Link Time Optimization?
+By default, the Cargo compiles and optimizes each compilation unit serparately.
+Link time optimization, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;llvm.org&#x2F;docs&#x2F;LinkTimeOptimization.html&quot;&gt;described here&lt;&#x2F;a&gt;,
+takes longer in the link step, but can produce better optimized binaries with less dead code.
+We can enable it by adding &lt;code&gt;lto = true&lt;&#x2F;code&gt; in our &lt;code&gt;profile.release&lt;&#x2F;code&gt; section of &lt;code&gt;Cargo.toml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that this brought my build time from 0.12 s to 3.86 s; quite the jump.
+But it also cut about 100 KB from our binary. The size is now 280,888 bytes.
+But can we get it down further?&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s restrict the number of code generation units. By default, Cargo spins up multiple
+codegen units to speed up compile times, but that does limit some of the optimizations
+you can do. Add &lt;code&gt;codegen-units = 1&lt;&#x2F;code&gt; to the &lt;code&gt;profile.release&lt;&#x2F;code&gt; section.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately, that didn&#x27;t affect the size at all. And it bumped my build time up to 8.15 s.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s try disabling some of the nicer features of Rust&#x27;s &lt;code&gt;panic!&lt;&#x2F;code&gt; calls. By default, a
+panic unwinds the stack frame and prints a backtrace. But we can strip that feature
+down by causing panic to abort immediately instead of producing a backtrace. To do
+this, add &lt;code&gt;panic = &amp;quot;abort&amp;quot;&lt;&#x2F;code&gt; to the same section as above.&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is that reclaimed about 4KB. We&#x27;re at 276,792 bytes now.&lt;&#x2F;p&gt;
+&lt;p&gt;The bad news is that is the end of the easy modifications. The rest of the 
+suggestions involve optimizing &lt;code&gt;libstd&lt;&#x2F;code&gt; for size and taking &lt;code&gt;libstd&lt;&#x2F;code&gt; out altogether.
+These are projects for a different day.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2022 Book Review</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tristanandrus.com/blog/2022-book-review/"/>
+        <id>https://tristanandrus.com/blog/2022-book-review/</id>
+        
+        <content type="html" xml:base="https://tristanandrus.com/blog/2022-book-review/">&lt;p&gt;Here are some of the books I read in 2022 and what I thought of them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-mythical-man-month-by-fred-brooks&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-mythical-man-month-by-fred-brooks&quot; aria-label=&quot;Anchor link for: the-mythical-man-month-by-fred-brooks&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; by Fred Brooks&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. &lt;em&gt;The Mythical Man Month&lt;&#x2F;em&gt; is a classic of software program management, and
+for good reason. Every chapter laid out truths about software development that
+resonated deeply with my experience. There were some surreal parts of some of 
+the later chapters where Brooks would go from a timeless nugget of wisdom to 
+discussing details of the microfiche system he was using. However, I’d say 93% 
+of the book is just as relevant today as it was then. For a 1975 computer book, 
+The Mythical Man Month holds up impressively well.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;dune-by-frank-herbert&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#dune-by-frank-herbert&quot; aria-label=&quot;Anchor link for: dune-by-frank-herbert&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Dune&lt;&#x2F;em&gt; by Frank Herbert&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. I’ll admit, I started reading Dune because of the 2021 film. I started reading it in that year and only in 2022 did I finish it. This book is dense. The world building is impeccable. It can be a little tedious at times because you get to experience scenes through multiple characters’ eyes. I want to know what’s going to happen to Muad’Dib, but for now this series is on the back burner.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ready-player-two-by-ernest-cline&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ready-player-two-by-ernest-cline&quot; aria-label=&quot;Anchor link for: ready-player-two-by-ernest-cline&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Ready Player Two&lt;&#x2F;em&gt; by Ernest Cline&lt;&#x2F;h1&gt;
+&lt;p&gt;3&#x2F;10. I’m sad to say this did not live to its predecessor. I think it’s a combination of factors. Most of the references did not resonate with me, and the pacing was wonky. The setup was cool, but took a long time. Then the first couple adventures took a long time, followed by several rushed ones and a quick ending.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-green-mile-by-stephen-king&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-green-mile-by-stephen-king&quot; aria-label=&quot;Anchor link for: the-green-mile-by-stephen-king&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Green Mile&lt;&#x2F;em&gt; by Stephen King&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. Good writing. Mostly interesting story. Not as captivating as Misery. There were some dull spots. But it did make me cry, so there’s that.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shady-characters-by-keith-houston&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#shady-characters-by-keith-houston&quot; aria-label=&quot;Anchor link for: shady-characters-by-keith-houston&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Shady Characters&lt;&#x2F;em&gt; by Keith Houston&lt;&#x2F;h1&gt;
+&lt;p&gt;9&#x2F;10. I would recommend this book to anyone who has ever wondered why the question mark looks the way it does, or anyone who knows what a pilcrow is. Very informative and well researched.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;evicted-by-nathan-desmond&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#evicted-by-nathan-desmond&quot; aria-label=&quot;Anchor link for: evicted-by-nathan-desmond&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;Evicted&lt;&#x2F;em&gt; by Nathan Desmond&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. It is hard to express how meaningful this book was to read. It takes a very honest look at poverty in America, revolving around evictions and housing insecurity. This was written by a man who has spent years with poor tenants and their landlords. This is one of those books that will change your outlook on things forever. I very much recommend it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-body-a-guide-for-occupants-by-bill-bryson&quot; aria-label=&quot;Anchor link for: the-body-a-guide-for-occupants-by-bill-bryson&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;The Body: A Guide for Occupants&lt;&#x2F;em&gt; by Bill Bryson&lt;&#x2F;h1&gt;
+&lt;p&gt;7&#x2F;10. This book was good, but felt a little offbeat at times. My main takeaways are these. First, medicine has really only had a handful of really big hits: germ theory, a scientific understanding of anatomy, antibiotics, anesthetic, and vaccines. There is still a lot we don’t know about the body. But ol’ Bill Bryson does not have a medical degree, so if anyone qualified would like to email me to correct my takeaways, I would welcome it.&lt;&#x2F;p&gt;
+&lt;p&gt;The other takeaway from The Body is an understanding of why traditional, conservative farming communities are predisposed to be leery of doctors. Because until about 120 years ago, a lot of what doctors did was actively harmful. Yikes!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot; aria-label=&quot;Anchor link for: how-to-invent-everything-a-survival-guide-for-the-stranded-time-traveler-by-ryan-north&quot;&gt;🔗&lt;&#x2F;a&gt;&lt;em&gt;How to Invent Everything: A Survival Guide for the Stranded Time Traveler&lt;&#x2F;em&gt; by Ryan North&lt;&#x2F;h1&gt;
+&lt;p&gt;10&#x2F;10. I love this book. I have always tried to build a library where if it were the last remaining library on Earth, I could feasibly rebuild civilization. You know, at least a bit. This book is now the crown jewel of that collection. It was amazing to see how to bootstrap civilization in one hardcover tome. If I ever have to dash off into the wilderness, I hope to have a copy of How to Invent Everything with me.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
