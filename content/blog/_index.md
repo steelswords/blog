@@ -1,6 +1,6 @@
 +++
-paginate_by = 5
-path = "/blog"
+paginate_by = 10
+#path = "blog"
 title = "Blog"
 sort_by = "date"
 template = "section.html"
