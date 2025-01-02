@@ -72,6 +72,7 @@
     {%- if config.extra.theme_switcher == true -%}
         <script type="text/javascript" src="{{ get_url(path='js/initialize_theme_min.js') | safe }}"></script>
         <script defer src="{{ get_url(path='js/main_min.js', trailing_slash=false) | safe }}"/></script>
+        <script defer src="{{ get_url(path='js/toggle_spoiler.js', trailing_slash=false) | safe }}"/></script>
     {%- endif -%}
 
 </head>

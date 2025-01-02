@@ -1,0 +1,8 @@
+<div class="spoiler">
+    <button class="spoiler-toggle" id='spoiler-toggle-{{ nth }}'>
+        {{ caption | safe }}
+    </button>
+    <div class="spoiler-content" id='spoiler-content-{{ nth }}'>
+        {{ body | markdown | safe }}
+    </div>
+</div>
