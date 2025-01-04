@@ -17,11 +17,11 @@ systems. This page will get you up and running!
 - 50 GB of disk space
 - A supported distribution (If using Arch, follow the Arch Wiki article)
 - These packages installed: `gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool`
-- A semipowerful computer. If you’re doing this on a Chromebook, you’re going to have a bad time.
+- A semi-powerful computer. If you’re doing this on a Chromebook, you’re going to have a bad time.
 
 # Setup
 
-We will be following the documenation at [https://docs.yoctoproject.org] today.
+We will be following the documentation at [https://docs.yoctoproject.org] today.
 
 Let’s clone the repo, first of all.
 

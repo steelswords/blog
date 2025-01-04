@@ -39,7 +39,7 @@ sounds really onerous. Is there some other way?
 
 Crosstool-ng is a nifty set of scripts designed to make downloading and building 
 the right binutils, libc, and compiler source easy peasy. And boy, does it deliver. 
-I was able to go from no experience to making a toolchain for my Raspberrry Pi 
+I was able to go from no experience to making a toolchain for my Raspberry Pi 
 Zero W in under an hour while watching a movie. (Home tinkerers will likely know
 what I mean about a movie-watching productivity hit.)
 
@@ -83,5 +83,5 @@ Hey presto! It works!
 
 In the future, if I ever need to make a cross compiler, I'm going to build it with
 crosstool-ng. There is no reason not to, and it made the whole process super easy,
-clean, and reproducable. Three wonderful things to see in the mess of complexity
+clean, and reproducible. Three wonderful things to see in the mess of complexity
 that is computer programming.

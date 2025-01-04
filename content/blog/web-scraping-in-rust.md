@@ -23,12 +23,12 @@ This quaint city bungalow is perfect for those five-alarm chili parties where
 As it turns out, our main criterion for picking a property, besides having a 
 comfortable price and size, was the commute to my office. As my wife and I compiled 
 a dataset of potential houses, it became tedious to manually look up the commute 
-from each property. Futhermore, the address at the top is not selectable, so I 
+from each property. Furthermore, the address at the top is not selectable, so I 
 can’t just copy it into a spreadsheet.
 
-This seems like a job for…. a three-day project that saves me a total of 20 minutes!
+This seems like a job for... a three-day project that saves me a total of 20 minutes!
 
-The good news is this gives me a chance to try Rust. I’ve used Rust trivially 
+The good news is this gives me a chance to try Rust. I've used Rust trivially 
 before, but this is an opportunity to make something actually useful to me.
 
 # What Does it Do?
@@ -98,9 +98,9 @@ any serious capacity.
 Rust is an interesting language. I find some parts really clean and snappy, like 
 all the builtin functions. I like the safety feature, and I love that it’s 
 efficient and can go toe-to-toe with C++. The main thing I don’t like is the 
-steep learning curve. Rust works very differently from other languages I’ve used 
+steep learning curve. Rust works very differently from other languages I've used 
 before, especially its borrowing system. (Die-hard Rustaceans will tell me that’s 
 what’s so great about it.) That being said, for all my frustrations of trying to 
-figure out why my closure expected a () but found a &str, I keep finding myself 
+figure out why my closure expected a `()` but found a `&str`, I keep finding myself 
 drawn to this language. There is something magical about this tricky language. 
 I think my Rust journey is not over; it has just begun.

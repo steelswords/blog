@@ -27,12 +27,12 @@ events from wherever GNOME stores them?
 # Querying Calendar Events
 The answer, of course, is harder than I thought. I believe I have stumbled on one
 of those rare coding subjects that not a great many people dabble in. I will
-spare the reader a longwinded account of my grueling research process and leave
+spare the reader a long winded account of my grueling research process and leave
 my "final recipe," so to speak, for any interested parties in the future.
 
 I know that I sync my work calendar to my desktop through Evolution-EWS, because
 the built-in Pop!\_OS stuff does not support Office 365. (Thanks, Microsoft.)
-So my first attempts were to look at how to connect to whatver Evolution uses on
+So my first attempts were to look at how to connect to whatever Evolution uses on
 the back end. For this, you will need to access the `EDataServer`. For the longest
 time, I could only find
 [this forum post](https://discourse.gnome.org/t/accessing-evolution-calendars-from-scripts/17884),
@@ -80,7 +80,7 @@ the next phase of the day. These are the parts that are supported:
 - Early morning before work
 - At work
 - After work, but before bedtime
-- After bedtime, but before a reasonable wakeup hour.
+- After bedtime, but before a reasonable wake up hour.
 
 The last two I hope will be useful for personal regulation. Sometimes I get so
 caught up in a project it can be hard to extract myself to rest for the night.

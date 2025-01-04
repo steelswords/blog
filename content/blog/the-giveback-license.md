@@ -76,7 +76,7 @@ at that company wants to add a feature to that library, they are free to do so.
 But they are then required to either open source their fork of that library or
 submit a pull request.
 
-Win-win, right? The company gets access to fairly permissable software to speed
+Win-win, right? The company gets access to fairly permissible software to speed
 their development times. The FOSS project gets contributions back whenever a
 user implements a new feature or fix, and the developers at the company can
 feel safe adding a Giveback-licensed library to their app because it won't

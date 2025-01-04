@@ -24,7 +24,7 @@ excitement to high excitement. A good read for horror fans.
 
 # *Educated: A Memoir* by Tara Westover
 
-10/10. This book is an Important Book to Read. An excellent tail.
+10/10. This book is an Important Book to Read. An excellent tale.
 
 
 # *Bad Blood: Secrets and Lies in a Silicon Valley Startup* by John Carreyrou
@@ -76,7 +76,7 @@ from me!
 # *The Well of Ascention* by Brandon Sanderson.
 8/10. This book flags a little behind its predecessor. But it is still a great novel.
 Again, the ending made me not want to read ahead, which I am forced to conclude, is
-a regular effect of Sanderson's writting. There were high payoff moments, though,
+a regular effect of Sanderson's writing. There were high payoff moments, though,
 and much appreciated expansion on some topics introduced in *The Final Empire*.
 Eventually I will read the third book in the series, but I'm still recovering from
 the end of this one.
@@ -98,11 +98,11 @@ inside.
 
 # *Speaker for the Dead* by Orson Scott Card
 
-9/10. This was a really smashing read. I was entralled with the Piggies and their culture,
+9/10. This was a really smashing read. I was enthralled with the Piggies and their culture,
 and the narrative was engaging. I was left craving the next book.
 
 
 # *Ghost in the Wires: My Adventures as the World's Most Wanted Hacker* by Kevin Mitnik
-10/10. This was a phenominal read. I'd read Kevin Mitnik's other book, *The Art
+10/10. This was a phenomenal read. I'd read Kevin Mitnik's other book, *The Art
 of Deception*, before and enjoyed it. This was like on a whole 'nother level. Fans
 of *Mr. Robot* and *Catch Me If You Can* will love this book as well!!

@@ -24,7 +24,7 @@ For more of my professional experience, check out my “Professional” page.
 
 As a kid, I loved the Harry Potter books. I used to dream about waking up to an invitation to learn about a world of magic.
 
-Electronics and computers are the closest thing to magic we have in this world. Tell me this isn’t magic: We melt down a lump of sand into a very specific configuration. By doing special, wizardly things to it, we can package that lump of melted sand into something you can speak to and it can literally order a pizza for you. That lump of sand uses wizardry to understand what you’re saying, talks to other lumps of sand through wires people have strung every which way, and eventually another lump of sand writes a message to a human being, who starts making you a pizza. This is magic, my friends, and I am all in.
+Electronics and computers are the closest thing to magic we have in this world. Tell me this isn't magic: We melt down a lump of sand into a very specific configuration. By doing special, wizardly things to it, we can package that lump of melted sand into something you can speak to and it can literally order a pizza for you. That lump of sand uses wizardry to understand what you’re saying, talks to other lumps of sand through wires people have strung every which way, and eventually another lump of sand writes a message to a human being, who starts making you a pizza. This is magic, my friends, and I am all in.
 
 # Things you should know about me
 
@@ -36,7 +36,7 @@ Electronics and computers are the closest thing to magic we have in this world. 
 
 # Examples of my work
 
-If you’re an employer looking to give me a great job, you might be interested to see examples of my work on GitHub. A lot of my portfolio is school assignments and to make it harder for would-be plagurists I have made all those repositories private. If you convince me you’re not just a lazy engineering student I’ll give you read access to the repositories for any of the following classes:
+If you’re an employer looking to give me a great job, you might be interested to see examples of my work on GitHub. A lot of my portfolio is school assignments and to make it harder for would-be plagiarists I have made all those repositories private. If you convince me you’re not just a lazy engineering student I’ll give you read access to the repositories for any of the following classes:
 
     Microcontrollers
     Computer Networks

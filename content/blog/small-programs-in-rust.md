@@ -112,7 +112,7 @@ opt-level = "z"
 ```
 
 Same size. I gues there's not much to shrink down. But how about Link Time Optimization?
-By default, the Cargo compiles and optimizes each compilation unit serparately.
+By default, the Cargo compiles and optimizes each compilation unit separately.
 Link time optimization, [described here](https://llvm.org/docs/LinkTimeOptimization.html),
 takes longer in the link step, but can produce better optimized binaries with less dead code.
 We can enable it by adding `lto = true` in our `profile.release` section of `Cargo.toml`.

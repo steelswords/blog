@@ -15,13 +15,13 @@ Here it is in action:
 
 {{ youtube(id="e5GbTxEwg40") }}
 
-The primary reason this took so long was because I didn’t have a 3D printer at 
+The primary reason this took so long was because I didn't have a 3D printer at 
 first. After I acquired one this project took off! It was so exciting to print 
 out those parts effortlessly, instead of trying to craft them out of cardboard.
 
 # Mechanical Assembly
 
-All of the mechanical pieces are 3D printed. I used balassy’s design, 
+All of the mechanical pieces are 3D printed. I used balassy's design, 
 [found on Thingiverse](https://www.thingiverse.com/thing:3856965).
 
 Most of the screws used are M3. It’s so nice to use metric screws. They’re much 

@@ -30,7 +30,7 @@ KERNEL=kernel
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcmrpi_defconfig
 ```
 
-I put my laptop into “High performace” mode for whatever that does and run the following:
+I put my laptop into “High performance” mode for whatever that does and run the following:
 
 ```bash
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs

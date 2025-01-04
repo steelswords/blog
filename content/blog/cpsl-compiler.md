@@ -10,7 +10,7 @@ tags = ["showcase", "project"]
 
 During my undergrad degree, I took a wonderful class called Compiler Construction. It had a reputation among the computer science students of being the hardest class their department offered. It was so much fun!
 
-The first day of the class, the professor stressed to us the amount of work this compiler would take. He said not to procrastinate because we couldn’t physically type the amount of code required in less than four weeks or so. He was more or less right about that. Not to worry though, I got started as soon as I could.
+The first day of the class, the professor stressed to us the amount of work this compiler would take. He said not to procrastinate because we couldn't physically type the amount of code required in less than four weeks or so. He was more or less right about that. Not to worry though, I got started as soon as I could.
 
 The class was very interesting. We talked about parsing, regular expressions, and abstract syntax trees, among other topics.
 

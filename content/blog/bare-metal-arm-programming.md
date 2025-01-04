@@ -18,7 +18,7 @@ class, I only ever used the pre-installed, pre-configured Keil IDE the lab
 had set up. That changes with this project. **I want to program this thing with
 nothing more than a datasheet and gcc**.
 
-I had attempted this once before unsuccesfully, but since then I have found
+I had attempted this once before unsuccessfully, but since then I have found
 [this remarkable resource by cpq](https://github.com/cpq/bare-metal-programming-guide).
 It details fairly closely what I wanted to do. It helped fill in gaps in my knowledge
 about the process, but I still had to look up and find lots of details in my
