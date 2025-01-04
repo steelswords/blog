@@ -1,0 +1,8 @@
+<div class="spoiler-section">
+    <button class="spoiler-toggle-button">
+        {{ caption | safe }}
+    </button>
+    <div class="spoiler-section-content">
+        {{ body | markdown | safe }}
+    </div>
+</div>

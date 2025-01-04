@@ -1,8 +1,8 @@
-base_url = "https://tristanandrus.com"
-#base_url = "http://localhost:1111"
+#base_url = "https://tristanandrus.com"
+base_url = "http://localhost:1111"
 title = "Tristan Andrus"
 description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
-generate_feed = true
+generate_feeds = true
 compile_sass = true
 minify_html = true
 
@@ -43,7 +43,6 @@ favicon = ""
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
 favicon_emoji = "💻"
-
 # This header image is used for SEO. For example if you were to share an image via Messenger/Instagram/Twitter a preview picture is also presented
 headerImage = ""
 

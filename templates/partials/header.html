@@ -36,7 +36,7 @@
 
     {# CSS #}
     {# Load subset of glyphs for header. Avoids flashing issue in Firefox #}
-    <link rel="stylesheet" href="{{ get_url(path="spoiler.css" , cachebust=true) }}">
+    <link rel="stylesheet" href="{{ get_url(path="spoilersection.css" , cachebust=true) }}">
     {% if config.extra.custom_subset and config.extra.custom_subset == true %}
         <link rel="stylesheet" href="{{ get_url(path="custom_subset.css" , cachebust=true) }}">
     {% elif lang == 'en' %}
@@ -135,6 +135,7 @@
         {%- include "partials/content_security_policy.html" -%}
     {%- endif -%}
 
+    <script defer src="{{ get_url(path='js/toggle_spoiler.js', trailing_slash=false) | safe }}"/></script>
     {%- if config.extra.theme_switcher and config.extra.theme_switcher == true -%}
         {# If JavaScript is disabled, hide the button. #}
         <noscript><link rel="stylesheet" href="{{ get_url(path='no_js.css') | safe }}"/></noscript>

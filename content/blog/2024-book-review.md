@@ -86,7 +86,7 @@ And I suspect it suffers from translation problems too. First, the name of the B
 Bad Evil Guy: *Capricorn???* The name gives idyllic goat, or possibly a goatherd,
 not a psychopathic villain.
 
-{% spoiler(caption="Show Inkheart Spoilers") %}
+{% spoilersection(caption="Show Inkheart Spoilers") %}
 
 There are scenes that go on for pages and pages that add nothing to the story.
 The action starts to pick up, and then immediately we take a break for a good 50
@@ -117,7 +117,7 @@ Dustfinger is the true villain of the piece.
 Andy Weir in my eyes. Lots of nerdy fun, especially amusing for engineering types
 who just relate so easily to Bob.
 
-{% spoiler(caption="Show We are Legion, We Are Bob Spoilers") %}
+{% spoilersection(caption="Show We are Legion, We Are Bob Spoilers") %}
 The audiobook got a little confusing to follow once Bob buds off new Bobs, but
 you get used to it fairly quickly. That's why it's not 10/10.
 {% end %}

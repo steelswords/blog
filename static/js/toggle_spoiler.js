@@ -30,7 +30,7 @@ function toggleSpoiler() {
 }
 
 function addToggleSpoilerClickListenersToAllSpoilers() {
-    let spoilerButtons = document.getElementsByClassName('spoiler-toggle')
+    let spoilerButtons = document.getElementsByClassName('spoiler-toggle-button')
     for (i = 0; i < spoilerButtons.length; i++)
     {
         let but = spoilerButtons.item(i);
