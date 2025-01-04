@@ -10,6 +10,7 @@ taxonomies = [
     {name = "tags", feed = true},
 ]
 
+theme = "tabi"
 [markdown]
 external_links_target_blank = true
 highlight_code = true
@@ -60,6 +61,8 @@ socials = [
     # { name = "atom feed", url = "$BASE_URL/atom.xml", icon = "rss" },
     { name = "github", url = "https://github.com/steelswords/", icon = "github" },
     { name = "linkedin", url = "https://www.linkedin.com/in/tristan-andrus", icon = "linkedin" },
+    { name = "mastodon", url = "https://fosstodon.org/@steelswords", icon = "mastodon" },
+    { name = "bluesky", url = "https://bsky.app/profile/steelswords.bsky.social", icon = "bluesky" },
 ]
 
 # Custom security headers. What urls should your website be able to connect to?

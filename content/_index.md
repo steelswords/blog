@@ -5,9 +5,9 @@ sort_by = "date"
 template = "section.html"
 
 [extra]
-header = {title = "Hi, there! I'm Tristan.", img = "$BASE_URL/img/main.webp" }
+header = {title = "Hi, there! I'm Tristan.", img = "img/main.webp" }
 section_path = "blog/_index.md"
-max_posts = 10
+max_posts = 15
 +++
 
 I am an embedded engineer interested in low-level code, hardware development, operating systems, and robotics. Welcome to my website!
