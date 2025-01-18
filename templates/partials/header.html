@@ -37,6 +37,7 @@
     {# CSS #}
     {# Load subset of glyphs for header. Avoids flashing issue in Firefox #}
     <link rel="stylesheet" href="{{ get_url(path="spoilersection.css" , cachebust=true) }}">
+    <link rel="stylesheet" href="{{ get_url(path="attributedblockquote.css" , cachebust=true) }}">
     {% if config.extra.custom_subset and config.extra.custom_subset == true %}
         <link rel="stylesheet" href="{{ get_url(path="custom_subset.css" , cachebust=true) }}">
     {% elif lang == 'en' %}
