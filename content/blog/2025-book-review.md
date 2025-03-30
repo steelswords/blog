@@ -59,4 +59,31 @@ it more than made up for it in sheer "What the heck?!" moments. Holy cow, the
 twists! Very good.
 {% end %}
 
+# *The Death Cure* by James Dashner
 
+The third book in *The Mazer Runner* series. 9/10. It's been a while between
+finishing this book and writing this review, but I seem to recall there were
+some plot choices that seemed to weaken parts of the narrative that happened
+previously. However, the ending was a fairly satisfying payoff. I if I finished
+on a different day I would have balked at the rapid conclusion, though.
+
+# *All These Worlds* by Dennis E. Taylor
+10/10. What can I say except the Bobiverse is one of my favorite series now?
+My goodness, another solid installation. Every book of Mr. Taylor's I have read
+thus far has been consistently top-notch.
+
+# *A Man Called Ove* by Fredrick Backman
+10/10. This is a wonderful book. It's one of stories that makes you hate a guy,
+then love him. I was floored really early on. This is a wonderful tale about
+communiy, heartbreak, taking *responsibility*, and human kindness.
+
+# *Heaven's River* by Dennis E. Taylor
+10/10. What more is there to say? Another Bobiverse book. Another fantasitc,
+nerdy novel in what has quickly become my favorite Sci-fi series. Just start at
+the beginning and read all these books. That's all I have to say on the subject.
+
+# *Russia in Revolution* by S. A. Smith
+I've been reading a lot of literature on communism (not all of it finished, and
+not all of it mentioned here), and so I needed to have some legitimate
+historical context to the Soviet state. This provided that. It was dry in some
+parts, but what serious historical work isn't? 8/10.
