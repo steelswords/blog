@@ -8,7 +8,7 @@ tags = ["linux", "opinions"]
 +++
 
 # Linux Tools I Could Not Live Without
-You know the scenes -- usually on some cheesy but bingable crime-fighting show 
+You know the scenes -- usually on some cheesy but binge-able crime-fighting show 
 -- where the "tech guy" starts typing furiously, keys flying over their keyboard,
 as they bring up and process all sorts of information? I used to think that was
 Hollywood hyperbole until I started using some of the tools in this list. I
@@ -26,7 +26,7 @@ tools enable for me.
 Honestly, learning Vim was one of the best things I could do for decreasing the
 friction in my workflow. Being able to train muscle memory to "jump over here"
 "replace just that word", or "back up to the beginning of the line" without
-fumbling for the "Home" key or the mouse has been a gamechanger. It is also a
+fumbling for the "Home" key or the mouse has been a game changer. It is also a
 sort of gateway drug for everything else you see here. I'm on this path today
 because I invested time in learning how to be efficient with Vim.
 
@@ -57,7 +57,7 @@ tremendous powerup! I can't properly express how awesome it is. Just trust me,
 being able to navigate the web from the keyboard is a life-changing experience.
 
 ## A terminal multiplexer: tmux
-tmux is a gamechanger. I was first introduced to it as a way to start programs I
+tmux is a game changer. I was first introduced to it as a way to start programs I
 started on my Raspberry Pi via SSH and keep them running even after I logged out
 of SSH (or lost connection when I went somewhere else, as I just had one laptop
 in those days. Ah, college...).
@@ -80,9 +80,9 @@ keyboard for the vast, vast majority of tasks!
 
 ## A decent shell: zsh
 
-This is a little opinonated (not like everything else above, of course /j).
-Bash is definitely an improvement on more barebones POSIX shells, like `sh`,
-`ash`, and `dash`. I actually try to do all my shell scripting in the `bash`
+This is a little opinionated (not like everything else above, of course /j).
+Bash is definitely an improvement on more barebones POSIX shells, like sh,
+ash, and dash. I actually try to do all my shell scripting in the bash
 dialect for its relatively complete features and ubiquity. But for a daily
 driver, it's kind of lacking. I have found zsh to be much more user-friendly for
 me.
