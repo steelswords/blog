@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://tristanandrus.com/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme>dark</tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>Tristan Andrus</tabi:current_section>
+    </tabi:metadata><title>Tristan Andrus</title>
+        <subtitle>I am an embedded engineer with an interest in low-level code, operating systems, and robotics.</subtitle>
+    <link href="https://tristanandrus.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tristanandrus.com" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-11-03T00:00:00+00:00</updated>
+    <id>https://tristanandrus.com/atom.xml</id><entry xml:lang="en">
+        <title>A Descent into Lovecraftian Madness Because of Time Zones</title>
+        <published>2025-11-03T00:00:00+00:00</published>
+        <updated>2025-11-03T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/timezone-madness/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/timezone-madness/</id>
+        <summary type="html">A right of passage was achieved: but at what cost?</summary>
+        </entry><entry xml:lang="en">
+        <title>Linux Tools I Cannot Live Without</title>
+        <published>2025-07-06T00:00:00+00:00</published>
+        <updated>2025-07-06T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/linux-tools-i-cannot-live-without/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/linux-tools-i-cannot-live-without/</id>
+        <summary type="html">These are my ingredients for a happy, productive time with Linux</summary>
+        </entry><entry xml:lang="en">
+        <title>SSH Spellbook</title>
+        <published>2025-07-06T00:00:00+00:00</published>
+        <updated>2025-07-06T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/ssh-master-guide/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/ssh-master-guide/</id>
+        <summary type="html">My Master Spellbook for using SSH fluently and fluidly.</summary>
+        </entry><entry xml:lang="en">
+        <title>Teardown: Keuby Android Smart TV Box</title>
+        <published>2025-01-04T00:00:00+00:00</published>
+        <updated>2025-01-04T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/keuby-android-tv-box/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/keuby-android-tv-box/</id>
+        <summary type="html">I found a no-name Android media box at a thrift store and took it apart</summary>
+        </entry><entry xml:lang="en">
+        <title>2024 Book Review</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/2024-book-review/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/2024-book-review/</id>
+        <summary type="html">A review of the books I read in 2024</summary>
+        </entry><entry xml:lang="en">
+        <title>The Giveback License</title>
+        <published>2024-12-01T00:00:00+00:00</published>
+        <updated>2024-12-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/the-giveback-license/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/the-giveback-license/</id>
+        <summary type="html">A new software license for FOSS</summary>
+        </entry><entry xml:lang="en">
+        <title>Bare Metal Programming the STM32</title>
+        <published>2024-08-31T00:00:00+00:00</published>
+        <updated>2024-08-31T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/bare-metal-arm-programming/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/bare-metal-arm-programming/</id>
+        <summary type="html">Programming an ARM Cortex M4 without any framework or IDE - just some datasheets and gcc</summary>
+        </entry><entry xml:lang="en">
+        <title>A Script to Report Unscheduled Hours Left in the Day</title>
+        <published>2024-05-12T00:00:00+00:00</published>
+        <updated>2024-05-12T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/getting-calendar-events-from-gnome-synced-accounts/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/getting-calendar-events-from-gnome-synced-accounts/</id>
+        <summary type="html">Getting synced Calendar events from GNOME Calendar is harder than it looks.</summary>
+        </entry><entry xml:lang="en">
+        <title>Zigbee Lights Hack</title>
+        <published>2024-04-13T00:00:00+00:00</published>
+        <updated>2024-04-13T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/zigbee-lights-hack/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/zigbee-lights-hack/</id>
+        <summary type="html">My efforts to control fluorescent lights with an Aduro Zigbee light bulb</summary>
+        </entry><entry xml:lang="en">
+        <title>2023 Book Review</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/2023-book-review/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/2023-book-review/</id>
+        <summary type="html">A review of the books I read in 2023</summary>
+        </entry><entry xml:lang="en">
+        <title>Upgrading a VTech Baby Monitor</title>
+        <published>2023-09-06T00:00:00+00:00</published>
+        <updated>2023-09-06T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/baby-monitor-usb-c-upgrade/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/baby-monitor-usb-c-upgrade/</id>
+        <summary type="html">I liberated our baby monitor from its barrel plug charger by installing a USB-C port on it.</summary>
+        </entry><entry xml:lang="en">
+        <title>Shrinking the binary size of Rust programs</title>
+        <published>2023-07-17T00:00:00+00:00</published>
+        <updated>2023-07-17T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/small-programs-in-rust/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/small-programs-in-rust/</id>
+        <summary type="html">Rust is a performant language. But its binaries are huge. How can we shrink them?</summary>
+        </entry><entry xml:lang="en">
+        <title>Connect 4 in Rust</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/connect4/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/connect4/</id>
+        </entry><entry xml:lang="en">
+        <title>Let&#x27;s Build a Cross Compiler!</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/lets-build-a-cross-compiler/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/lets-build-a-cross-compiler/</id>
+        <summary type="html">I build a cross compiler for the Raspberry Pi Zero W with Crosstool-ng</summary>
+        </entry><entry xml:lang="en">
+        <title>Web Scraping in Rust</title>
+        <published>2023-04-23T00:00:00+00:00</published>
+        <updated>2023-04-23T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/web-scraping-in-rust/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/web-scraping-in-rust/</id>
+        <summary type="html">I scraped Utah&#x27;s MLS with Rust to find the commute time of different properties</summary>
+        </entry><entry xml:lang="en">
+        <title>Linux Kernel Development, part 2: Character Devices</title>
+        <published>2023-01-21T00:00:00+00:00</published>
+        <updated>2023-01-21T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/linux-kernel-development-part-2/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/linux-kernel-development-part-2/</id>
+        <summary type="html">Let&#x27;s write a kernel module to give us &#x2F;dev&#x2F;fibonacci, which gives us Fibonacci numbers when read</summary>
+        </entry><entry xml:lang="en">
+        <title>Linux Kernel Development on the Raspberry Pi Zero W</title>
+        <published>2023-01-03T00:00:00+00:00</published>
+        <updated>2023-01-03T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/linux-kernel-development-part-1/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/linux-kernel-development-part-1/</id>
+        <summary type="html">I scraped Utah&#x27;s MLS with Rust to find the commute time of different properties</summary>
+        </entry><entry xml:lang="en">
+        <title>About Tristan Andrus</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/about/" type="text/html"/>
+        <id>https://tristanandrus.com/about/</id>
+        <summary type="html">Tristan Andrus is an embedded engineer with a strong Linux background.</summary>
+        </entry><entry xml:lang="en">
+        <title>2022 Book Review</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/2022-book-review/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/2022-book-review/</id>
+        <summary type="html">A review of the books I read in 2022</summary>
+        </entry><entry xml:lang="en">
+        <title>Professional Experience</title>
+        <published>2023-01-01T00:00:00+00:00</published>
+        <updated>2023-01-01T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/experience/" type="text/html"/>
+        <id>https://tristanandrus.com/experience/</id>
+        <summary type="html">Tristan Andrus is an embedded engineer with a strong Linux background.</summary>
+        </entry><entry xml:lang="en">
+        <title>Meeting Indicator</title>
+        <published>2022-12-17T00:00:00+00:00</published>
+        <updated>2022-12-17T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/meeting-indicator/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/meeting-indicator/</id>
+        <summary type="html">I made a WiFi-controlled light to show my family when I&#x27;m in a meeting</summary>
+        </entry><entry xml:lang="en">
+        <title>Hello World in Yocto</title>
+        <published>2022-06-30T00:00:00+00:00</published>
+        <updated>2022-06-30T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/hello-world-in-yocto/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/hello-world-in-yocto/</id>
+        <summary type="html">Getting started with Yocto for the Raspberry Pi 3</summary>
+        </entry><entry xml:lang="en">
+        <title>The Useless Box</title>
+        <published>2022-06-29T00:00:00+00:00</published>
+        <updated>2022-06-29T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/useless-box/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/useless-box/</id>
+        <summary type="html">I made a box that is entirely useless and cheeky. What fun!</summary>
+        </entry><entry xml:lang="en">
+        <title>CPSL Compiler</title>
+        <published>2022-06-12T00:00:00+00:00</published>
+        <updated>2022-06-12T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/cpsl-compiler/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/cpsl-compiler/</id>
+        <summary type="html">I built a compiler for a Pascal-like language called CPSL</summary>
+        </entry><entry xml:lang="en">
+        <title>The Laser Tank</title>
+        <published>2018-12-20T00:00:00+00:00</published>
+        <updated>2018-12-20T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/laser-tank/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/laser-tank/</id>
+        </entry><entry xml:lang="en">
+        <title>The Making of my Chain Mail Armor</title>
+        <published>2017-06-17T00:00:00+00:00</published>
+        <updated>2017-06-17T00:00:00+00:00</updated>
+        <author>
+            <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tristanandrus.com/blog/making-chain-mail-armor/" type="text/html"/>
+        <id>https://tristanandrus.com/blog/making-chain-mail-armor/</id>
+        <summary type="html">This is how I made chain mail for fun.</summary>
+        </entry>
+</feed>
