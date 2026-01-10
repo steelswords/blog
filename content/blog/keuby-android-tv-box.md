@@ -10,9 +10,9 @@ tags = ["electronics, Linux, teardowns"]
 
 # The Keuby Ice 0515: a Cheap, Craponium Box Like You Wouldn't Believe
 
-I found this at the thrift store for $5 and it intrigued me. I know what BOM costs
-are like for small, media-capable Linux/Android devices, and they are no $5. Before
-I purchased, I made sure to search online for what details I could find. You know
+I found this media box at the thrift store for $5 and it intrigued me. I know what BOM costs
+are like for small, media-capable Linux/Android devices, and they are no $5, let me tell you!
+Before I purchased it, I made sure to search online for what details I could find. You know
 you've got a no-name device when the most information out there was from an EBay
 listing. Oh my. Well, apparently it runs Android 5 of some flavor. Oh my again!
 
@@ -25,10 +25,10 @@ And the bottom:
 
 {{ dimmable_image(src="img/articles/keuby/keuby-unopened-back.jpg", alt='The bottom of the Keuby Ice 0515. There are vent holes all over. A gray tag says, "Android Smart TV Box, Model: Keuby Ice 0515, MADE IN CHINA". A smaller white tag lists its MAC address and a barcode.') }}
 
-Besides the lack of the usual regulatory stamps of approval (no FCC, ETL, or even
+Besides the lack of the usual regulatory stamps of approval (no FCC, CE, or ETL markings, or even
 power specs. Nothing), this seems like a pretty cool little piece of hardware.
 There's an HDMI port, two USB type A ports (not 3.0, but possibly 2.0 or lower),
-an Ethernet port, a 3.5 mm audio jack, and optical audio port, and a garden-variety
+an Ethernet port, a 3.5 mm audio jack, an optical audio port, and a garden-variety
 barrel jack for power.
 
 Since there are no input power specs, I hooked it up to a power supply and a monitor
@@ -47,7 +47,7 @@ regulators will increase current draw as the supplied voltage goes *down*, not
 the other way around. But it's just weird enough that I'd kind of like to open it
 up and see what's going on.
 
-Popping off the four rubber feet revealed four comically tiny screws, which both
+Popping off the four rubber feet revealed four comically tiny screws, which
 showed me two things. The first thing was that every possible measure was taken
 to cut costs on this device. Those screws were the tiniest screws they could get
 away with, and their mount points were these weak little spindly things; I doubted
@@ -57,7 +57,7 @@ The second thing it showed me was the interior:
 
 {{ dimmable_image(src="img/articles/keuby/keuby-opened-top.jpg", alt='The circuitboard of the Keuby') }}
 
-An astute observer will notice that there is no power circuitry there at all. I
+An astute observer will notice that there is not a lot of power circuitry there at all. I
 looked up the two most suspicious looking chips by that barrel plug and they both
 had to do with audio, not power. No heatsinks for MOSFETs or voltage regulators.
 Between that and the cheapness of the screws situation, I had to conclude that
@@ -108,8 +108,8 @@ is not powered on the order of years. In any case, we're starting from scratch.
 Either way, I poked around a little and found a... fully functional Android 5 system.
 Hey presto!
 
-Yeah, there is *no way* I'm connecting this thing to my home network right now. Maybe I'll set up some sort of sandbox later.
-But for now, let's see what it can do!
+Yeah, there is *no way* I'm connecting this thing to my home network right now.
+Maybe I'll set up some sort of sandbox later. But for now, let's see what it can do!
 
 {{ dimmable_image(src="img/articles/keuby/keuby-ui-1.jpg", alt='A view of the Keuby UI main menu. There are buttons for Online Video, My recommended, Settings, My Apps, Music, Local, and a few more at the bottom.') }}
 <br/>

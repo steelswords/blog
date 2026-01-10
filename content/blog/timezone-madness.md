@@ -8,7 +8,7 @@ draft = false
 tags = ["programming"]
 +++
 
-# Right of Passage Achieved: Descent into Lovecraftian Madness Because of Time Zones
+# Rite of Passage Achieved: Descent into Lovecraftian Madness Because of Time Zones
 
 > Editor's note: This happened in 2024, but was published over a year later on this blog.
 
@@ -32,7 +32,8 @@ typical entry:
 > own time. I asked about daylight saving; they said it wasn't used. I
 > did not inquire about practices in the past.
 
-That seems pretty reasonable. But then follow another change in 2015 where Metlakatla decided to follow Alaska's time, "switching between AKST and AKDT from now on...."
+That seems pretty reasonable. But then follows another change in 2015 where
+Metlakatla decided to follow Alaska's time, "switching between AKST and AKDT from now on...."
 
 And then the thing that broke me.
 
@@ -42,7 +43,9 @@ And then the thing that broke me.
 > They will be gmtoff=-28800 year-round.
 > https://www.facebook.com/141055983004923/photos/pb.141055983004923.-2207520000.1541465673./569081370202380/
 
-A ***Facebook post***? The world's most authoritative timezone database, having to reference a Facebook post as an authoritative source for how a community reckons time. Oh my gosh, time reckoning is so much worse than I ever thought.
+A ***Facebook post***? The world's most authoritative timezone database, having
+to reference a *Facebook post* as an authoritative source for how a community
+reckons time. Oh my gosh, time reckoning is so much worse than I ever thought.
 
 And here's the thing. Metlakatla, AK is a small community of 1454 souls as of the
 2020 census. It's a census-designated place, which means it's unincorporated. And 
