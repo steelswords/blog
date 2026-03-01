@@ -2,7 +2,7 @@
 title = "How to Feel Good While Glued to Your Computer 15/7"
 date = 2025-09-01
 description = "Always at your desk at work or home? Do you have tight shoulders and neck problems? Can't sleep? This guide is for you!"
-draft = true
+draft = false
 
 [taxonomies]
 tags = ["opinion"]
