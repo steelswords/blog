@@ -1,4 +1,5 @@
 base_url = "https://tristanandrus.com"
+#base_url = "http://127.0.0.1"
 title = "Tristan Andrus"
 description = "I am an embedded engineer with an interest in low-level code, operating systems, and robotics."
 generate_feeds = true
@@ -12,6 +13,15 @@ taxonomies = [
 theme = "tabi"
 [markdown]
 external_links_target_blank = true
+
+[markdown.highlighting]
+style = "inline"
+theme = "github-dark"
+
+#highlight_code = true
+#highlight_theme = "css"
+
+#default_language = "en"
 
 [extra]
 
