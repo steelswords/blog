@@ -21,7 +21,7 @@ them on my blog to show off. 😉
 
 Here's the final result.
 
-{{ dimmable_image(src="img/connect4playthrough.gif", alt="A stunning upset by Player 2") }}
+{{ <dimmable_image src="img/connect4playthrough.gif" alt="A stunning upset by Player 2" /> }}
 
 # Features
 - Local multiplayer

@@ -19,11 +19,11 @@ listing. Oh my. Well, apparently it runs Android 5 of some flavor. Oh my again!
 Here's what it looks like. Forgive me for not cleaning off the case first. After
 all, I didn't know if I was going to end up tossing this in the trash or not.
 
-{{ dimmable_image(src="img/articles/keuby/keuby-unopened-front.jpg", alt="The top of the Keuby Ice 0515. Keuby is emblazoned in large letters.") }}
+{{ <dimmable_image src="img/articles/keuby/keuby-unopened-front.jpg" alt="The top of the Keuby Ice 0515. Keuby is emblazoned in large letters." /> }}
 
 And the bottom:
 
-{{ dimmable_image(src="img/articles/keuby/keuby-unopened-back.jpg", alt='The bottom of the Keuby Ice 0515. There are vent holes all over. A gray tag says, "Android Smart TV Box, Model: Keuby Ice 0515, MADE IN CHINA". A smaller white tag lists its MAC address and a barcode.') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-unopened-back.jpg" alt={'The bottom of the Keuby Ice 0515. There are vent holes all over. A gray tag says, "Android Smart TV Box, Model: Keuby Ice 0515, MADE IN CHINA". A smaller white tag lists its MAC address and a barcode.'} /> }}
 
 Besides the lack of the usual regulatory stamps of approval (no FCC, CE, or ETL markings, or even
 power specs. Nothing), this seems like a pretty cool little piece of hardware.
@@ -55,7 +55,7 @@ if they would handle a mere dozen screw removal/insertion cycles.
 
 The second thing it showed me was the interior:
 
-{{ dimmable_image(src="img/articles/keuby/keuby-opened-top.jpg", alt='The circuitboard of the Keuby') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-opened-top.jpg" alt={'The circuitboard of the Keuby'} /> }}
 
 An astute observer will notice that there is not a lot of power circuitry there at all. I
 looked up the two most suspicious looking chips by that barrel plug and they both
@@ -68,7 +68,7 @@ I missed something?
 
 Turns out I had.
 
-{{ dimmable_image(src="img/articles/keuby/keuby-unopened-light-on.jpg", alt='An unopened Keuby Ice box, with a green light showing on the front.') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-unopened-light-on.jpg" alt={'An unopened Keuby Ice box, with a green light showing on the front.'} /> }}
 
 There is a power indicator LED on the front of the box. I only noticed it turned
 on when I reached 12 V and saw some current draw. I was watching the monitor the
@@ -84,7 +84,7 @@ Well, in any case, we booted, which means I likely didn't cook the board with th
 
 And just like that, I had a boot screen!
 
-{{ dimmable_image(src="img/articles/keuby/keuby-boot-1.jpg", alt='A shockingly magenta boot screen, with a graphic saying Amlogic, 8 core Mali 450 Quad Core A9 M8') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-boot-1.jpg" alt={'A shockingly magenta boot screen, with a graphic saying Amlogic, 8 core Mali 450 Quad Core A9 M8'} /> }}
 
 The "Mali 450" Refers to the GPU, which apparently has 8 shader cores on this SOC.
 The Quad Core A9, of course, refers to the family of ARM CPU in the SOC. So this
@@ -93,11 +93,11 @@ super old, but I don't mind that either.
 
 Next, it booted some more and dummped me into a setup screen.
 
-{{ dimmable_image(src="img/articles/keuby/keuby-boot-2.jpg", alt='A shockingly magenta boot screen, with a graphic saying Amlogic, 8 core Mali 450 Quad Core A9 M8') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-boot-2.jpg" alt={'A shockingly magenta boot screen, with a graphic saying Amlogic, 8 core Mali 450 Quad Core A9 M8'} /> }}
 
 <br/>
 
-{{ dimmable_image(src="img/articles/keuby/keuby-setup.jpg", alt='A setup screen asking for my system language preference: Simplified Chinese, English, or Traditional Chinese') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-setup.jpg" alt={'A setup screen asking for my system language preference: Simplified Chinese, English, or Traditional Chinese'} /> }}
 
 
 Did the original owner
@@ -111,10 +111,10 @@ Hey presto!
 Yeah, there is *no way* I'm connecting this thing to my home network right now.
 Maybe I'll set up some sort of sandbox later. But for now, let's see what it can do!
 
-{{ dimmable_image(src="img/articles/keuby/keuby-ui-1.jpg", alt='A view of the Keuby UI main menu. There are buttons for Online Video, My recommended, Settings, My Apps, Music, Local, and a few more at the bottom.') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-ui-1.jpg" alt={'A view of the Keuby UI main menu. There are buttons for Online Video, My recommended, Settings, My Apps, Music, Local, and a few more at the bottom.'} /> }}
 <br/>
 
-{{ dimmable_image(src="img/articles/keuby/keuby-ui-2-settings.jpg", alt='The Settings screen of the Keuby UI. It shows the Android version is Android 5.1.1, the build number is Keuby ice 20150309 test-keys, and the Kernel version is 3.10.33') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-ui-2-settings.jpg" alt={'The Settings screen of the Keuby UI. It shows the Android version is Android 5.1.1, the build number is Keuby ice 20150309 test-keys, and the Kernel version is 3.10.33'} /> }}
 
 Alright, this is too fun. It's booted Android 5.1.1, with Linux kernel 3.10.33.
 My gosh, that's old. And yep, the build number would suggest this was built in 2015.
@@ -128,7 +128,7 @@ What to do with this machine?
 As what I can only guess was one of its primary raisons d'être, it runs Kodi. Or,
 at least, v 14.0, which, you know, is 10 years old now, but who's counting?
 
-{{ dimmable_image(src="img/articles/keuby/keuby-ui-3-kodi.jpg", alt='An old version of Kodi running on the Keuby') }}
+{{ <dimmable_image src="img/articles/keuby/keuby-ui-3-kodi.jpg" alt={'An old version of Kodi running on the Keuby'} /> }}
 
 I'm really tempted to set up a sandbox network and let this guy update... Provided
 there's anywhere still left to update from. The fact that I couldn't find a

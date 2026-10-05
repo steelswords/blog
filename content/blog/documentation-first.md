@@ -1,7 +1,8 @@
 +++
 title = "The Documentation First Approach"
-date = 2026-11-1
+date = 2026-11-01
 description = "A manifesto for building and maintaining computer systems"
+draft = true
 
 [taxonomies]
 tags = ["opinion", "programming"]

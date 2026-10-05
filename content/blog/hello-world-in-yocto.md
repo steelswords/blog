@@ -83,7 +83,7 @@ runqemu qemux86-64
 
 You’ll see it boot, and wonder of wonder, miracle of miracles:
 
-{{ dimmable_image(src="img/articles/yocto/yocto-bootscreen.png", alt="The Yocto bootscreen") }}
+{{ <dimmable_image src="img/articles/yocto/yocto-bootscreen.png" alt="The Yocto bootscreen" /> }}
 
 A boot screen!
 
@@ -95,5 +95,5 @@ Now for the moment we’ve all been waiting for.
 ```bash
 echo "Hello, world!"
 ```
-{{ dimmable_image(src="img/articles/yocto/yocto-hello-world.jpg", alt="The Yocto bootscreen") }}
+{{ <dimmable_image src="img/articles/yocto/yocto-hello-world.jpg" alt="The Yocto bootscreen" /> }}
 

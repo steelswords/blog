@@ -52,12 +52,12 @@ forward to the series being finished off before I get to the end.
 # *The Scorch Trials* by James Dashner
 
 This is the second book in *The Maze Runner* series. 10/10.
-{% spoilersection(caption="Show Scorch Trials Spoilers") %}
+{% <spoilersection caption="Show Scorch Trials Spoilers"> %}
 I feel like the "escape from a box with seemingly no exit" angle was really the
 icing on the cake in *Maze Runner*. While *Scorch Trials* lacked that element,
 it more than made up for it in sheer "What the heck?!" moments. Holy cow, the
 twists! Very good.
-{% end %}
+{% </spoilersection> %}
 
 # *The Death Cure* by James Dashner
 

@@ -86,7 +86,7 @@ And I suspect it suffers from translation problems too. First, the name of the B
 Bad Evil Guy: *Capricorn???* The name gives idyllic goat, or possibly a goatherd,
 not a psychopathic villain.
 
-{% spoilersection(caption="Show Inkheart Spoilers") %}
+{% <spoilersection caption="Show Inkheart Spoilers"> %}
 
 There are scenes that go on for pages and pages that add nothing to the story.
 The action starts to pick up, and then immediately we take a break for a good 50
@@ -110,17 +110,17 @@ back to the real world again so she could speak?
 Also, Dustfinger just sucks. Man, what an awful guy! If I were an English teacher
 teaching characterization, I would happily entertain student essays on how
 Dustfinger is the true villain of the piece.
-{% end %}
+{% </spoilersection> %}
 
 # *We Are Legion, We Are Bob* by Dennis E. Taylor
 9/10. This is such a fun book! It's right up there with *Project Hail Mary* by
 Andy Weir in my eyes. Lots of nerdy fun, especially amusing for engineering types
 who just relate so easily to Bob.
 
-{% spoilersection(caption="Show We are Legion, We Are Bob Spoilers") %}
+{% <spoilersection caption="Show We are Legion, We Are Bob Spoilers"> %}
 The audiobook got a little confusing to follow once Bob buds off new Bobs, but
 you get used to it fairly quickly. That's why it's not 10/10.
-{% end %}
+{% </spoilersection> %}
 
 # *Never a Girl, Always a Boy: A Family Memoir of a Transgender Journey* by Jo Ivester
 

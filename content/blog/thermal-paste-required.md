@@ -28,13 +28,13 @@ aforementioned laptop and see if that solved the issue).
 I went ahead and removed the fan screws and was greeted with some very dry, not
 healthy looking thermal paste. Looks like I'm on the right track.
 
-{{ dimmable_image(src="img/articles/thermal-paste/old-crusty-thermal-paste.jpg", alt="Old, nasty-looking thermal paste") }}
+{{ <dimmable_image src="img/articles/thermal-paste/old-crusty-thermal-paste.jpg" alt="Old, nasty-looking thermal paste" /> }}
 
 I cleaned the
 old paste off with some cotton swabs and isopropyl alcohol: the wonder solvent
 of the electronics world. Ooo, shiny!
 
-{{ dimmable_image(src="img/articles/thermal-paste/shiny-cpu.jpg", alt="A very shiny CPU top") }}
+{{ <dimmable_image src="img/articles/thermal-paste/shiny-cpu.jpg" alt="A very shiny CPU top" /> }}
 
 I also looked at the heatsink in the fan assembly to see if it needed new thermal
 paste too. But as best as I could tell, that sucker was soldered together.
@@ -43,7 +43,7 @@ I had an idea of how much thermal paste to put on, but didn't really *know*, you
 know? I figured it was better to err on the side of abundance. In the end, I'm
 pretty sure I used way too much. 😉
 
-{{ dimmable_image(src="img/articles/thermal-paste/too-much-paste.jpg", alt="A pretty okay thermal paste job") }}
+{{ <dimmable_image src="img/articles/thermal-paste/too-much-paste.jpg" alt="A pretty okay thermal paste job" /> }}
 
 I thought about if I should clean up the excess. I don't think it would affect
 the thermals either way by much, cause the whole point of this is to create a

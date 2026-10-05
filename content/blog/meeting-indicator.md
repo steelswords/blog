@@ -22,6 +22,6 @@ The brightness of just one green or one red LED powered from the microcontroller
 
 I had this on a breadboard for probably a month or so to prove the hardware and then moved into a more permanent perfboard.
 
-{{ dimmable_image(src="img/articles/singles/meeting-indicator.jpg", alt="My meeting indicator") }}
+{{ <dimmable_image src="img/articles/singles/meeting-indicator.jpg" alt="My meeting indicator" /> }}
 
 A couple of aliases later and I can simply type `inmeeting` or `outmeeting` on my work laptop and my light changes from green to red and back again. This little project has helped my working from home life immensely!

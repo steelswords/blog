@@ -1,3 +1,4 @@
+{% component spoilersection(caption = "") %}
 <div class="spoiler-section">
     <button class="spoiler-toggle-button">
         {{ caption | safe }}
@@ -6,3 +7,4 @@
         {{ body | markdown | safe }}
     </div>
 </div>
+{% endcomponent spoilersection %}

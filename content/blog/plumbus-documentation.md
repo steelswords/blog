@@ -9,7 +9,7 @@ tags = ["opinion"]
 +++
 
 # Plumbus Documentation
-{% attributed_block_quote(citation="*Rick and Morty Season 2*, episode 8") %}
+{% <attributed_block_quote citation="*Rick and Morty Season 2*, episode 8"> %}
 Today on *How They Do It*: Plumbuses. Everyone has a Plumbus in their home.
 
 First, they take the dinglebop and they smooth it out with a bunch of schleem.
@@ -25,7 +25,7 @@ The blamphs rub against the chumbles. And the plubis and grumbo are shaved away.
 
 That leaves you with a regular old plumbus
 
-{% end %}
+{% </attributed_block_quote> %}
 
 *Plumbus documentation* is what I call documentation that is very precise and accurate,
 and yet, because of lack of background explanation, utterly useless because it

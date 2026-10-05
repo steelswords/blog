@@ -161,7 +161,7 @@ lsmod | grep helloworld
 journalctl -xe
 ```
 
-{{ dimmable_image(src="img/articles/linux-kernel-development/part1-success.png", alt="The sweet, beautiful sight of a correct terminal printout") }}
+{{ <dimmable_image src="img/articles/linux-kernel-development/part1-success.png" alt="The sweet, beautiful sight of a correct terminal printout" /> }}
 
 There it is! That’s our message. When we unload the module, we will see the other 
 message as well. That was a lot of fun! Tune in next time for a less trivial 

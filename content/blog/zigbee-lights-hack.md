@@ -50,7 +50,7 @@ BOM cost, it's way smaller than my previous attempt at doing AC -> DC conversion
 
 After a few weeks, I had some cheap PCBs and was ready to start soldering!
 
-{{ dimmable_image(src="img/articles/zigbee-lights/unpopped-pcb.jpg", alt="The unpopulated PCB") }}
+{{ <dimmable_image src="img/articles/zigbee-lights/unpopped-pcb.jpg" alt="The unpopulated PCB" /> }}
 
 ## PCB Assembly
 
@@ -62,7 +62,7 @@ pieces in my office carpet that will remain til the end of time.
 
 And here's the finished piece:
 
-{{ dimmable_image(src="img/articles/zigbee-lights/unpopped-pcb.jpg", alt="The unpopulated PCB") }}
+{{ <dimmable_image src="img/articles/zigbee-lights/unpopped-pcb.jpg" alt="The unpopulated PCB" /> }}
 
 Time to test it out!
 

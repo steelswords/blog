@@ -23,16 +23,16 @@ voltage regulator. [The link, for the curious](https://a.aliexpress.com/_m046TLM
 
 And here's a picture.
 
-{{ dimmable_image(src="img/articles/baby-monitor-upgrade/usb-c-module.jpg", alt="MT3608 DC-DC Booster Module") }}
+{{ <dimmable_image src="img/articles/baby-monitor-upgrade/usb-c-module.jpg" alt="MT3608 DC-DC Booster Module" /> }}
 
 I desoldered the barrel jack and attached a little pigtail with the module on it.
 
 
-{{ dimmable_image(src="img/articles/baby-monitor-upgrade/barrel-jack-interior.jpg", alt="The rear of the barrel jack on the PCB") }}
+{{ <dimmable_image src="img/articles/baby-monitor-upgrade/barrel-jack-interior.jpg" alt="The rear of the barrel jack on the PCB" /> }}
 
 And Bob's your uncle.
 
-{{ dimmable_image(src="img/articles/baby-monitor-upgrade/baby-monitor-upgrade-final.jpg", alt="The final product: Fully reassembled, working, and with a little USB pigtail.") }}
+{{ <dimmable_image src="img/articles/baby-monitor-upgrade/baby-monitor-upgrade-final.jpg" alt="The final product: Fully reassembled, working, and with a little USB pigtail." /> }}
 
 # But... It's Ugly
 

@@ -13,7 +13,7 @@ I wanted to make a useless box because it sounded like a fun project and it woul
 
 Here it is in action:
 
-{{ youtube(id="e5GbTxEwg40") }}
+{{ <youtube id="e5GbTxEwg40" /> }}
 
 The primary reason this took so long was because I didn't have a 3D printer at 
 first. After I acquired one this project took off! It was so exciting to print 
@@ -33,7 +33,7 @@ really well.
 
 # Electrical Assembly
 
-{{ dimmable_image(src="img/articles/useless-box/uselessbox-hw-overview.jpg", alt="Useless Box hardware assembly") }}
+{{ <dimmable_image src="img/articles/useless-box/uselessbox-hw-overview.jpg" alt="Useless Box hardware assembly" /> }}
 
 The microcontroller is an Arduino Nano, which I had insisted on purchasing ages 
 ago for reasons lost to time. (I much prefer the ESP8266 for projects these days 
@@ -43,7 +43,7 @@ scrapped project.
 
 ## The Perfboard
 
-{{ dimmable_image(src="img/articles/useless-box/perfboard.jpg", alt="Up close on some very prototype-grade soldering") }}
+{{ <dimmable_image src="img/articles/useless-box/perfboard.jpg" alt="Up close on some very prototype-grade soldering" /> }}
 
 This perfboard was certainly not my finest. I really should have planned this 
 board out better. First off, I tried to drive the servo signal from the Arduino’s 
@@ -68,4 +68,4 @@ I set up an interrupt to handle a change on the input pin. This is a more effici
 
 One day, when I catch the right wind in my sails, I’ll make the useless box sassier, as per my wife’s request. I whiteboarded a mathematical model of sass – or sassimatics, as I call it – as a heuristic for getting the box to respond in a seemingly more exasperated way based on how “annoyed” it was. I’ll update this page when it happens.
 
-{{ dimmable_image(src="img/articles/useless-box/conclusion.jpg", alt="The Useless Box") }}
+{{ <dimmable_image src="img/articles/useless-box/conclusion.jpg" alt="The Useless Box" /> }}

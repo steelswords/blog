@@ -19,4 +19,4 @@ We used an HC-06 Bluetooth module to pair to our phones and control the robot. W
 
 Here it is in action:
 
-{{ youtube(id="xH9-nnhlVDA") }}
+{{ <youtube id="xH9-nnhlVDA" /> }}

@@ -34,7 +34,7 @@ appreciate the boon that would be to odometry.
 
 So let's hook these puppies up to a scope and see what they can do!
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/test-setup.jpeg", alt="A (rather messy) photo of my testing in progress") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/test-setup.jpeg" alt="A (rather messy) photo of my testing in progress" /> }}
 
 # Hardware Setup
 This experiment is driven through the trusty [L298N motor driver module](https://lastminuteengineers.com/l298n-dc-stepper-driver-arduino-tutorial/).
@@ -50,7 +50,7 @@ additional experiment certainty I get with so much more input certainty!
 
 The motors on this tank chassis have the following pinout.
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/tank-chassis-motor-wiring-diagram.jpg", alt="The wiring diagram for the motors used in this robot chassis.") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/tank-chassis-motor-wiring-diagram.jpg" alt="The wiring diagram for the motors used in this robot chassis." /> }}
 
 | Wire | Function |
 |------|----------|
@@ -75,11 +75,11 @@ with them much in my career, so I'm interested to see what signals they output.
 I used the driving pulse signal as a trigger for my oscilloscope and was able to
 capture this response from the first Hall effect sensor:
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/hall-001.png", alt="Hall Effect Sensor 1, initial signal") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/hall-001.png" alt="Hall Effect Sensor 1, initial signal" /> }}
 
 Once I had plugged in Hall effect sensor 2:
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/hall-002.png", alt="Hall Effect Sensor 2, initial signal") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/hall-002.png" alt="Hall Effect Sensor 2, initial signal" /> }}
 
 Hmm... Channel 2 is much, much noisier here. I wonder if I should calibrate
 channel 2 first.
@@ -90,7 +90,7 @@ minutes, I saw similar noise on both channels. That's a win!
 Woopsie, I never connected 5V to the Hall effect sensors. Let's capture those
 again.
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/SDS00003.png", alt="The signal after I started powering the Hall effect sensors") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00003.png" alt="The signal after I started powering the Hall effect sensors" /> }}
 
 As you can see from the scope capture, these signals sit at 5V normally. Hmm...
 There is not a lot of signal going on here at all.
@@ -99,7 +99,7 @@ Let's tie these to ground and see if we get more definition out of them.
 Adding 13kΩ resistors (cause they were handy) from the signal lines to ground.
 Then, we take another picture. Zooming in on the signal, we see the following.
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/SDS00004.png", alt="Adding pull-down resistors to the sensor outputs") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00004.png" alt="Adding pull-down resistors to the sensor outputs" /> }}
 
 Okay, something is definitely off here.
 
@@ -119,7 +119,7 @@ But this isn't making sense. According to the datasheet, I should be able to get
 a TTL signal out of them with the pull-up resistor that's on the PCB for each.
 
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/ttl-signal-zoom-in.jpg", alt="This shows we should be getting a digital signal easily from the Hall Effect sensor") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/ttl-signal-zoom-in.jpg" alt="This shows we should be getting a digital signal easily from the Hall Effect sensor" /> }}
 
 Some connectivity testing reveals the frustrating and all-too-common answer.
 The ground wire has a break in it somewhere.
@@ -137,13 +137,13 @@ and immediately got these nice TTL signals in quadrature
 (from the position of the two Hall Effect sensors)! This is taken with very
 short pulses: 1 Hz and 1.1% duty cycle.
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/SDS00012.jpg", alt="This shows the digital signal we were expecting") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00012.jpg" alt="This shows the digital signal we were expecting" /> }}
 
 
 And for a bit longer, here's 1 Hz, 50% duty cycle:
 
-{{ dimmable_image(src="img/articles/hall-effect-characterization/SDS00014.jpg", alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle") }}
-{{ dimmable_image(src="img/articles/hall-effect-characterization/SDS00015.jpg", alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle") }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00014.jpg" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00015.jpg" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
 
 Oooo, that's nice! You can see the rotor speed up and slow down as the motors engage
 and disengage.

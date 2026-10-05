@@ -121,7 +121,7 @@ could not pull the mesh apart, even with all my might (I tried). This was great
 news! It meant I was on the right track! But I needed a cheaper, easier solution.
 
 
-{{ dimmable_image(src="img/articles/chainmail/chainmailcopper.jpg", alt="Copper chain mail") }}
+{{ <dimmable_image src="img/articles/chainmail/chainmailcopper.jpg" alt="Copper chain mail" /> }}
 
 Enter Success I.
 
@@ -161,14 +161,14 @@ Assembling the chain mail was relatively easy, but very time-consuming. Essentia
 it consisted of making a bunch of single rings, which were then joined into the familiar 4-in-1 pattern like so:
 
 
-{{ dimmable_image(src="img/articles/chainmail/chainmail4in1.jpg", alt="A fivelette") }}
+{{ <dimmable_image src="img/articles/chainmail/chainmail4in1.jpg" alt="A fivelette" /> }}
 
 After I had assembled several of these “fiveletts,” as I termed them, I strung
 them together in a vertical column. After I had assembled these, I wove them
 together to form the “fabric,” if you will, of the mail. It sounds simple because
 it is. A few hours’ work might produce something like this:
 
-{{ dimmable_image(src="img/articles/chainmail/chainmail2.jpg", alt="Some steel chain mail fabric") }}
+{{ <dimmable_image src="img/articles/chainmail/chainmail2.jpg" alt="Some steel chain mail fabric" /> }}
 
 This whole process took many hours over several months. Each day after school, I
 would fire up a portable DVD player (usually loaded with _The Dark Knight_), and
@@ -176,4 +176,4 @@ spend the afternoon working on my armor. Using leather gloves, slip-joint pliers
 and eye protection (sometimes burrs jumped off rings as I was closing them), I
 knitted myself a working haubergeon. Isn't it lovely? 🙂
 
-{{ dimmable_image(src="img/articles/chainmail/chainmailwhole.jpg", alt="Steel haubergeon acquired") }}
+{{ <dimmable_image src="img/articles/chainmail/chainmailwhole.jpg" alt="Steel haubergeon acquired" /> }}

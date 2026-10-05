@@ -25,7 +25,7 @@ and resource creation functions described in _Linux Device Drivers_. My code was
 building and running alright:
 
 
-{{ dimmable_image(src="img/articles/linux-kernel-development/part2-not-in-dev.png", alt="Parital success") }}
+{{ <dimmable_image src="img/articles/linux-kernel-development/part2-not-in-dev.png" alt="Parital success" /> }}
 
 But there was nothing in `/dev`! Our device did make it into `/sys`, but not all 
 the way to `/dev`. I turned to some more recent sources to fix my problems. I’m 
@@ -48,11 +48,11 @@ sudo modprobe fibonacci
 
 Then we can see what `dmesg` has to say.
 
-{{ dimmable_image(src="img/articles/linux-kernel-development/part2-dmesg.png", alt="dmesg says the device was created successfully") }}
+{{ <dimmable_image src="img/articles/linux-kernel-development/part2-dmesg.png" alt="dmesg says the device was created successfully" /> }}
 
 That’s good news! Everything seems to have loaded properly. Let’s check that our device is in `/dev`.
 
-{{ dimmable_image(src="img/articles/linux-kernel-development/part2-ls-dev.png", alt="Listing of /dev showing fibonacci0") }}
+{{ <dimmable_image src="img/articles/linux-kernel-development/part2-ls-dev.png" alt="Listing of /dev showing fibonacci0" /> }}
 
 Nice! Now let’s read from it:
 
@@ -113,7 +113,7 @@ call, I return 0 to let the userspace program know it got all the data I had.
 So I made this adjustment to my code and…
 
 
-{{ dimmable_image(src="img/articles/linux-kernel-development/part2-success.png", alt="Success! Reading fibonacci numbers out of a character device") }}
+{{ <dimmable_image src="img/articles/linux-kernel-development/part2-success.png" alt="Success! Reading fibonacci numbers out of a character device" /> }}
 
 Huzzah! That’s just what we wanted. Whew! I don’t think I’ve ever worked that hard to generate the Fibonacci series.
 
