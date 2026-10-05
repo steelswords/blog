@@ -74,6 +74,9 @@
         {%- set stylesheets = [...stylesheets, 'skins/' ~ config.extra.skin ~ '.css'] -%}
     {%- endif -%}
 
+    {# Site-specific styles for the spoilersection and attributed_block_quote components #}
+    {%- set stylesheets = [...stylesheets, "spoilersection.css", "attributedblockquote.css"] -%}
+
     {# Load all stylesheets #}
     {%- for stylesheet in stylesheets %}
         <link rel="stylesheet" href="{{ get_url(path=stylesheet, cachebust=true) | safe }}" />

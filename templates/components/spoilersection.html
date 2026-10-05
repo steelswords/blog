@@ -1,10 +1,9 @@
 {% component spoilersection(caption = "") %}
+{#- Markdown runs on this output, so keep lines unindented: indented lines after a blank line become code blocks. -#}
 <div class="spoiler-section">
-    <button class="spoiler-toggle-button">
-        {{ caption | safe }}
-    </button>
-    <div class="spoiler-section-content">
-        {{ body | markdown | safe }}
-    </div>
+<button class="spoiler-toggle-button">{{ caption | safe }}</button>
+<div class="spoiler-section-content">
+{{ body | markdown | safe }}
+</div>
 </div>
 {% endcomponent spoilersection %}

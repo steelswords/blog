@@ -1,6 +1,7 @@
 {% component attributed_block_quote(citation = "") %}
+{#- Markdown runs on this output, so keep lines unindented: indented lines after a blank line become code blocks. -#}
 <blockquote class="attributed-block-quote">
-    {{ body | markdown | safe }}
-    <cite ><div id="mdash">-</div><div id="citationcontent">{{ citation | markdown | safe }} </div></cite>
+{{ body | markdown | safe }}
+<cite><div id="mdash">-</div><div id="citationcontent">{{ citation | markdown | safe }}</div></cite>
 </blockquote>
 {% endcomponent attributed_block_quote %}
