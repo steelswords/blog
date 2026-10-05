@@ -4,7 +4,7 @@ date = 2018-12-20
 description = ""
 
 [taxonomies]
-tags = ["showcase", "project"]
+tags = ["showcase", "project", "robots"]
 +++
 
 # The Laser Tank
