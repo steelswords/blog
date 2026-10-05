@@ -1,6 +1,6 @@
 +++
 title = "Characterizing a Hall Effect Sensor"
-date = 2026-10-02
+date = 2026-10-05
 description = "This motor module has a Hall effect sensor hooked up. Let's see what it looks like on a scope!"
 
 [taxonomies]
@@ -119,7 +119,7 @@ But this isn't making sense. According to the datasheet, I should be able to get
 a TTL signal out of them with the pull-up resistor that's on the PCB for each.
 
 
-{{ <dimmable_image src="img/articles/hall-effect-characterization/ttl-signal-zoom-in.jpg" alt="This shows we should be getting a digital signal easily from the Hall Effect sensor" /> }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/ttl-signal-zoom-in.png" alt="This shows we should be getting a digital signal easily from the Hall Effect sensor" /> }}
 
 Some connectivity testing reveals the frustrating and all-too-common answer.
 The ground wire has a break in it somewhere.
@@ -137,13 +137,13 @@ and immediately got these nice TTL signals in quadrature
 (from the position of the two Hall Effect sensors)! This is taken with very
 short pulses: 1 Hz and 1.1% duty cycle.
 
-{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00012.jpg" alt="This shows the digital signal we were expecting" /> }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00012.png" alt="This shows the digital signal we were expecting" /> }}
 
 
 And for a bit longer, here's 1 Hz, 50% duty cycle:
 
-{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00014.jpg" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
-{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00015.jpg" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00014.png" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
+{{ <dimmable_image src="img/articles/hall-effect-characterization/SDS00015.png" alt="The signal from the Hall effect sensor at 1 Hz, 50% duty cycle" /> }}
 
 Oooo, that's nice! You can see the rotor speed up and slow down as the motors engage
 and disengage.
